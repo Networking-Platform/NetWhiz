@@ -23,6 +23,8 @@ function authCreateAccountWithEmail(event) {
     .then((userCredential) => {
         const user = userCredential.user;
         console.log("User created successfully with email: ", userCredential.user.email);
+        // Go to sign up successful page/give a message
+        window.location.href = "user_page.html";
     })
     .catch((error) => {
         const errorCode = error.code;

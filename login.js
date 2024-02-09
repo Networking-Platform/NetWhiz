@@ -1,5 +1,5 @@
 import { app } from './firebase-config.js'; 
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
 // Initialize Firebase Authentication and get a reference to the service
 const auth = getAuth(app);
@@ -9,6 +9,37 @@ const passwordInputEl = document.getElementById("password")
 
 const signInButtonEl = document.getElementById("login-btn")
 
-function loadUserPage() {
-    window.location.href = "user_page.html";
+function authSignInWithEmail(event) {
+    /*  
+        Use the code from the documentaion to make this function work.
+        
+        Make sure to first create two consts, 'email' and 'password', to fetch the values from the input fields emailInputEl and passwordInputEl.
+       
+        If the login is successful then you should show the logged in view using showLoggedInView()
+        If something went wrong, then you should log the error message using console.error.
+    */
+    event.preventDefault();
+    const email = usernameInputEl.value
+    const password = passwordInputEl.value
+
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        console.log("Login succeed!")
+        window.location.href = "user_page.html";
+    })
+    .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.error(errorMessage)
+    });
+    
 }
+
+const signupButtonEl = document.getElementById("login-btn")
+signupButtonEl.addEventListener("click", function(event) {
+    console.log("click success");
+    authSignInWithEmail(event);
+});
+
