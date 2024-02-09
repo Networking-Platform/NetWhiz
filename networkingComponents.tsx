@@ -11,9 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (backButton) {
         backButton.addEventListener('click', () => {
-            window.location.href = 'welcome.html';
+            window.location.href = 'index.html';
         });
     }
 
+    const backToLoginButton = document.getElementById('back-to-login');
 
+    if (backToLoginButton) {
+        backToLoginButton.addEventListener('click', () => {
+            window.location.href = 'login.html';
+        });
+    }
 });
