@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Sign up</title>
+    <link href="login.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="blue-half">
+        <img id="wireframe" src="Humaaans Wireframe.png" alt="login image">
+
+    </div>
+    <div class="white-half">
+        <button id='back-to-login'>
+            &lt; Back to Login
+        </button>
+        <div id="welcome">
+            Welcome to
+        </div>
+
+        <div id="website-name">
+            website
+        </div>
+        <div id="bottom-right-container">
+            <div id="account">
+                Account Sign up
+            </div>
+
+            <div id="description">
+                Not a user? Sign up now!
+            </div>
+
+            <div id="username-and-password">
+                <form>
+                    <label for="username"> User name</label><br>
+                    <input type="email" id="username" name="username"><br>
+
+                    <label for="password"> Password</label><br>
+                    <input type="text" id="password" name="password"><br>
+
+                    <input type="checkbox" id="rememberme" checked>
+                    Remember me <br>
+                    <input type="submit" id="signup-btn" value="Sign up">
+                </form>
+            </div>
+            <div>
+                Already have an account? <a href="login.html">Login</a> here
+            </div>
+        </div>
+    </div>
+    <script src="networkingComponents.tsx"></script>
+    <script src="signup.js" type="module"></script>
+</body>
+
+</html>

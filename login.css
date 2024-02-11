@@ -46,6 +46,16 @@ body {
     padding-bottom: 30px;
 }
 
+#back-to-login {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    padding-left: 55px;
+    padding-top: 55px;
+    padding-bottom: 30px;
+}
+
 #welcome {
     width: 380px;
     margin-left: 30%;
@@ -101,7 +111,7 @@ body {
     font-size: 16px;
 }
 
-#submit {
+input[type="submit"] {
     color: #ffffff;
     background-color: #6358DC;
     width: 310px;
