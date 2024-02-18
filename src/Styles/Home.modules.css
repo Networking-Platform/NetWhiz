@@ -1,0 +1,137 @@
+
+#website-title {
+
+    width: 380px;
+    height: 147.75px;
+    top: 64px;
+    left: 82px;
+    position: absolute;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 43.36px;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+h1 {
+
+    width: 658px;
+    height: 322px;
+    top: 152px;
+    left: 82px;
+    position: absolute;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-size: 55px;
+    font-weight: 500;
+    line-height: 75px;
+    letter-spacing: 200;
+    text-align: left;
+
+
+}
+
+
+
+#intro {
+    width: 658px;
+    top: 427px;
+    left: 82px;
+    position: absolute;
+    line-height: 35px;
+    color: #000000;
+    font-size: 25px;
+    text-align: left;
+
+}
+
+#get-started {
+    top: 530px;
+    position: absolute;
+    color: #ffffff;
+    background-color: blue;
+    left: 82px;
+    width: 162.43px;
+    height: 44px;
+}
+
+/* #aboutus-button {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    padding-left: 55px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 70%
+}
+#contact-button {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    padding-left: 55px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 80%
+}
+
+
+#FAQ-button {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    padding-left: 55px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 90%
+} */
+
+#buttons {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    margin-top: -15px; /* Shift buttons up */
+    margin-right: 8%;
+}
+
+.info-button {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    padding-left: 55px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /*margin-left: 90% */
+    margin-left: 10px; /* Adjust spacing between buttons */
+}
+
+#icon {
+    /* float: right; */
+    box-sizing: border-box;
+    width: 34px;
+    height: 34px;
+
+
+    position: fixed;
+    top: 2%;
+    right: 2%;
+    z-index: 999;
+}
+
+#cover {
+    box-sizing: border-box;
+    width: 810px;
+    height: 643px;
+    margin-bottom: 200px;
+
+    position: fixed;
+    top: 15%;
+    right: 8%;
+    z-index: 998; 
+}
+

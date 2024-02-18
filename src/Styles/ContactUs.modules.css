@@ -1,0 +1,86 @@
+#contact-us {
+    width: 380px;
+    margin-left: 5%;
+    margin-top: 5%;
+    color: #3127A0;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 43.36px;
+}
+
+#words {
+    width: 658px;
+    top: 227px;
+    left: 82px;
+    position: absolute;
+    line-height: 35px;
+    color: #000000;
+    font-size: 20px;
+    text-align: left;
+}
+
+#talk-to-us form {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin-top: 8%;
+    margin-left: 5%;
+}
+
+#talk-to-us input {
+    margin-bottom: 20px;
+}
+
+#firstname {
+
+    width: 45%;
+    height: 50px;
+    margin-right: 26px;
+}
+
+#lastname {
+    width: 45%;
+    height: 50px;
+    margin-left: 26px;
+}
+
+#email-address {
+    height: 50px;
+    width: 99%;
+}
+
+#content {
+    height: 150px;
+}
+
+
+#submit {
+    /* position: absolute; */
+    color: #ffffff;
+    background-color: #6358DC;
+    margin-left: 35%;
+    width: 162.43px;
+    height: 44px;
+}
+
+::placeholder {
+    position: relative;
+    font-size: 20px;
+    color: #9999;
+    text-indent: 20px;
+    top: 3px;
+}
+
+#hbc {
+    box-sizing: border-box;
+    width: 810px;
+    height: 643px;
+    margin-bottom: 200px;
+
+    position: fixed;
+    top: 15%;
+    right: 8%;
+    z-index: 998; 
+}
+
