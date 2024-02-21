@@ -1,5 +1,5 @@
 import user_4_fill from '../Images/user_4_fill.png';
-import humaaansGraph from 'C:/Users/19018/Desktop/network/project/src/Images/Humaaans Graphs.png';
+import humaaansGraph from '../Images/Humaaans Graphs.png';
 import '../Styles/Home.modules.css';
 
 interface Props {
@@ -7,9 +7,10 @@ interface Props {
     aboutUsHandler: () => void;
     contactHandler: () => void;
     FAQHandler: () => void;
+    ProfileHandler: () => void;
 }
 
-function Home({getStartedHandler, aboutUsHandler, contactHandler, FAQHandler}: Props) {
+function Home({getStartedHandler, aboutUsHandler, contactHandler, FAQHandler, ProfileHandler}: Props) {
     return (
         <div>
             <div id="website-title">Website.com</div>
@@ -24,6 +25,7 @@ function Home({getStartedHandler, aboutUsHandler, contactHandler, FAQHandler}: P
                 <button className="info-button" onClick={aboutUsHandler}> About Us </button>
                 <button className="info-button" onClick={contactHandler}> Contact </button>
                 <button className="info-button" onClick={FAQHandler}> FAQ </button>
+                <button className="info-button" onClick={ProfileHandler}> Profile </button>
             </div>
             <img id="icon" src={user_4_fill} alt="user icon" />
             <img id="cover" src={humaaansGraph} alt="front page image" />

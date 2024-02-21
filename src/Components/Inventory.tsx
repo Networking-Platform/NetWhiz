@@ -1,0 +1,72 @@
+import '../Styles/Inventory.modules.css';
+import learning_icon from '../Images/Learning_Icon.png'
+import profile_icon from '../Images/profile_icon.png'
+import help_center_icon from '../Images/help_center_icon.png'
+import setting_icon from '../Images/setting_icon.png'
+import theme_icon from '../Images/theme_icon.png'
+import selected_inventory_icon from '../Images/inventory_selected_icon.png'
+import logout_icon from '../Images/logout_icon.png'
+
+interface Props {
+    getStartedHandler: () => void;
+    aboutUsHandler: () => void;
+    contactHandler: () => void;
+    FAQHandler: () => void;
+    ProfileHandler: () => void;
+}
+
+function Inventory({ProfileHandler,
+                    getStartedHandler,
+                    aboutUsHandler,
+                    contactHandler,
+                    FAQHandler} : Props) {
+    return (
+        <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
+            <div className="blue-half" style={{ width: '20%', height: '100%', backgroundColor: '#3127A0', position: 'absolute', left: 0 }}>
+                <div id="website-title">Website.com</div>
+                <button id="sidebar-learning-progress-button">
+                    <img src={learning_icon} alt="Learning icon"/>
+                    Learning Progress
+                </button>
+                <button id="sidebar-profile-button" onClick={ProfileHandler}>
+                    <img src={profile_icon} alt="Profile Icon"/>
+                    Profile
+                </button>
+                <button id="sidebar-help-center-button">
+                    <img src={help_center_icon} alt="Help Center Icon"/>
+                    Help Center
+                </button>
+                <button id="sidebar-setting-button">
+                    <img src={setting_icon} alt="Setting Icon"/>
+                    Setting
+                </button>
+                <button id="sidebar-theme-button">
+                    <img src={theme_icon} alt="Theme Icon"/>
+                    Theme
+                </button>
+                <button id="sidebar-selected-inventory-button">
+                    <img src={selected_inventory_icon} alt="Selected Inventory Icon"/>
+                    Inventory
+                </button>
+                <div id="separation-line"></div>
+                <button id="sidebar-logout-button">
+                    <img src={logout_icon} alt="Logout Icon"/>
+                    Log out
+                </button>
+            </div>
+
+            <div className="white-half" style={{ width: '80%', height: '100%', backgroundColor: 'white', position: 'absolute', left: '20%' }}>
+            <div id="inventory-title">Homepage {'>'} Inventory</div>
+                <div id="inventory-top-buttons">
+                    <button className="inventory-info-button" onClick={aboutUsHandler}> About Us </button>
+                    <button className="inventory-info-button" onClick={contactHandler}> Contact </button>
+                    <button className="inventory-info-button" onClick={FAQHandler}> FAQ </button>
+                    <button className="inventory-info-button" onClick={ProfileHandler}> Profile </button>
+                </div>
+                <button id = "red-name-button">Kelvin</button>
+            </div>
+        </div>
+    );
+}
+
+export default Inventory;

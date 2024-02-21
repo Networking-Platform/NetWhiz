@@ -1,0 +1,457 @@
+#website-title {
+    position: absolute;
+    left: 10.46%;
+    right: 64.96%;
+    top: 1.83%;
+    bottom: 92.04%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 135.5%;
+    /* or 43px */
+
+    color: #FFFFFF;
+}
+
+
+#profile-background {
+    position: absolute;
+    width: 1041px;
+    height: 128px;
+    left: 76px;
+    right: 76px;
+    top: 130px;
+
+    background: #F0EFEF;
+}
+
+#avatar {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    left: 76px;
+    top: 60px;
+    border-radius: 50%;
+    background: #D9D9D9;
+}
+
+
+#username {
+    position: absolute;
+    width: 122px;
+    height: 37px;
+    left: 238px;
+    top: 128px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 22px;
+    /* or 69% */
+
+    color: #3127A0;
+}
+
+
+#bio {
+    position: absolute;
+    width: 182px;
+    height: 26px;
+    left: 242px;
+    top: 165px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    /* or 110% */
+
+    color: #000000;
+}
+
+
+#edit-button {
+    position: absolute;
+    width: 48px;
+    height: 28px;
+    left: 980px;
+    top: 165px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    color: #000000;
+    z-index: 1000;
+    background-color: #ffffff;
+    border: none; /* Removing border */
+    cursor: pointer;
+    padding-left: 28px; /* Adding space for the icon */
+}
+
+#edit-button img {
+    position: absolute;
+    left: 5px; /* Adjust the position of the icon */
+    top: 3px; /* Adjust the position of the icon */
+    width: 20px; /* Adjust the width of the icon */
+    height: 20px; /* Adjust the height of the icon */
+}
+
+#profile-top-buttons {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    top: 15px; 
+    right: 200px;
+    z-index: 1000;
+}
+
+.profile-info-button {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    padding-left: 55px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-left: 10px; 
+}
+
+#profile-title {
+    position: absolute;
+    width: 173px;
+    height: 22px;
+    left: 76px;
+    top: 60px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 135.5%;
+    /* identical to box height, or 22px */
+
+    color: #3127A0;
+}
+
+#red-name-button {
+    position: absolute;
+    right: 28px;
+    top: 30px;
+    border-radius: 20px;
+    background-color: #f47878;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    color: var(--color-gray-10, #fff);
+    white-space: nowrap;
+    padding: 12px 24px;
+    font: 600 26px Inter, sans-serif;
+    width: 150px;
+}
+
+#info-slot-topleft {
+    position: absolute;
+    width: 460px;
+    height: 179px;
+    left: 76px;
+    top: 400px;
+    background: #F0EFEF;
+    border-radius: 30px;
+}
+
+#info-slot-topright {
+    position: absolute;
+    width: 460px;
+    height: 179px;
+    left: calc(76px + 460px + 120px); /* Adjusted left position */
+    top: 400px;
+    background: #F0EFEF;
+    border-radius: 30px;
+}
+
+#info-slot-bottomleft {
+    position: absolute;
+    width: 460px;
+    height: 179px;
+    left: 76px;
+    top: calc(400px + 179px + 40px); /* Adjusted top position */
+    background: #F0EFEF;
+    border-radius: 30px;
+}
+
+#info-slot-bottomright {
+    position: absolute;
+    width: 460px;
+    height: 179px;
+    left: calc(76px + 460px + 120px); /* Adjusted left position */
+    top: calc(400px + 179px + 40px); /* Adjusted top position */
+    background: #F0EFEF;
+    border-radius: 30px;
+}
+
+#info-slot-title {
+    position: absolute;
+    width: 250px;
+    height: 29px;
+    left: 33%;
+    top: 26%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    /* or 110% */
+
+    color: #000000;
+    /* identical to box height, or 138% */
+}
+
+#info-slot-icon {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    left: 7%;
+    top: 22%;
+
+    background: #D9D9D9;
+    border-radius: 20px;
+}
+
+#info-slot-stats {
+    position: absolute;
+    width: auto; /* Let the width be determined by the content */
+    max-width: 200px; /* Limit the maximum width */
+    height: 22px;
+    left: 33%;
+    bottom: 30%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 22px;
+    white-space: nowrap;
+    color: #3127A0;
+}
+
+#sidebar-learning-progress-button {
+    position: absolute;
+    width: 249px;
+    height: 48px;
+    left: 20px;
+    top: 120px;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #3127A0;
+    border: none; /* Removing border */
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-learning-progress-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+#sidebar-selected-profile-button {
+    position: absolute;
+    width: 249px;
+    height: 48px;
+    left: 20px;
+    top: calc(120px + 48px + 20px);
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3127A0;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    border: none; /* Removing border */
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-selected-profile-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+
+
+#sidebar-help-center-button {
+    position: absolute;
+    width: 249px;
+    height: 48px;
+    left: 20px;
+    top: calc(120px + 2 * (48px + 20px));
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #3127A0;
+    border: none; /* Removing border */
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-help-center-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+#sidebar-theme-button {
+    position: absolute;
+    width: 249px;
+    height: 48px;
+    left: 20px;
+    top: calc(120px + 4 * (48px + 20px));
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #3127A0;
+    border: none; /* Removing border */
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-theme-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+#sidebar-inventory-button {
+    position: absolute;
+    width: 249px;
+    height: 48px;
+    left: 20px;
+    top: calc(120px + 5 * (48px + 20px));
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #3127A0;
+    border: none; /* Removing border */
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-inventory-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+#sidebar-setting-button {
+    position: absolute;
+    width: 249px;
+    height: 48px;
+    left: 20px;
+    top: calc(120px + 3 * (48px + 20px));
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #3127A0;
+    border: none; /* Removing border */
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-setting-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px;
+}
+
+#separation-line {
+    position: absolute;
+    width: 250px;
+    height: 1px;
+    left: 6%;
+    top: calc(120px + 6 * (48px + 20px));
+    background-color: #ffffff;
+}
+
+#sidebar-logout-button {
+    position: absolute;
+    width: 249px;
+    height: 48px;
+    left: 20px;
+    top: calc(120px + 6 * (48px + 20px) + 40px);
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #f47878;
+    border: none; /* Removing border */
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-logout-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}

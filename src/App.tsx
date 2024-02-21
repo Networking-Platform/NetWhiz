@@ -4,6 +4,8 @@ import LogIn from './Components/LogIn';
 import ContactUs from './Components/ContactUs';
 import AboutUs from './Components/AboutUs';
 import FAQ from './Components/FAQ';
+import Profile from './Components/Profile';
+import Inventory from './Components/Inventory';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -28,13 +30,58 @@ function App() {
     setCurrentPage('FAQ');
   }
 
+  const toProfilePage = () => {
+    setCurrentPage('Profile');
+  }
+
+  const toInventoryPage = () => {
+    setCurrentPage('Inventory');
+  }
+
   return (
     <div>
-      {currentPage === 'Home' ? <Home getStartedHandler={goToLogin} aboutUsHandler={toAboutUsPage} contactHandler={toContactPage} FAQHandler={toFAQPage}/> : null}
-      {currentPage === 'LogIn' ? <LogIn backToHomeHandler={backToHome} /> : null}
-      {currentPage === 'AboutUs' ? <AboutUs aboutUsHandler={toAboutUsPage} contactHandler={toContactPage} FAQHandler={toFAQPage} /> : null}
-      {currentPage === 'ContactUs' ? <ContactUs aboutUsHandler={toAboutUsPage} contactHandler={toContactPage} FAQHandler={toFAQPage}/> : null}
-      {currentPage === 'FAQ' ? <FAQ aboutUsHandler={toAboutUsPage} contactHandler={toContactPage} FAQHandler={toFAQPage}/> : null}
+      {currentPage === 'Home' ? <Home 
+                                  getStartedHandler={goToLogin} 
+                                  aboutUsHandler={toAboutUsPage} 
+                                  contactHandler={toContactPage} 
+                                  FAQHandler={toFAQPage} 
+                                  ProfileHandler={toProfilePage} 
+                                /> : null}
+
+      {currentPage === 'LogIn' ? <LogIn 
+                                    backToHomeHandler={backToHome} 
+                                  /> : null}
+
+      {currentPage === 'AboutUs' ? <AboutUs 
+                                      aboutUsHandler={toAboutUsPage} 
+                                      contactHandler={toContactPage} 
+                                      FAQHandler={toFAQPage} 
+                                    /> : null}
+      {currentPage === 'ContactUs' ? <ContactUs 
+                                      aboutUsHandler={toAboutUsPage} 
+                                      contactHandler={toContactPage} 
+                                      FAQHandler={toFAQPage}
+                                    /> : null}
+      {currentPage === 'FAQ' ? <FAQ 
+                                  aboutUsHandler={toAboutUsPage} 
+                                  contactHandler={toContactPage} 
+                                  FAQHandler={toFAQPage}
+                                /> : null}
+      {currentPage === 'Profile' ? <Profile 
+                                      ProfileHandler={toProfilePage} 
+                                      aboutUsHandler={toAboutUsPage} 
+                                      contactHandler={toContactPage} 
+                                      FAQHandler={toFAQPage} 
+                                      getStartedHandler={goToLogin}
+                                      InventoryHandler={toInventoryPage}
+                                    /> : null}
+      {currentPage === 'Inventory' ? <Inventory 
+                                      ProfileHandler={toProfilePage} 
+                                      aboutUsHandler={toAboutUsPage} 
+                                      contactHandler={toContactPage} 
+                                      FAQHandler={toFAQPage} 
+                                      getStartedHandler={goToLogin}
+                                    /> : null}
     </div>
 
   );
