@@ -6,84 +6,93 @@ import AboutUs from './Components/AboutUs';
 import FAQ from './Components/FAQ';
 import Profile from './Components/Profile';
 import Inventory from './Components/Inventory';
+import "@fontsource/inter"
+import "@fontsource/inter/700.css";
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('Home');
+
+  const usePageNavigation = () => {
+    const navigate = useNavigate();
+    return (pageName: string) => navigate(`/${pageName.toLowerCase()}`);
+  }
+
+  const setPage = usePageNavigation();
 
   const goToLogin = () => {
-    setCurrentPage('LogIn');
+    setPage('login');
   }
 
   const backToHome = () => {
-    setCurrentPage('Home');
+    setPage('');
   }
 
   const toContactPage = () => {
-    setCurrentPage('ContactUs');
+    setPage('contact');
   }
 
   const toAboutUsPage = () => {
-    setCurrentPage('AboutUs');
+    setPage('about');
   }
 
   const toFAQPage = () => {
-    setCurrentPage('FAQ');
+    setPage('faq');
   }
 
   const toProfilePage = () => {
-    setCurrentPage('Profile');
+    setPage('profile');
   }
 
   const toInventoryPage = () => {
-    setCurrentPage('Inventory');
+    setPage('inventory');
   }
 
   return (
     <div>
-      {currentPage === 'Home' ? <Home 
+      <Routes>
+      <Route path="/" element={<Home 
                                   getStartedHandler={goToLogin} 
                                   aboutUsHandler={toAboutUsPage} 
                                   contactHandler={toContactPage} 
                                   FAQHandler={toFAQPage} 
                                   ProfileHandler={toProfilePage} 
-                                /> : null}
+                                />} />
 
-      {currentPage === 'LogIn' ? <LogIn 
-                                    backToHomeHandler={backToHome} 
-                                  /> : null}
-
-      {currentPage === 'AboutUs' ? <AboutUs 
-                                      aboutUsHandler={toAboutUsPage} 
-                                      contactHandler={toContactPage} 
-                                      FAQHandler={toFAQPage} 
-                                    /> : null}
-      {currentPage === 'ContactUs' ? <ContactUs 
-                                      aboutUsHandler={toAboutUsPage} 
-                                      contactHandler={toContactPage} 
-                                      FAQHandler={toFAQPage}
-                                    /> : null}
-      {currentPage === 'FAQ' ? <FAQ 
-                                  aboutUsHandler={toAboutUsPage} 
-                                  contactHandler={toContactPage} 
-                                  FAQHandler={toFAQPage}
-                                /> : null}
-      {currentPage === 'Profile' ? <Profile 
-                                      ProfileHandler={toProfilePage} 
-                                      aboutUsHandler={toAboutUsPage} 
-                                      contactHandler={toContactPage} 
-                                      FAQHandler={toFAQPage} 
-                                      getStartedHandler={goToLogin}
-                                      InventoryHandler={toInventoryPage}
-                                    /> : null}
-      {currentPage === 'Inventory' ? <Inventory 
-                                      ProfileHandler={toProfilePage} 
-                                      aboutUsHandler={toAboutUsPage} 
-                                      contactHandler={toContactPage} 
-                                      FAQHandler={toFAQPage} 
-                                      getStartedHandler={goToLogin}
-                                    /> : null}
+      <Route path="/login" element={<LogIn 
+                                          backToHomeHandler={backToHome} 
+                                        />} />
+        <Route path="/contact" element={<ContactUs 
+                                            aboutUsHandler={toAboutUsPage} 
+                                            contactHandler={toContactPage} 
+                                            FAQHandler={toFAQPage} 
+                                          />} />
+        <Route path="/about" element={<AboutUs 
+                                          aboutUsHandler={toAboutUsPage} 
+                                          contactHandler={toContactPage} 
+                                          FAQHandler={toFAQPage} 
+                                        />} />
+        <Route path="/faq" element={<FAQ 
+                                        aboutUsHandler={toAboutUsPage} 
+                                        contactHandler={toContactPage} 
+                                        FAQHandler={toFAQPage} 
+                                      />} />
+        <Route path="/profile" element={<Profile 
+                                            ProfileHandler={toProfilePage} 
+                                            aboutUsHandler={toAboutUsPage} 
+                                            contactHandler={toContactPage} 
+                                            FAQHandler={toFAQPage} 
+                                            getStartedHandler={goToLogin}
+                                            InventoryHandler={toInventoryPage}
+                                          />} />
+        <Route path="/inventory" element={<Inventory 
+                                              ProfileHandler={toProfilePage} 
+                                              aboutUsHandler={toAboutUsPage} 
+                                              contactHandler={toContactPage} 
+                                              FAQHandler={toFAQPage} 
+                                              getStartedHandler={goToLogin}
+                                            />} />
+      </Routes>
     </div>
-
   );
 }
 

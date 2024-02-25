@@ -49,7 +49,7 @@ function Inventory({ProfileHandler,
                     Inventory
                 </button>
                 <div id="separation-line"></div>
-                <button id="sidebar-logout-button">
+                <button id="sidebar-logout-button" onClick={getStartedHandler}>
                     <img src={logout_icon} alt="Logout Icon"/>
                     Log out
                 </button>
@@ -64,6 +64,9 @@ function Inventory({ProfileHandler,
                     <button className="inventory-info-button" onClick={ProfileHandler}> Profile </button>
                 </div>
                 <button id = "red-name-button">Kelvin</button>
+                <div id="top-area">
+                    
+                </div>
             </div>
         </div>
     );

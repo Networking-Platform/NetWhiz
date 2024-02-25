@@ -52,7 +52,7 @@ function Profile({ProfileHandler,
                     Inventory
                 </button>
                 <div id="separation-line"></div>
-                <button id="sidebar-logout-button">
+                <button id="sidebar-logout-button" onClick={getStartedHandler}>
                     <img src={logout_icon} alt="Logout Icon"/>
                     Log out
                 </button>

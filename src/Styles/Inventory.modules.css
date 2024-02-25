@@ -250,7 +250,7 @@
 
 #inventory-title {
     position: absolute;
-    width: 173px;
+    width: 200px;
     height: 22px;
     left: 76px;
     top: 60px;
@@ -261,7 +261,7 @@
     font-size: 16px;
     line-height: 135.5%;
     /* identical to box height, or 22px */
-
+    
     color: #3127A0;
 }
 
@@ -284,4 +284,17 @@
     padding-top: 30px;
     padding-bottom: 10px;
     margin-left: 10px; 
+}
+
+
+#top-area {
+    position: absolute;
+    width: 1048px;
+    height: 230px;
+    left: 3%;
+    right: 3%;
+    top: 13%;
+
+    background: #E2E5FF;
+    border-radius: 20px;
 }
