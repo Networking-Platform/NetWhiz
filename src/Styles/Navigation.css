@@ -1,0 +1,56 @@
+.page-title {
+    left: 70px;
+    top: 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#page-title-button {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 22px;
+    color: #3127A0;
+    white-space: nowrap;
+    border: none;
+    background-color: transparent;
+}
+
+#top-buttons {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1%;
+    top: 2%; 
+    right: 18%;
+    z-index: 1000;
+}
+
+.info-button {
+    background-color: transparent;
+    color: black;
+    border: none;
+    font-size: 16px;
+    padding-left: 10%;
+    padding-top: 7%;
+    padding-bottom: 7%;
+    margin-left: 3%; 
+}
+
+#red-name-button {
+    position: absolute;
+    right: 3%;
+    top: 4%;
+    border-radius: 20px;
+    background-color: #f47878;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    color: var(--color-gray-10, #fff);
+    white-space: nowrap;
+    padding: 12px 24px;
+    font: 600 26px Inter, sans-serif;
+    width: 12%;
+}

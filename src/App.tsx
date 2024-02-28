@@ -9,6 +9,7 @@ import Inventory from './Components/Inventory';
 import "@fontsource/inter"
 import "@fontsource/inter/700.css";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import View from './Components/View';
 
 function App() {
 
@@ -47,6 +48,10 @@ function App() {
     setPage('inventory');
   }
 
+  const toViewPage = () => {
+    setPage('inventory/view');
+  }
+
   return (
     <div>
       <Routes>
@@ -83,6 +88,7 @@ function App() {
                                             FAQHandler={toFAQPage} 
                                             getStartedHandler={goToLogin}
                                             InventoryHandler={toInventoryPage}
+                                            backToHomeHandler={backToHome}
                                           />} />
         <Route path="/inventory" element={<Inventory 
                                               ProfileHandler={toProfilePage} 
@@ -90,6 +96,19 @@ function App() {
                                               contactHandler={toContactPage} 
                                               FAQHandler={toFAQPage} 
                                               getStartedHandler={goToLogin}
+                                              ViewHandler={toViewPage}
+                                              InventoryHandler={toInventoryPage}
+                                              backToHomeHandler={backToHome} 
+                                            />} />
+        <Route path="/inventory/view" element={<View 
+                                              ProfileHandler={toProfilePage} 
+                                              aboutUsHandler={toAboutUsPage} 
+                                              contactHandler={toContactPage} 
+                                              FAQHandler={toFAQPage} 
+                                              getStartedHandler={goToLogin}
+                                              ViewHandler={toViewPage}
+                                              InventoryHandler={toInventoryPage}
+                                              backToHomeHandler={backToHome}
                                             />} />
       </Routes>
     </div>

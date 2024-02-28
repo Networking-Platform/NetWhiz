@@ -1,0 +1,293 @@
+#website-title {
+    position: absolute;
+    left: 10.46%;
+    right: 64.96%;
+    top: 1.83%;
+    bottom: 92.04%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 135.5%;
+    /* or 43px */
+
+    color: #FFFFFF;
+}
+
+#sidebar-learning-progress-button {
+    position: absolute;
+    width: 83%;
+    height: 48px;
+    left: 6%;
+    top: 120px;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #3127A0;
+    border: none; /* Removing border */
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-learning-progress-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+#sidebar-profile-button {
+    position: absolute;
+    width: 83%;
+    height: 48px;
+    left: 6%;
+    top: calc(120px + 48px + 20px);
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #3127A0;
+    border: none; /* Removing border */
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-profile-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+#sidebar-selected-profile-button {
+    position: absolute;
+    width: 83%;
+    height: 48px;
+    left: 6%;
+    top: calc(120px + 48px + 20px);
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3127A0;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    border: none; /* Removing border */
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-selected-profile-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+
+
+#sidebar-help-center-button {
+    position: absolute;
+    width: 83%;
+    height: 48px;
+    left: 6%;
+    top: calc(120px + 2 * (48px + 20px));
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #3127A0;
+    border: none; /* Removing border */
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-help-center-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+#sidebar-theme-button {
+    position: absolute;
+    width: 83%;
+    height: 48px;
+    left: 6%;
+    top: calc(120px + 4 * (48px + 20px));
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #3127A0;
+    border: none; /* Removing border */
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-theme-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+#sidebar-inventory-button {
+    position: absolute;
+    width: 83%;
+    height: 48px;
+    left: 6%;
+    top: calc(120px + 5 * (48px + 20px));
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #3127A0;
+    border: none; /* Removing border */
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-inventory-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+#sidebar-selected-inventory-button {
+    position: absolute;
+    width: 83%;
+    height: 48px;
+    left: 6%;
+    top: calc(120px + 5 * (48px + 20px));
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3127A0;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    border: none; /* Removing border */
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-selected-inventory-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+#sidebar-setting-button {
+    position: absolute;
+    width: 83%;
+    height: 48px;
+    left: 6%;
+    top: calc(120px + 3 * (48px + 20px));
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #3127A0;
+    border: none; /* Removing border */
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-setting-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px;
+}
+
+#separation-line {
+    position: absolute;
+    width: 250px;
+    height: 1px;
+    left: 6%;
+    top: calc(120px + 6 * (48px + 20px));
+    background-color: #ffffff;
+}
+
+#sidebar-logout-button {
+    position: absolute;
+    width: 83%;
+    height: 48px;
+    left: 6%;
+    top: calc(120px + 6 * (48px + 20px) + 40px);
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #f47878;
+    border: none; /* Removing border */
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-logout-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+
