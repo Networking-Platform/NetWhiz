@@ -69,11 +69,11 @@ function View({ProfileHandler,
                     <span id="page-title-button" onClick={InventoryHandler}> Inventory {'>'} </span>
                     <span id="page-title-button" onClick={ViewHandler}> View </span>
                 </div>
-                <div id="inventory-top-buttons">
-                    <button className="inventory-info-button" onClick={aboutUsHandler}> About Us </button>
-                    <button className="inventory-info-button" onClick={contactHandler}> Contact </button>
-                    <button className="inventory-info-button" onClick={FAQHandler}> FAQ </button>
-                    <button className="inventory-info-button" onClick={ProfileHandler}> Profile </button>
+                <div id="top-buttons">
+                    <button className="info-button" onClick={aboutUsHandler}> About Us </button>
+                    <button className="info-button" onClick={contactHandler}> Contact </button>
+                    <button className="info-button" onClick={FAQHandler}> FAQ </button>
+                    <button className="info-button" onClick={ProfileHandler}> Profile </button>
                 </div>
                 <button id = "red-name-button">Kelvin</button>
                 
