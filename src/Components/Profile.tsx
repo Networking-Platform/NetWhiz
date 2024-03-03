@@ -1,3 +1,5 @@
+import '../Styles/Navigation.css'
+import '../Styles/Sidebar.css'
 import '../Styles/Profile.modules.css';
 import edit_icon from '../Images/Edit_icon.png'
 import learning_icon from '../Images/Learning_Icon.png'
@@ -16,6 +18,7 @@ interface Props {
     ProfileHandler: () => void;
     InventoryHandler: () => void;
     ProgressHandler: () => void;
+    backToHomeHandler:() => void;
 }
 
 function Profile({ProfileHandler,
@@ -24,7 +27,8 @@ function Profile({ProfileHandler,
                     contactHandler,
                     FAQHandler,
                     InventoryHandler,
-                    ProgressHandler} : Props) {
+                    ProgressHandler,
+                    backToHomeHandler} : Props) {
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
             <div className="blue-half" style={{ width: '20%', height: '100%', backgroundColor: '#3127A0', position: 'absolute', left: 0 }}>
@@ -54,7 +58,7 @@ function Profile({ProfileHandler,
                     Inventory
                 </button>
                 <div id="separation-line"></div>
-                <button id="sidebar-logout-button">
+                <button id="sidebar-logout-button" onClick={getStartedHandler}>
                     <img src={logout_icon} alt="Logout Icon"/>
                     Log out
                 </button>
@@ -71,12 +75,15 @@ function Profile({ProfileHandler,
                     </button>
                 </div>
 
-                <div id="profile-title">Homepage {'>'} Profile</div>
-                <div id="profile-top-buttons">
-                    <button className="profile-info-button" onClick={aboutUsHandler}> About Us </button>
-                    <button className="profile-info-button" onClick={contactHandler}> Contact </button>
-                    <button className="profile-info-button" onClick={FAQHandler}> FAQ </button>
-                    <button className="profile-info-button" onClick={ProfileHandler}> Profile </button>
+                <div className="page-title">
+                    <span id="page-title-button" onClick={backToHomeHandler}>Homepage {'>'} </span>
+                    <span id="page-title-button" onClick={ProfileHandler}> Profile </span>
+                </div>
+                <div id="top-buttons">
+                    <button className="info-button" onClick={aboutUsHandler}> About Us </button>
+                    <button className="info-button" onClick={contactHandler}> Contact </button>
+                    <button className="info-button" onClick={FAQHandler}> FAQ </button>
+                    <button className="info-button" onClick={ProfileHandler}> Profile </button>
                 </div>
                 <button id = "red-name-button">Kelvin</button>
 

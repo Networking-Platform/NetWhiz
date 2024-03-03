@@ -7,36 +7,50 @@ import FAQ from './Components/FAQ';
 import Profile from './Components/Profile';
 import Inventory from './Components/Inventory';
 import Progress from './Components/Progress';
+import "@fontsource/inter"
+import "@fontsource/inter/700.css";
+import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import View from './Components/View';
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('Home');
+
+  const usePageNavigation = () => {
+    const navigate = useNavigate();
+    return (pageName: string) => navigate(`/${pageName.toLowerCase()}`);
+  }
+
+  const setPage = usePageNavigation();
 
   const goToLogin = () => {
-    setCurrentPage('LogIn');
+    setPage('login');
   }
 
   const backToHome = () => {
-    setCurrentPage('Home');
+    setPage('');
   }
 
   const toContactPage = () => {
-    setCurrentPage('ContactUs');
+    setPage('contact');
   }
 
   const toAboutUsPage = () => {
-    setCurrentPage('AboutUs');
+    setPage('about');
   }
 
   const toFAQPage = () => {
-    setCurrentPage('FAQ');
+    setPage('faq');
   }
 
   const toProfilePage = () => {
-    setCurrentPage('Profile');
+    setPage('profile');
   }
 
   const toInventoryPage = () => {
-    setCurrentPage('Inventory');
+    setPage('inventory');
+  }
+
+  const toViewPage = () => {
+    setPage('inventory/view');
   }
 
   const toProgressPage = () => {
@@ -45,61 +59,75 @@ function App() {
 
   return (
     <div>
-      {currentPage === 'Home' ? <Home 
+      <Routes>
+      <Route path="/" element={<Home 
                                   getStartedHandler={goToLogin} 
                                   aboutUsHandler={toAboutUsPage} 
                                   contactHandler={toContactPage} 
                                   FAQHandler={toFAQPage} 
                                   ProfileHandler={toProfilePage} 
-                                /> : null}
-
-      {currentPage === 'LogIn' ? <LogIn 
-                                    backToHomeHandler={backToHome} 
-                                  /> : null}
-
-      {currentPage === 'AboutUs' ? <AboutUs 
-                                      aboutUsHandler={toAboutUsPage} 
-                                      contactHandler={toContactPage} 
-                                      FAQHandler={toFAQPage} 
-                                    /> : null}
-      {currentPage === 'ContactUs' ? <ContactUs 
-                                      aboutUsHandler={toAboutUsPage} 
-                                      contactHandler={toContactPage} 
-                                      FAQHandler={toFAQPage}
-                                    /> : null}
-      {currentPage === 'FAQ' ? <FAQ 
-                                  aboutUsHandler={toAboutUsPage} 
-                                  contactHandler={toContactPage} 
-                                  FAQHandler={toFAQPage}
-                                /> : null}
-      {currentPage === 'Profile' ? <Profile 
-                                      ProfileHandler={toProfilePage} 
-                                      aboutUsHandler={toAboutUsPage} 
-                                      contactHandler={toContactPage} 
-                                      FAQHandler={toFAQPage} 
-                                      getStartedHandler={goToLogin}
-                                      InventoryHandler={toInventoryPage}
-                                      ProgressHandler={toProgressPage}
-                                    /> : null}
-      {currentPage === 'Inventory' ? <Inventory 
-                                      ProfileHandler={toProfilePage} 
-                                      aboutUsHandler={toAboutUsPage} 
-                                      contactHandler={toContactPage} 
-                                      FAQHandler={toFAQPage} 
-                                      getStartedHandler={goToLogin}
-                                      ProgressHandler={toProgressPage}
-                                    /> : null}
-      {currentPage === 'Progress' ? <Progress 
-                                      ProfileHandler={toProfilePage} 
-                                      aboutUsHandler={toAboutUsPage} 
-                                      contactHandler={toContactPage} 
-                                      FAQHandler={toFAQPage} 
-                                      getStartedHandler={goToLogin}
-                                      InventoryHandler={toInventoryPage}
-                                      ProgressHandler={toProgressPage}
-                                    /> : null}
+                                />} />
+      <Route path="/login" element={<LogIn 
+                                          backToHomeHandler={backToHome} 
+                                        />} />
+        <Route path="/contact" element={<ContactUs 
+                                            aboutUsHandler={toAboutUsPage} 
+                                            contactHandler={toContactPage} 
+                                            FAQHandler={toFAQPage} 
+                                          />} />
+        <Route path="/about" element={<AboutUs 
+                                          aboutUsHandler={toAboutUsPage} 
+                                          contactHandler={toContactPage} 
+                                          FAQHandler={toFAQPage} 
+                                        />} />
+        <Route path="/faq" element={<FAQ 
+                                        aboutUsHandler={toAboutUsPage} 
+                                        contactHandler={toContactPage} 
+                                        FAQHandler={toFAQPage} 
+                                      />} />
+        <Route path="/profile" element={<Profile 
+                                            ProfileHandler={toProfilePage} 
+                                            aboutUsHandler={toAboutUsPage} 
+                                            contactHandler={toContactPage} 
+                                            FAQHandler={toFAQPage} 
+                                            getStartedHandler={goToLogin}
+                                            InventoryHandler={toInventoryPage}
+                                            backToHomeHandler={backToHome}
+                                            ProgressHandler={toProgressPage}
+                                          />} />
+        <Route path="/inventory" element={<Inventory 
+                                              ProfileHandler={toProfilePage} 
+                                              aboutUsHandler={toAboutUsPage} 
+                                              contactHandler={toContactPage} 
+                                              FAQHandler={toFAQPage} 
+                                              getStartedHandler={goToLogin}
+                                              ViewHandler={toViewPage}
+                                              InventoryHandler={toInventoryPage}
+                                              backToHomeHandler={backToHome} 
+                                              ProgressHandler={toProgressPage}
+                                            />} />
+        <Route path="/inventory/view" element={<View 
+                                              ProfileHandler={toProfilePage} 
+                                              aboutUsHandler={toAboutUsPage} 
+                                              contactHandler={toContactPage} 
+                                              FAQHandler={toFAQPage} 
+                                              getStartedHandler={goToLogin}
+                                              ViewHandler={toViewPage}
+                                              InventoryHandler={toInventoryPage}
+                                              backToHomeHandler={backToHome}
+                                              ProgressHandler={toProgressPage}
+                                            />} />
+        <Route path="/progress" element={<Progress 
+                                              ProfileHandler={toProfilePage} 
+                                              aboutUsHandler={toAboutUsPage} 
+                                              contactHandler={toContactPage} 
+                                              FAQHandler={toFAQPage} 
+                                              getStartedHandler={goToLogin}
+                                              InventoryHandler={toInventoryPage}
+                                              ProgressHandler={toProgressPage}
+                                            />} />
+      </Routes>
     </div>
-
   );
 }
 
