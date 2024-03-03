@@ -6,6 +6,7 @@ import AboutUs from './Components/AboutUs';
 import FAQ from './Components/FAQ';
 import Profile from './Components/Profile';
 import Inventory from './Components/Inventory';
+import Progress from './Components/Progress';
 
 function App() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -36,6 +37,10 @@ function App() {
 
   const toInventoryPage = () => {
     setCurrentPage('Inventory');
+  }
+
+  const toProgressPage = () => {
+    setCurrentPage('Progress');
   }
 
   return (
@@ -74,6 +79,7 @@ function App() {
                                       FAQHandler={toFAQPage} 
                                       getStartedHandler={goToLogin}
                                       InventoryHandler={toInventoryPage}
+                                      ProgressHandler={toProgressPage}
                                     /> : null}
       {currentPage === 'Inventory' ? <Inventory 
                                       ProfileHandler={toProfilePage} 
@@ -81,6 +87,16 @@ function App() {
                                       contactHandler={toContactPage} 
                                       FAQHandler={toFAQPage} 
                                       getStartedHandler={goToLogin}
+                                      ProgressHandler={toProgressPage}
+                                    /> : null}
+      {currentPage === 'Progress' ? <Progress 
+                                      ProfileHandler={toProfilePage} 
+                                      aboutUsHandler={toAboutUsPage} 
+                                      contactHandler={toContactPage} 
+                                      FAQHandler={toFAQPage} 
+                                      getStartedHandler={goToLogin}
+                                      InventoryHandler={toInventoryPage}
+                                      ProgressHandler={toProgressPage}
                                     /> : null}
     </div>
 

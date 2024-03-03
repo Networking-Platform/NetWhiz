@@ -13,18 +13,20 @@ interface Props {
     contactHandler: () => void;
     FAQHandler: () => void;
     ProfileHandler: () => void;
+    ProgressHandler: () => void;
 }
 
 function Inventory({ProfileHandler,
                     getStartedHandler,
                     aboutUsHandler,
                     contactHandler,
-                    FAQHandler} : Props) {
+                    FAQHandler,
+                    ProgressHandler} : Props) {
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
             <div className="blue-half" style={{ width: '20%', height: '100%', backgroundColor: '#3127A0', position: 'absolute', left: 0 }}>
                 <div id="website-title">Website.com</div>
-                <button id="sidebar-learning-progress-button">
+                <button id="sidebar-learning-progress-button" onClick={ProgressHandler}>
                     <img src={learning_icon} alt="Learning icon"/>
                     Learning Progress
                 </button>
