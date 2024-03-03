@@ -54,7 +54,7 @@ function App() {
   }
 
   const toProgressPage = () => {
-    setCurrentPage('Progress');
+    setPage('Progress');
   }
 
   return (
@@ -115,7 +115,6 @@ function App() {
                                               ViewHandler={toViewPage}
                                               InventoryHandler={toInventoryPage}
                                               backToHomeHandler={backToHome}
-                                              ProgressHandler={toProgressPage}
                                             />} />
         <Route path="/progress" element={<Progress 
                                               ProfileHandler={toProfilePage} 
