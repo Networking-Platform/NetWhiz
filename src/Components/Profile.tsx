@@ -35,7 +35,7 @@ function Profile({ProfileHandler,
                     <img src={learning_icon} alt="Learning icon"/>
                     Learning Progress
                 </button>
-                <button id="sidebar-selected-profile-button">
+                <button id="sidebar-selected-profile-button" onClick={ProfileHandler}>
                     <img src={selected_profile_icon} alt="Selected Profile Icon"/>
                     Profile
                 </button>

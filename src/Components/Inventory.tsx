@@ -55,7 +55,7 @@ function Inventory({ProfileHandler,
                     <img src={theme_icon} alt="Theme Icon"/>
                     Theme
                 </button>
-                <button id="sidebar-selected-inventory-button">
+                <button id="sidebar-selected-inventory-button" onClick={InventoryHandler}>
                     <img src={selected_inventory_icon} alt="Selected Inventory Icon"/>
                     Inventory
                 </button>
