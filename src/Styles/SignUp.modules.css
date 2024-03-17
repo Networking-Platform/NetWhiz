@@ -1,0 +1,82 @@
+#sign-up-container {
+    width: 427px;
+    height: 557px;
+    margin-top: 2%;
+    margin-left: 60%;
+    radius: 6px;
+    font-family: 'Inter', sans-serif;
+}
+
+#account-signup {
+    width: 380px;
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 43.36px;
+}
+
+#descriptionn {
+    color: darkgrey;
+    margin-top: 2%;
+    margin-bottom: 7%;
+}
+
+#signup-info {
+    color: gray;
+}
+
+
+#sign-up-form form {
+    display: flex;
+    flex-direction: column;
+    max-width: 700px;
+    margin-top: 9%;
+}
+
+#sign-up-form input {
+    margin-bottom: 20px;
+}
+
+#sign-up-fields label {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+
+.name {
+    width: 100%;
+    height: 50px;
+}
+
+
+#emailaddress {
+    height: 50px;
+    width: 99%;
+}
+
+#pass-word {
+    height: 50px;
+}
+
+#submitt {
+    /* position: absolute; */
+    color: #ffffff;
+    background-color: #6358DC;
+    margin-left: 35%;
+    width: 162.43px;
+    height: 44px;
+}
+
+
+
+#float-right {
+    float: right;
+}
+
+#float-left {
+    float: left;
+}
+/* .last-name {
+    float: right;
+} */
+
