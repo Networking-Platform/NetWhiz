@@ -153,6 +153,22 @@
     top: 70%;
 }
 
+#lesson2-box {
+    position: absolute;
+    width: 20%;
+    height: 18%;
+    left: 10%;
+    top: 105%;
+}
+
+#lesson3-box {
+    position: absolute;
+    width: 20%;
+    height: 18%;
+    left: 60%;
+    top: 105%;
+}
+
 #unlocked-border {
     box-sizing: border-box;
 
@@ -260,7 +276,38 @@
 }
 
 #down-arrow {
-    /* Vector */
+
+    position: absolute;
+    left: 74.59%;
+    right: 18.15%;
+    top: 64.24%;
+    bottom: 24.24%;
+
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    
+    border-top: 10px solid #3127A0;
+}
+
+#down-left-arrow {
+
+    position: absolute;
+    left: 74.59%;
+    right: 18.15%;
+    top: 100%;
+    bottom: 24.24%;
+
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    
+    border-top: 10px solid #3127A0;
+}
+
+#down-right-arrow {
 
     position: absolute;
     left: 74.59%;

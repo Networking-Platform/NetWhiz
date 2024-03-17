@@ -113,6 +113,24 @@ function Progress({ProfileHandler,
                     <div id = "down-arrow"></div>
                 </div>
 
+                <div id = "lesson2-box">
+                    <div id = "unlocked-border"></div>
+                    <div id = "locked-border">
+                        <div id = "lesson-text">LESSON 2</div>
+                        <div id = "lesson-name">"Topic"</div>
+                    </div>
+                    <div id = "down-arrow"></div>
+                </div>
+
+                <div id = "lesson3-box">
+                    <div id = "unlocked-border"></div>
+                    <div id = "locked-border">
+                        <div id = "lesson-text">LESSON 2</div>
+                        <div id = "lesson-name">"Topic"</div>
+                    </div>
+                    <div id = "down-arrow"></div>
+                </div>
+
                 <div id = "transition-arrow">
                     <img src = {transition_arrow} alt="Transition Arrow"></img>
                 </div>
