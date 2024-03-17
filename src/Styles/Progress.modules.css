@@ -1,0 +1,642 @@
+#website-title {
+    position: absolute;
+    left: 10.46%;
+    right: 64.96%;
+    top: 1.83%;
+    bottom: 92.04%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 135.5%;
+    /* or 43px */
+
+    color: #FFFFFF;
+}
+
+#white-half {
+    /* Course > Learning Progress */
+
+    position: relative;
+    width: 1546px;
+    height: 2410px;
+
+    background: #FFFFFF;
+
+}
+
+
+#progress-group {
+    /* Group 1828 */
+
+    position: absolute;
+    width: 650px;
+    height: 69px;
+    left: 787px;
+    top: 168px;
+}
+
+#progress-bar {
+    /* Group 1827 */
+
+    position: absolute;
+    width: 650px;
+    height: 40px;
+    left: 787px;
+    top: 197px;
+}
+
+#white-bar {
+    /* Rectangle 322 */
+
+    position: absolute;
+    width: 650px;
+    height: 40px;
+    left: 787px;
+    top: 197px;
+
+    background: #F2F1F1;
+    border-radius: 30px;
+}
+
+#blue-bar {
+    /* Rectangle 323 */
+
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    left: 787px;
+    top: 197px;
+
+    background: #3127A0;
+    border-radius: 30px;
+}
+
+#progress-text {
+    /* 15% complete */
+
+    position: absolute;
+    width: 108px;
+    height: 22px;
+    left: 1307px;
+    top: 168px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 135.5%;
+    /* identical to box height, or 22px */
+
+    color: #827F7F;
+}
+
+#status-circle {
+    /* Ellipse 9 */
+    box-sizing: border-box;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 405px;
+    top: 200px;
+    border-radius: 50%;
+    background: #D9D9D9;
+
+}
+
+#status-text {
+    /* Current Status */
+
+    position: absolute;
+    width: 142px;
+    height: 27px;
+    left: 407px;
+    top: 165px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 135.5%;
+    /* or 27px */
+
+    color: #000000;
+
+}
+
+#status-level {
+    /* Beginner */
+
+    position: absolute;
+    width: 139px;
+    height: 43px;
+    left: 460px;
+    top: 197px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 135.5%;
+    /* or 43px */
+
+    color: #000000;
+}
+
+#lesson0-box {
+    /* Group 1836 */
+
+    position: absolute;
+    width: 250px;
+    height: 136.14px;
+    left: 740px; /* -49 */
+    top: 311px;
+}
+
+#lesson1-box {
+    /* Group 1847 */
+
+    position: absolute;
+    width: 234px;
+    height: 135.87px;
+    left: 740px;
+    top: 592px;
+}
+
+#current-border {
+    /* Rectangle 266 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 0.33%;
+    right: 7.59%;
+    top: 10.3%;
+    bottom: 0%;
+
+    background: #2E1FC8;
+    border-radius: 28.8779px;
+}
+
+#current-border2 {
+    /* Rectangle 35 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 0%;
+    right: 7.92%;
+    top: 2.42%;
+    bottom: 7.88%;
+
+    background: #F47878;
+    border: 4.12541px solid #1B01B7;
+    border-radius: 28.8779px;
+
+}
+
+#lesson-text {
+    /* LESSON 0 */
+
+    position: absolute;
+    left: 11.22%;
+    right: 18.81%;
+    top: 16.97%;
+    bottom: 40%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24.7525px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+#lesson-name {
+    /* Tutorial */
+
+    position: absolute;
+    left: 12.54%;
+    right: 20.46%;
+    top: 55.15%;
+    bottom: 15.15%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19.802px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+#current-circle {
+    /* Ellipse 6 */
+
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 81.85%;
+    right: 0%;
+    top: 0%;
+    bottom: 66.67%;
+    border-radius: 50%;
+    background: #FFFFFF;
+    border: 4px solid #1B01B7;
+}
+
+#down-arrow {
+    /* Vector */
+
+    position: absolute;
+    left: 74.59%;
+    right: 18.15%;
+    top: 64.24%;
+    bottom: 24.24%;
+
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    
+    border-top: 10px solid #3127A0;
+}
+
+#checkmark {
+    /* Vector */
+
+    position: absolute;
+    left: 25%;
+    right: 55%;
+    top: 25%;
+    bottom: 55%;
+
+}
+
+#transition-arrow {
+    /* Vector */
+
+    position: absolute;
+    left: 58.41%;
+    right: 37.08%;
+    top: 68.39%;
+    bottom: 73.72%;
+
+    /* background: #2E1FC8; */
+    /* transform: rotate(-134.64deg); */
+
+}
+
+#avatar {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    left: 76px;
+    top: 60px;
+    border-radius: 50%;
+    background: #D9D9D9;
+}
+
+
+#username {
+    position: absolute;
+    width: 122px;
+    height: 37px;
+    left: 238px;
+    top: 128px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 22px;
+    /* or 69% */
+
+    color: #3127A0;
+}
+
+
+#bio {
+    position: absolute;
+    width: 182px;
+    height: 26px;
+    left: 242px;
+    top: 165px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    /* or 110% */
+
+    color: #000000;
+}
+
+
+#edit-button {
+    position: absolute;
+    width: 48px;
+    height: 28px;
+    left: 980px;
+    top: 165px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    color: #000000;
+    z-index: 1000;
+    background-color: #ffffff;
+    border: none; /* Removing border */
+    cursor: pointer;
+    padding-left: 28px; /* Adding space for the icon */
+}
+
+#edit-button img {
+    position: absolute;
+    left: 5px; /* Adjust the position of the icon */
+    top: 3px; /* Adjust the position of the icon */
+    width: 20px; /* Adjust the width of the icon */
+    height: 20px; /* Adjust the height of the icon */
+}
+
+#profile-top-buttons {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    top: 15px; 
+    right: 200px;
+    z-index: 1000;
+}
+
+.profile-info-button {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: 16px;
+    padding-left: 55px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-left: 10px; 
+}
+
+#profile-title {
+    position: absolute;
+    width: 173px;
+    height: 22px;
+    left: 76px;
+    top: 60px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 135.5%;
+    /* identical to box height, or 22px */
+
+    color: #3127A0;
+}
+
+#red-name-button {
+    position: absolute;
+    right: 28px;
+    top: 30px;
+    border-radius: 20px;
+    background-color: #f47878;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    color: var(--color-gray-10, #fff);
+    white-space: nowrap;
+    padding: 12px 24px;
+    font: 600 26px Inter, sans-serif;
+    width: 150px;
+}
+
+
+
+#sidebar-selected-learning-progress-button {
+    position: absolute;
+    width: 249px;
+    height: 48px;
+    left: 20px;
+    top: 120px;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3127A0;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    border: none; /* Removing border */
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-selected-learning-progress-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+#sidebar-profile-button {
+    position: absolute;
+    width: 249px;
+    height: 48px;
+    left: 20px;
+    top: calc(120px + 48px + 20px);
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #3127A0;
+    border: none; /* Removing border */
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-profile-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+
+
+#sidebar-help-center-button {
+    position: absolute;
+    width: 249px;
+    height: 48px;
+    left: 20px;
+    top: calc(120px + 2 * (48px + 20px));
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #3127A0;
+    border: none; /* Removing border */
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-help-center-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+#sidebar-theme-button {
+    position: absolute;
+    width: 249px;
+    height: 48px;
+    left: 20px;
+    top: calc(120px + 4 * (48px + 20px));
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #3127A0;
+    border: none; /* Removing border */
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-theme-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+#sidebar-inventory-button {
+    position: absolute;
+    width: 249px;
+    height: 48px;
+    left: 20px;
+    top: calc(120px + 5 * (48px + 20px));
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #3127A0;
+    border: none; /* Removing border */
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-inventory-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+#sidebar-setting-button {
+    position: absolute;
+    width: 249px;
+    height: 48px;
+    left: 20px;
+    top: calc(120px + 3 * (48px + 20px));
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #3127A0;
+    border: none; /* Removing border */
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-setting-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px;
+}
+
+#separation-line {
+    position: absolute;
+    width: 250px;
+    height: 1px;
+    left: 6%;
+    top: calc(120px + 6 * (48px + 20px));
+    background-color: #ffffff;
+}
+
+#sidebar-logout-button {
+    position: absolute;
+    width: 249px;
+    height: 48px;
+    left: 20px;
+    top: calc(120px + 6 * (48px + 20px) + 40px);
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #f47878;
+    border: none; /* Removing border */
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-logout-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
