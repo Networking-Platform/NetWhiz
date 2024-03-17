@@ -44,6 +44,36 @@
     margin-right: 12px; /* Add some space between the image and text */
 }
 
+#sidebar-selected-learning-progress-button {
+    position: absolute;
+    width: 249px;
+    height: 48px;
+    left: 20px;
+    top: 120px;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3127A0;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    border: none; /* Removing border */
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-selected-learning-progress-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
 #sidebar-profile-button {
     position: absolute;
     width: 83%;
