@@ -6,6 +6,7 @@ import AboutUs from './Components/AboutUs';
 import FAQ from './Components/FAQ';
 import Profile from './Components/Profile';
 import Inventory from './Components/Inventory';
+import SignUp from './Components/SignUp';
 import Progress from './Components/Progress';
 import "@fontsource/inter"
 import "@fontsource/inter/700.css";
@@ -70,6 +71,7 @@ function App() {
       <Route path="/login" element={<LogIn 
                                           backToHomeHandler={backToHome} 
                                         />} />
+      <Route path="/signUp" element={<SignUp backToLoginHandler={goToLogin}/>} />
         <Route path="/contact" element={<ContactUs 
                                             aboutUsHandler={toAboutUsPage} 
                                             contactHandler={toContactPage} 

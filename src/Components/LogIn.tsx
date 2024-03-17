@@ -40,7 +40,7 @@ function LogIn({backToHomeHandler}: Props) {
                     <div id="username-and-password">
                         <form>
                             <label htmlFor="username"> User name</label><br />
-                            <input type="text" id="username" name="username" /><br />
+                            <input type="text" id="user-name" name="username" /><br />
 
                             <label htmlFor="password"> Password</label><br />
                             <input type="text" id="password" name="password" /><br />
@@ -51,7 +51,7 @@ function LogIn({backToHomeHandler}: Props) {
                         </form>
                     </div>
                     <div>
-                        Don't have an account? Sign up here
+                        Don't have an account? <a href="/SignUp">Sign up here</a>
                     </div>
                 </div>
             </div>

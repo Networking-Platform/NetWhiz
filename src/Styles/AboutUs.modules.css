@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#top-white-section {
+    height: 100vh;
+    background-color: white;
+}
+
+#bottom-blue-section {
+    background-color: #1D0B67;
+    color: white;
+}
+
+#about-us {
+    width: 380px;
+    left: 85%;
+    top: 165px;
+    position: absolute;
+    color: #3127A0;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 43.36px;
+}
+
+#abu-words {
+    width: 658px;
+    top: 250px;
+    left: 58%;
+    position: absolute;
+    line-height: 35px;
+    color: #000000;
+    font-size: 20px;
+    text-align: left;
+    font-weight: 600;
+}
+
+#moneyVerse {
+    position: absolute;
+    width: 697px;
+    height: 426px;
+    top: 22%;
+    left: 3%;
+}
+
+#palzplant {
+    position: absolute;
+    width: 329px;
+    height: 194px;
+    top: 623px;
+    left: 83%;
+}
+
+#palzplant2 {
+    position: absolute;
+    width: 285px;
+    height: 162px;
+    top: 655px;
+    left: 74%;
+}
+
+#meetus {
+    width: 497px;
+    padding-left: 36%;
+    padding-top: 90px;
+    padding-bottom: 60px;
+    line-height: 54.2px;
+    font-size: 40px;
+    font-weight: 600;
+}
+#profileimage-container {
+    margin-left: 200px;
+    padding-bottom: 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+.grid-item img {
+    width: 100%;
+    height: auto;
+}

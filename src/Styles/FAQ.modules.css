@@ -1,0 +1,51 @@
+#questions {
+    width: 658px;
+    margin-top: 5%;
+    left: 82px;
+    margin-left: 5%;
+    line-height: 32.52px;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+}
+
+#page-title {
+    margin-left: 50%;
+    margin-top: 100px;
+    color: #3127A0;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 43.36px;
+    transform: translate(-30%);
+}
+#homeOffice {
+    box-sizing: border-box;
+    width: 569px;
+    height: 501px;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    z-index: 998; 
+}
+@media screen and (min-width: 1150px) and (max-width: 1350px) {
+    #homeOffice {
+        box-sizing: border-box;
+        width: 369px;
+        height: 501px;
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        z-index: 998; 
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    #homeOffice {
+        display: none;
+    }
+}
+#faqBlock {
+    padding: 30px;
+}

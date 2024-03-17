@@ -89,16 +89,15 @@ h1 {
     padding-bottom: 30px;
     margin-left: 90%
 } */
-
+/* 
 #buttons {
     display: flex;
     justify-content: flex-end;
     padding: 10px;
-    margin-top: -15px; /* Shift buttons up */
+    margin-top: -15px; /* Shift buttons up 
     margin-right: 8%;
-}
-
-.info-button {
+} 
+/* .info-button {
     background-color: white;
     color: black;
     border: none;
@@ -106,9 +105,9 @@ h1 {
     padding-left: 55px;
     padding-top: 30px;
     padding-bottom: 30px;
-    /*margin-left: 90% */
-    margin-left: 10px; /* Adjust spacing between buttons */
-}
+    margin-left: 90% 
+    margin-left: 10px;
+} */
 
 #icon {
     /* float: right; */
@@ -134,4 +133,25 @@ h1 {
     right: 8%;
     z-index: 998; 
 }
+
+@media screen and (min-width: 1200px) and (max-width: 1550px) {
+    #cover {
+        box-sizing: border-box;
+        width: 607px;
+        height: 482px;
+        margin-bottom: 200px;
+    
+        position: fixed;
+        top: 30%;
+        right: 4%;
+        z-index: 998; 
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #cover {
+        display: none;
+    }
+}
+
 
