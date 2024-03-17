@@ -11,7 +11,7 @@ interface Props {
     FAQHandler: () => void;
 }
 
-function ContactUs({aboutUsHandler, contactHandler, FAQHandler}: Props) {
+function AboutUs({aboutUsHandler, contactHandler, FAQHandler}: Props) {
     return ( 
         <div>
             <div id="top-white-section">
@@ -48,4 +48,4 @@ function ContactUs({aboutUsHandler, contactHandler, FAQHandler}: Props) {
     )
 }
 
-export default ContactUs;
+export default AboutUs;
