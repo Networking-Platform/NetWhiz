@@ -6,6 +6,7 @@ import AboutUs from './Components/AboutUs';
 import FAQ from './Components/FAQ';
 import Profile from './Components/Profile';
 import Inventory from './Components/Inventory';
+import SignUp from './Components/SignUp';
 import "@fontsource/inter"
 import "@fontsource/inter/700.css";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
@@ -66,6 +67,7 @@ function App() {
       <Route path="/login" element={<LogIn 
                                           backToHomeHandler={backToHome} 
                                         />} />
+      <Route path="/signUp" element={<SignUp backToLoginHandler={goToLogin}/>} />
         <Route path="/contact" element={<ContactUs 
                                             aboutUsHandler={toAboutUsPage} 
                                             contactHandler={toContactPage} 

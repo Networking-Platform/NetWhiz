@@ -1,7 +1,8 @@
 #contact-us {
     width: 380px;
-    margin-left: 5%;
-    margin-top: 5%;
+    left: 5%;
+    top: 100px;
+    position: absolute;
     color: #3127A0;
     font-family: 'Inter', sans-serif;
     font-size: 32px;
@@ -9,10 +10,19 @@
     line-height: 43.36px;
 }
 
+#website-title-cu {
+    position: absolute;
+    margin-left: 5%;
+    top: 30px;
+    color: black;
+    font-size: 32px;
+    font-weight: 600;
+
+}
 #words {
     width: 658px;
-    top: 227px;
-    left: 82px;
+    top: 180px;
+    left: 5%;
     position: absolute;
     line-height: 35px;
     color: #000000;
@@ -24,7 +34,8 @@
     display: flex;
     flex-direction: column;
     max-width: 700px;
-    margin-top: 8%;
+    /* position: absolute; */
+    margin-top: 330px;
     margin-left: 5%;
 }
 
@@ -54,6 +65,17 @@
     height: 150px;
 }
 
+#sign-up-fields label,
+#sign-up-fields input {
+    display: inline-block;
+    margin-bottom: 10px; /* Adjust as needed */
+}
+
+#sign-up-fields label {
+    width: 120px; /* Adjust the width to your preference */
+    text-align: right;
+    margin-right: 10px; /* Adjust as needed */
+}
 
 #submit {
     /* position: absolute; */
@@ -82,5 +104,25 @@
     top: 15%;
     right: 8%;
     z-index: 998; 
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1550px) {
+    #hbc {
+        box-sizing: border-box;
+        width: 607px;
+        height: 481px;
+        margin-bottom: 200px;
+    
+        position: fixed;
+        top: 30%;
+        right: 4%;
+        z-index: 998; 
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #hbc {
+        display: none;
+    }
 }
 

@@ -21,7 +21,7 @@ function Home({getStartedHandler, aboutUsHandler, contactHandler, FAQHandler, Pr
             <button id="get-started" onClick={getStartedHandler}>
                 Get Started
             </button>
-            <div id="buttons">
+            <div id="top-buttons">
                 <button className="info-button" onClick={aboutUsHandler}> About Us </button>
                 <button className="info-button" onClick={contactHandler}> Contact </button>
                 <button className="info-button" onClick={FAQHandler}> FAQ </button>
