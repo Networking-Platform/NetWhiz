@@ -7,6 +7,7 @@ import FAQ from './Components/FAQ';
 import Profile from './Components/Profile';
 import Inventory from './Components/Inventory';
 import SignUp from './Components/SignUp';
+import Progress from './Components/Progress';
 import "@fontsource/inter"
 import "@fontsource/inter/700.css";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
@@ -53,6 +54,10 @@ function App() {
     setPage('inventory/view');
   }
 
+  const toProgressPage = () => {
+    setPage('Progress');
+  }
+
   return (
     <div>
       <Routes>
@@ -63,7 +68,6 @@ function App() {
                                   FAQHandler={toFAQPage} 
                                   ProfileHandler={toProfilePage} 
                                 />} />
-
       <Route path="/login" element={<LogIn 
                                           backToHomeHandler={backToHome} 
                                         />} />
@@ -91,6 +95,7 @@ function App() {
                                             getStartedHandler={goToLogin}
                                             InventoryHandler={toInventoryPage}
                                             backToHomeHandler={backToHome}
+                                            ProgressHandler={toProgressPage}
                                           />} />
         <Route path="/inventory" element={<Inventory 
                                               ProfileHandler={toProfilePage} 
@@ -101,6 +106,7 @@ function App() {
                                               ViewHandler={toViewPage}
                                               InventoryHandler={toInventoryPage}
                                               backToHomeHandler={backToHome} 
+                                              ProgressHandler={toProgressPage}
                                             />} />
         <Route path="/inventory/view" element={<View 
                                               ProfileHandler={toProfilePage} 
@@ -111,6 +117,15 @@ function App() {
                                               ViewHandler={toViewPage}
                                               InventoryHandler={toInventoryPage}
                                               backToHomeHandler={backToHome}
+                                            />} />
+        <Route path="/progress" element={<Progress 
+                                              ProfileHandler={toProfilePage} 
+                                              aboutUsHandler={toAboutUsPage} 
+                                              contactHandler={toContactPage} 
+                                              FAQHandler={toFAQPage} 
+                                              getStartedHandler={goToLogin}
+                                              InventoryHandler={toInventoryPage}
+                                              ProgressHandler={toProgressPage}
                                             />} />
       </Routes>
     </div>
