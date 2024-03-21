@@ -18,8 +18,14 @@ const hard_clicking_sound = new Audio(require('./Audios/clicking_hard.mp3'));
 const soft_clicking_sound = new Audio(require('./Audios/clicking_soft.mp3'));
 
 function App() {
+  const [mute, setMute] = useState(false);
+  
+  const toggleSound = () => {
+    setMute(!mute);
+  }
 
   const playClickSound = (hard = false) => {
+    if (mute) return;
     const clicking_sound = hard ? hard_clicking_sound : soft_clicking_sound;
     clicking_sound.play();
   }
@@ -88,6 +94,8 @@ function App() {
                                   contactHandler={toContactPage} 
                                   FAQHandler={toFAQPage} 
                                   ProfileHandler={toProfilePage} 
+                                  toggleSoundHandler={toggleSound}
+                                  mute={mute}
                                 />} />
 
       <Route path="/login" element={<LogIn 
@@ -117,6 +125,8 @@ function App() {
                                             InventoryHandler={toInventoryPage}
                                             backToHomeHandler={backToHome}
                                             ProgressHandler={toProfilePage}
+                                            toggleSoundHandler={toggleSound}
+                                            mute={mute}
                                           />} />
         <Route path="/inventory" element={<Inventory 
                                               ProfileHandler={toProfilePage} 
@@ -128,6 +138,8 @@ function App() {
                                               InventoryHandler={toInventoryPage}
                                               backToHomeHandler={backToHome} 
                                               ProgressHandler={toProfilePage}
+                                              toggleSoundHandler={toggleSound}
+                                              mute={mute}
                                             />} />
         <Route path="/inventory/view" element={<View 
                                               ProfileHandler={toProfilePage} 
@@ -138,6 +150,8 @@ function App() {
                                               ViewHandler={toViewPage}
                                               InventoryHandler={toInventoryPage}
                                               backToHomeHandler={backToHome}
+                                              toggleSoundHandler={toggleSound}
+                                              mute={mute}
                                             />} />
       </Routes>
     </div>
