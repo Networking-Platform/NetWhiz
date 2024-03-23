@@ -18,6 +18,7 @@ interface Props {
     ViewHandler: () => void;
     backToHomeHandler:() => void;
     InventoryHandler: () => void;
+    SettingsHandler: () => void;
 }
 
 function View({ProfileHandler,
@@ -27,7 +28,8 @@ function View({ProfileHandler,
                     FAQHandler, 
                     ViewHandler,
                     InventoryHandler,
-                    backToHomeHandler} : Props) {
+                    backToHomeHandler,
+                    SettingsHandler} : Props) {
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
             <div className="blue-half" style={{ width: '20%', height: '100%', backgroundColor: '#3127A0', position: 'fixed', left: 0}}>
@@ -44,7 +46,7 @@ function View({ProfileHandler,
                     <img src={help_center_icon} alt="Help Center Icon"/>
                     Help Center
                 </button>
-                <button id="sidebar-setting-button">
+                <button id="sidebar-setting-button" onClick={SettingsHandler}>
                     <img src={setting_icon} alt="Setting Icon"/>
                     Setting
                 </button>

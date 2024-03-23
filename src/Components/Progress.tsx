@@ -17,6 +17,7 @@ interface Props {
     ProfileHandler: () => void;
     InventoryHandler: () => void;
     ProgressHandler: () => void;
+    SettingsHandler: () => void;
 }
 
 function Progress({ProfileHandler,
@@ -25,7 +26,8 @@ function Progress({ProfileHandler,
                     contactHandler,
                     FAQHandler,
                     InventoryHandler,
-                    ProgressHandler} : Props) {
+                    ProgressHandler,
+                    SettingsHandler} : Props) {
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
             <div className="blue-half" style={{ width: '20%', height: '100%', backgroundColor: '#3127A0', position: 'absolute', left: 0 }}>
@@ -42,7 +44,7 @@ function Progress({ProfileHandler,
                     <img src={help_center_icon} alt="Help Center Icon"/>
                     Help Center
                 </button>
-                <button id="sidebar-setting-button">
+                <button id="sidebar-setting-button" onClick={SettingsHandler}>
                     <img src={setting_icon} alt="Setting Icon"/>
                     Setting
                 </button>
