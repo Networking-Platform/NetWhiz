@@ -9,6 +9,7 @@ import setting_icon from '../Images/setting_icon.png'
 import theme_icon from '../Images/theme_icon.png'
 import inventory_icon from '../Images/inventory_icon.png'
 import logout_icon from '../Images/logout_icon.png'
+import Navigation from './utils/Navigation';
 
 interface Props {
     getStartedHandler: () => void;
@@ -65,6 +66,19 @@ function Profile({ProfileHandler,
             </div>
 
             <div className="white-half" style={{ width: '80%', height: '100%', backgroundColor: 'white', position: 'absolute', left: '20%' }}>
+                <Navigation 
+                    aboutUsHandler={aboutUsHandler}
+                    contactHandler={contactHandler}
+                    FAQHandler={FAQHandler}
+                    profileHandler={ProfileHandler}
+                    username="Kelvin"
+                    redirects={
+                        [
+                            { page_name: 'Home', page_handler: backToHomeHandler },
+                            { page_name: 'Profile', page_handler: ProfileHandler }
+                        ]} 
+                />;
+
                 <div id="profile-background">
                     <div id="avatar"></div>
                     <div id="username">Kelvin</div>
@@ -74,18 +88,6 @@ function Profile({ProfileHandler,
                         Edit
                     </button>
                 </div>
-
-                <div className="page-title">
-                    <span id="page-title-button" onClick={backToHomeHandler}>Homepage {'>'} </span>
-                    <span id="page-title-button" onClick={ProfileHandler}> Profile </span>
-                </div>
-                <div id="top-buttons">
-                    <button className="info-button" onClick={aboutUsHandler}> About Us </button>
-                    <button className="info-button" onClick={contactHandler}> Contact </button>
-                    <button className="info-button" onClick={FAQHandler}> FAQ </button>
-                    <button className="info-button" onClick={ProfileHandler}> Profile </button>
-                </div>
-                <button id = "red-name-button">Kelvin</button>
 
                 <div id="info-slot-topleft">
                     <div id="info-slot-icon"></div>

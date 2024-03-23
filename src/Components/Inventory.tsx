@@ -11,6 +11,7 @@ import logout_icon from '../Images/logout_icon.png'
 import collection_icon from '../Images/collection_icon.png'
 import blue_jay from '../Images/BlueJay.png'
 import uncollected_parrot from '../Images/Uncollected_Parrot.png'
+import Navigation from './utils/Navigation';
 
 interface Props {
     getStartedHandler: () => void;
@@ -69,17 +70,19 @@ function Inventory({ProfileHandler,
             </div>
 
             <div className="white-half" style={{ width: '80%', height: '100%', backgroundColor: 'white', position: 'absolute', left: '20%' }}>
-                <div className="page-title">
-                    <span id="page-title-button" onClick={backToHomeHandler}>Homepage {'>'} </span>
-                    <span id="page-title-button" onClick={InventoryHandler}> Inventory </span>
-                </div>
-                <div id="top-buttons">
-                    <button className="info-button" onClick={aboutUsHandler}> About Us </button>
-                    <button className="info-button" onClick={contactHandler}> Contact </button>
-                    <button className="info-button" onClick={FAQHandler}> FAQ </button>
-                    <button className="info-button" onClick={ProfileHandler}> Profile </button>
-                </div>
-                <button id = "red-name-button">Kelvin</button>
+                <Navigation 
+                    aboutUsHandler={aboutUsHandler}
+                    contactHandler={contactHandler}
+                    FAQHandler={FAQHandler}
+                    profileHandler={ProfileHandler}
+                    username="Kelvin"
+                    redirects={
+                        [
+                            { page_name: 'Home', page_handler: backToHomeHandler },
+                            { page_name: 'Inventory', page_handler: InventoryHandler }
+                        ]} 
+                />;
+                
                 <div id="top-area">
                     <div id="inventory-title2"> My Collections</div>
                     <div id="collection-progress">
