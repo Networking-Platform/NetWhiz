@@ -1,13 +1,7 @@
 import '../Styles/Navigation.css'
 import '../Styles/Sidebar.css'
 import '../Styles/Settings.modules.css';
-import learning_icon from '../Images/Learning_Icon.png'
-import profile_icon from '../Images/profile_icon.png'
-import help_center_icon from '../Images/help_center_icon.png'
-import setting_selected_icon from '../Images/setting_selected_icon.png'
-import theme_icon from '../Images/theme_icon.png'
-import inventory_icon from '../Images/inventory_icon.png'
-import logout_icon from '../Images/logout_icon.png'
+import NavigationBar from './utils/BlueNavBar'
 
 interface Props {
     getStartedHandler: () => void;
@@ -31,39 +25,15 @@ function Settings({ProfileHandler,
                     backToHomeHandler,
                     SettingsHandler} : Props) {
     return (
-        <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
-            <div className="blue-half" style={{ width: '20%', height: '100%', backgroundColor: '#3127A0', position: 'fixed', left: 0}}>
-                <div id="website-title">Website.com</div>
-                <button id="sidebar-learning-progress-button" onClick={ProgressHandler}>
-                    <img src={learning_icon} alt="Learning icon"/>
-                    Learning Progress
-                </button>
-                <button id="sidebar-profile-button" onClick={ProfileHandler}>
-                    <img src={profile_icon} alt="Profile Icon"/>
-                    Profile
-                </button>
-                <button id="sidebar-help-center-button">
-                    <img src={help_center_icon} alt="Help Center Icon"/>
-                    Help Center
-                </button>
-                <button id="sidebar-selected-setting-button" onClick={SettingsHandler}>
-                    <img src={setting_selected_icon} alt="Setting Icon"/>
-                    Setting
-                </button>
-                <button id="sidebar-theme-button">
-                    <img src={theme_icon} alt="Theme Icon"/>
-                    Theme
-                </button>
-                <button id="sidebar-inventory-button" onClick={InventoryHandler}>
-                    <img src={inventory_icon} alt="Selected Inventory Icon"/>
-                    Inventory
-                </button>
-                <div id="separation-line"></div>
-                <button id="sidebar-logout-button" onClick={getStartedHandler}>
-                    <img src={logout_icon} alt="Logout Icon"/>
-                    Log out
-                </button>
-            </div>
+        <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative', overflow: 'hidden'}}>
+            <NavigationBar 
+                ProfileHandler={ProfileHandler}
+                getStartedHandler={getStartedHandler}
+                InventoryHandler={InventoryHandler}
+                ProgressHandler={ProgressHandler}
+                SettingsHandler={SettingsHandler}
+                currentPage='Settings'
+            />;
 
             <div className="white-half" style={{ width: '80%', height: '100%', backgroundColor: 'white', position: 'absolute', left: '20%' }}>
                 <div className="page-title">
