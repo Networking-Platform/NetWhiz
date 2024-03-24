@@ -126,6 +126,7 @@ function App() {
                                               getStartedHandler={goToLogin}
                                               InventoryHandler={toInventoryPage}
                                               ProgressHandler={toProgressPage}
+                                              backToHomeHandler={backToHome}
                                             />} />
       </Routes>
     </div>
