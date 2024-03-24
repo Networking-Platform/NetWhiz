@@ -136,6 +136,7 @@ function App() {
                                               InventoryHandler={toInventoryPage}
                                               ProgressHandler={toProgressPage}
                                               SettingsHandler={toSettingsPage}
+                                              backToHomeHandler={goToLogin}
                                             />} />
         <Route path = "/settings" element={<Settings 
                                               ProfileHandler={toProfilePage} 
