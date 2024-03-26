@@ -18,6 +18,8 @@ interface Props {
     ViewHandler: () => void;
     backToHomeHandler:() => void;
     InventoryHandler: () => void;
+    toggleSoundHandler:() => void;
+    mute: boolean;
 }
 
 function View({ProfileHandler,
@@ -27,7 +29,9 @@ function View({ProfileHandler,
                     FAQHandler, 
                     ViewHandler,
                     InventoryHandler,
-                    backToHomeHandler} : Props) {
+                    backToHomeHandler,
+                    toggleSoundHandler,
+                    mute} : Props) {
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
             <div className="blue-half" style={{ width: '20%', height: '100%', backgroundColor: '#3127A0', position: 'fixed', left: 0}}>
@@ -69,11 +73,12 @@ function View({ProfileHandler,
                     <span id="page-title-button" onClick={InventoryHandler}> Inventory {'>'} </span>
                     <span id="page-title-button" onClick={ViewHandler}> View </span>
                 </div>
-                <div id="inventory-top-buttons">
-                    <button className="inventory-info-button" onClick={aboutUsHandler}> About Us </button>
-                    <button className="inventory-info-button" onClick={contactHandler}> Contact </button>
-                    <button className="inventory-info-button" onClick={FAQHandler}> FAQ </button>
-                    <button className="inventory-info-button" onClick={ProfileHandler}> Profile </button>
+                <div id="top-buttons">
+                    <button className="info-button" onClick={aboutUsHandler}> About Us </button>
+                    <button className="info-button" onClick={contactHandler}> Contact </button>
+                    <button className="info-button" onClick={FAQHandler}> FAQ </button>
+                    <button className="info-button" onClick={ProfileHandler}> Profile </button>
+                    <button className="info-button" onClick={toggleSoundHandler}>{mute ? 'Turn On Sound' : 'Turn Off Sound'}</button>
                 </div>
                 <button id = "red-name-button">Kelvin</button>
                 

@@ -8,9 +8,17 @@ interface Props {
     contactHandler: () => void;
     FAQHandler: () => void;
     ProfileHandler: () => void;
+    toggleSoundHandler:() => void;
+    mute: boolean;
 }
 
-function Home({getStartedHandler, aboutUsHandler, contactHandler, FAQHandler, ProfileHandler}: Props) {
+function Home({getStartedHandler, 
+               aboutUsHandler, 
+               contactHandler, 
+               FAQHandler, 
+               ProfileHandler,
+               toggleSoundHandler,
+               mute}: Props) {
     return (
         <div>
             <div id="website-title">Website.com</div>
@@ -26,6 +34,7 @@ function Home({getStartedHandler, aboutUsHandler, contactHandler, FAQHandler, Pr
                 <button className="info-button" onClick={contactHandler}> Contact </button>
                 <button className="info-button" onClick={FAQHandler}> FAQ </button>
                 <button className="info-button" onClick={ProfileHandler}> Profile </button>
+                <button className="info-button" onClick={toggleSoundHandler}>{mute ? 'Turn On Sound' : 'Turn Off Sound'}</button>
             </div>
             <img id="icon" src={user_4_fill} alt="user icon" />
             <img id="cover" src={humaaansGraph} alt="front page image" />

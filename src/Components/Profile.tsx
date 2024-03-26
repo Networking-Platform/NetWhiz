@@ -19,6 +19,8 @@ interface Props {
     InventoryHandler: () => void;
     ProgressHandler: () => void;
     backToHomeHandler:() => void;
+    toggleSoundHandler:() => void;
+    mute: boolean;
 }
 
 function Profile({ProfileHandler,
@@ -28,7 +30,9 @@ function Profile({ProfileHandler,
                     FAQHandler,
                     InventoryHandler,
                     ProgressHandler,
-                    backToHomeHandler} : Props) {
+                    backToHomeHandler,
+                    toggleSoundHandler,
+                    mute} : Props) {
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
             <div className="blue-half" style={{ width: '20%', height: '100%', backgroundColor: '#3127A0', position: 'absolute', left: 0 }}>
@@ -37,7 +41,7 @@ function Profile({ProfileHandler,
                     <img src={learning_icon} alt="Learning icon"/>
                     Learning Progress
                 </button>
-                <button id="sidebar-selected-profile-button">
+                <button id="sidebar-selected-profile-button" onClick={ProfileHandler}>
                     <img src={selected_profile_icon} alt="Selected Profile Icon"/>
                     Profile
                 </button>
@@ -84,6 +88,7 @@ function Profile({ProfileHandler,
                     <button className="info-button" onClick={contactHandler}> Contact </button>
                     <button className="info-button" onClick={FAQHandler}> FAQ </button>
                     <button className="info-button" onClick={ProfileHandler}> Profile </button>
+                    <button className="info-button" onClick={toggleSoundHandler}>{mute ? 'Turn On Sound' : 'Turn Off Sound'}</button>
                 </div>
                 <button id = "red-name-button">Kelvin</button>
 
