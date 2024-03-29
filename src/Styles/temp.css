@@ -1,0 +1,93 @@
+.sidebar {
+  border-right: 1px solid #eee;
+  padding: 15px 10px;
+  font-size: 12px;
+  background: #e5dede;
+  display: flex;
+  align-items: center;
+}
+.description {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+  width: 20%;
+}
+
+.dndnode {
+  height: 20px;
+  padding: 10px;
+  border: 1px solid #1a192b;
+  margin-bottom: 10px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  cursor: grab;
+  margin: 20px;
+}
+
+.dndnode.input {
+  color: white;
+  background: #3127a0;
+  border: 2px solid #3127a0;
+  border-radius: 11px;
+}
+/* Rectangle 416 */
+/* Rectangle 416 */
+
+.dndnode.serverblock {
+  color: white;
+  background: #fc9a07;
+  border: 2px solid #fc9a07;
+  border-radius: 11px;
+}
+
+.dndnode.output {
+  color: white;
+  background: #f47878;
+  border: 2px solid #f47878;
+  border-radius: 11px;
+}
+
+.dndnode.datablock {
+  color: white;
+  background: #3ed079;
+  border: 2px solid #3ed079;
+  border-radius: 11px;
+}
+
+.dndnode.otherblock {
+  color: white;
+  background: rgba(255, 0, 0, 0.611);
+  border: 2px solid rgba(255, 0, 0, 0.611);
+  border-radius: 11px;
+}
+
+.reactflow-wrapper {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.selectall {
+  margin-top: 10px;
+}
+
+/* @media screen and (min-width: 768px) {
+  .dndflow {
+    flex-direction: row;
+  }
+
+  .dndflow aside {
+    width: 20%;
+    max-width: 250px;
+  }
+} */
+
+.react-flow__node-customNode {
+  font-size: 12px;
+  background: #eee;
+  /* border: 1px solid #555; */
+  border-radius: 5px;
+  text-align: center;
+}

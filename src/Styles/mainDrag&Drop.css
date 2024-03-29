@@ -1,0 +1,53 @@
+.outercontainer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.innercontainer {
+  width: 80%;
+  text-align: left;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; */
+}
+
+.flowcontainer {
+  height: 500px;
+  width: 100%;
+}
+
+.instruction {
+  text-align: left;
+  font-family: Helvetica;
+  height: 180px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.panel {
+  background-color: #E5DEDE;
+  width: 100%;
+  color: black;
+  font-weight: bold;
+}
+
+
+.runbutton {
+  color: white;
+  background-color: green;
+  margin-left: 800px;
+}
+
+.helpbutton {
+  color: white;
+  background-color: #0073ff;
+  margin-left: 20px;
+}
+
+.savebutton {
+  color: white;
+  background-color: rgb(239, 15, 15);
+  margin-left: 20px;
+}

@@ -8,6 +8,10 @@ import Profile from './Components/Profile';
 import Inventory from './Components/Inventory';
 import SignUp from './Components/SignUp';
 import Progress from './Components/Progress';
+
+import FirstLesson from './Components/FirstLesson';
+
+
 import "@fontsource/inter"
 import "@fontsource/inter/700.css";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
@@ -58,6 +62,9 @@ function App() {
     setPage('Progress');
   }
 
+  const toFirstLesson = () => {
+    setPage('FirstLesson');
+  }
   return (
     <div>
       <Routes>
@@ -127,8 +134,12 @@ function App() {
                                               InventoryHandler={toInventoryPage}
                                               ProgressHandler={toProgressPage}
                                               backToHomeHandler={backToHome}
+                                              gotToFirstLesson={toFirstLesson}
+                                            />} />
+        <Route path="/FirstLesson" element={<FirstLesson
                                             />} />
       </Routes>
+      
     </div>
   );
 }

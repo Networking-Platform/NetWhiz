@@ -1,0 +1,44 @@
+.purple-menu-bar {
+    background-color: #3127A0;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.purple-menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.purple-menu-bar ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.purple-menu-bar ul li:last-child {
+    margin-right: 0;
+}
+
+.innercontainer {
+    margin-top: 50px;
+    /* Adjust according to the height of the menu bar */
+}
+
+.title {
+    font-size: xx-large;
+}
+
+.courseButttom {
+    margin-left: 950px;
+    color : #F47878;
+}
+
+.profileButtom {
+    color: #ffffff;
+    background-color: #F47878;
+}
