@@ -76,7 +76,7 @@ function Profile({ProfileHandler,
                             { page_name: 'Home', page_handler: backToHomeHandler },
                             { page_name: 'Profile', page_handler: ProfileHandler }
                         ]} 
-                />;
+                />
                 <div id="profile-background">
                     <div id="avatar"></div>
                     <div id="username">Kelvin</div>

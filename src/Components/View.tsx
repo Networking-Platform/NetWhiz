@@ -77,7 +77,7 @@ function View({ProfileHandler,
                             { page_name: 'Inventory', page_handler: InventoryHandler },
                             { page_name: 'View', page_handler: ViewHandler }
                         ]} 
-                />;
+                />
                 
                 
                 <div id="showcase-box">

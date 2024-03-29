@@ -81,7 +81,7 @@ function Inventory({ProfileHandler,
                             { page_name: 'Home', page_handler: backToHomeHandler },
                             { page_name: 'Inventory', page_handler: InventoryHandler }
                         ]} 
-                />;
+                />
                 <div id="top-area">
                     <div id="inventory-title2"> My Collections</div>
                     <div id="collection-progress">
