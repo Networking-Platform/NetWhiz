@@ -66,10 +66,6 @@ function Profile({ProfileHandler,
 
             <div className="white-half" style={{ width: '80%', height: '100%', backgroundColor: 'white', position: 'absolute', left: '20%' }}>
                 <Navigation 
-                    aboutUsHandler={aboutUsHandler}
-                    contactHandler={contactHandler}
-                    FAQHandler={FAQHandler}
-                    profileHandler={ProfileHandler}
                     username="Kelvin"
                     redirects={
                         [
