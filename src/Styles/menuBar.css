@@ -1,7 +1,7 @@
 .purple-menu-bar {
     background-color: #3127A0;
     color: white;
-    padding: 20px 30px;
+    padding: 30px 30px;
     width: 100%;
     position: fixed;
     top: 0;
@@ -24,13 +24,27 @@
     margin-right: 0;
 }
 
+.navigation-container {
+    /* display: flex;
+    align-items: center; */
+    width: 50px;
+    float: left;
+}
+
+/* #title {
+    margin-right: 20px;
+} */
+
 #title {
     background-color: transparent;
-    color: white;
+    color: #3127A0;
     border: none;
     font-size: xx-large;
     font-weight: bold;
     margin-right: 50%;
+    margin-left: 20px;
+    padding-top: 50px;
+    cursor: pointer;
 }
 
 .infoButtons {
@@ -58,5 +72,5 @@
 }
 
 .innercontainer {
-    margin-top: 100px;
+    margin-top: 200px;
 }

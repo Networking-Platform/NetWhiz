@@ -13,10 +13,10 @@ import '../Styles/Navigation.css'
 import "../Styles/mainDrag&Drop.css";
 import "../Styles/nodeBottomBar.css";
 import "../Styles/menuBar.css";
-import '../Styles/Navigation.css'
 import BottomBar from "./nodesBottomBar";
 import CustomNode from "../Components/CustomNode";
 import CustomEdge from "../Components/CustomEdge";
+import Navigation from './utils/Navigation';
 
 interface Props {
   aboutUsHandler: () => void;
@@ -24,6 +24,7 @@ interface Props {
   FAQHandler: () => void;
   backToHomeHandler: () => void;
   ProfileHandler: () => void;
+  ProgressHandler: () => void;
 }
 
 let id = 0;
@@ -52,20 +53,19 @@ const initialNodes = [
 ];
 const initialEdges = [];
 
-export default function App({ backToHomeHandler, aboutUsHandler, contactHandler, FAQHandler, ProfileHandler }:Props) {
+export default function App({ backToHomeHandler, aboutUsHandler, contactHandler, FAQHandler, ProfileHandler, ProgressHandler }:Props) {
   return (
     <div className="outercontainer">
-      <div className="purple-menu-bar">  
-        {/* Content of the menu bar */}
-        {/* For example: */}
-        <ul>
+      <div className="navigation-container ">  
           <button id="title" onClick={backToHomeHandler}>Website.com</button>
-           <button className="infoButtons">Courses</button>
-          <button className="infoButtons" onClick={aboutUsHandler}>About us</button>
-          <button className="infoButtons" onClick={contactHandler}>Contact</button>
-          <button className="infoButtons" onClick={FAQHandler}>FAQ</button>
-          <button id="profileButtom" onClick={ProfileHandler}>Kelvin</button>
-        </ul>
+          <Navigation 
+              username="Kelvin"
+              redirects={
+              [
+                { page_name: 'Home', page_handler: backToHomeHandler },
+                { page_name: 'Progress', page_handler: ProgressHandler }
+              ]} 
+            />
       </div>
       <div className="innercontainer">
         <h2>1.1 Introduction of the Computer Networking</h2>

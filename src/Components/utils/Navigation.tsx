@@ -33,9 +33,8 @@ const Navigation: React.FC<NavigationProps> = ({
                 <button className="info-button" onClick={() => setPage('about')}> About Us </button>
                 <button className="info-button" onClick={() => setPage('contact')}> Contact </button>
                 <button className="info-button" onClick={() => setPage('faq')}> FAQ </button>
-                <button className="info-button" onClick={() => setPage('profile')}> Profile </button>
             </div>
-            <button id="red-name-button">{username}</button>
+            <button id="red-name-button" onClick={() => setPage('profile')} >{username}</button>
         </div>
     );
 };

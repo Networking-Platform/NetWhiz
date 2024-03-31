@@ -6,6 +6,8 @@
 
 .innercontainer {
   width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
   text-align: left;
 }
 
@@ -17,6 +19,8 @@
 .instruction {
   text-align: left;
   font-family: 'Inter';
+  max-width: 1200px;
+  margin: 0 auto;
   height: 180px;
   width: 100%;
 }

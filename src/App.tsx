@@ -140,6 +140,7 @@ function App() {
                                               contactHandler={toContactPage}
                                               FAQHandler={toFAQPage} 
                                               ProfileHandler={toProfilePage} 
+                                              ProgressHandler={toProgressPage}
                                             />} />
         <Route path="/SecondLesson" element={<SecondLesson
                                               backToHomeHandler={backToHome} 
@@ -147,6 +148,7 @@ function App() {
                                               contactHandler={toContactPage}
                                               FAQHandler={toFAQPage} 
                                               ProfileHandler={toProfilePage} 
+                                              ProgressHandler={toProgressPage}
                                             />} />
       </Routes>
       
