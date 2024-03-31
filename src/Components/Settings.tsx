@@ -25,7 +25,7 @@ function Settings({ProfileHandler,
                     backToHomeHandler,
                     SettingsHandler} : Props) {
     return (
-        <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative', overflow: 'hidden'}}>
+        <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative'}}>
             <NavigationBar 
                 ProfileHandler={ProfileHandler}
                 getStartedHandler={getStartedHandler}
