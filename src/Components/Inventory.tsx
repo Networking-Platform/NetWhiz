@@ -15,9 +15,6 @@ import Navigation from './utils/Navigation';
 
 interface Props {
     getStartedHandler: () => void;
-    aboutUsHandler: () => void;
-    contactHandler: () => void;
-    FAQHandler: () => void;
     ProfileHandler: () => void;
     ProgressHandler: () => void;
     ViewHandler: () => void;
@@ -27,9 +24,6 @@ interface Props {
 
 function Inventory({ProfileHandler,
                     getStartedHandler,
-                    aboutUsHandler,
-                    contactHandler,
-                    FAQHandler,
                     ProgressHandler,
                     InventoryHandler,
                     ViewHandler,

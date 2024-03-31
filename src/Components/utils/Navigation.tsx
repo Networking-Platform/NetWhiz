@@ -14,8 +14,8 @@ const Navigation: React.FC<NavigationProps> = ({
     username,
     redirects
 }) => {
+    const navigate = useNavigate();
     const usePageNavigation = () => {
-        const navigate = useNavigate();
         return (pageName: string) => navigate(`/${pageName.toLowerCase()}`);
     }
     

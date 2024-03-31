@@ -12,9 +12,6 @@ import logout_icon from '../Images/logout_icon.png'
 import Navigation from './utils/Navigation';
 interface Props {
     getStartedHandler: () => void;
-    aboutUsHandler: () => void;
-    contactHandler: () => void;
-    FAQHandler: () => void;
     ProfileHandler: () => void;
     InventoryHandler: () => void;
     ProgressHandler: () => void;
@@ -23,9 +20,6 @@ interface Props {
 
 function Profile({ProfileHandler,
                     getStartedHandler,
-                    aboutUsHandler,
-                    contactHandler,
-                    FAQHandler,
                     InventoryHandler,
                     ProgressHandler,
                     backToHomeHandler} : Props) {

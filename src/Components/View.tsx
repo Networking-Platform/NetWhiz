@@ -12,9 +12,6 @@ import Navigation from './utils/Navigation';
 
 interface Props {
     getStartedHandler: () => void;
-    aboutUsHandler: () => void;
-    contactHandler: () => void;
-    FAQHandler: () => void;
     ProfileHandler: () => void;
     ViewHandler: () => void;
     backToHomeHandler:() => void;
@@ -23,9 +20,6 @@ interface Props {
 
 function View({ProfileHandler,
                     getStartedHandler,
-                    aboutUsHandler,
-                    contactHandler,
-                    FAQHandler, 
                     ViewHandler,
                     InventoryHandler,
                     backToHomeHandler} : Props) {
