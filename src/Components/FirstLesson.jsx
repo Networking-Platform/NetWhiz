@@ -9,13 +9,23 @@ import ReactFlow, {
 } from "reactflow";
 
 import "reactflow/dist/style.css";
+import '../Styles/Navigation.css'
 import "../Styles/mainDrag&Drop.css";
-
-import "../Styles/temp.css";
+import "../Styles/nodeBottomBar.css";
 import "../Styles/menuBar.css";
-import SideBar from "../Components/SideBar";
+import '../Styles/Navigation.css'
+import BottomBar from "./nodesBottomBar";
 import CustomNode from "../Components/CustomNode";
 import CustomEdge from "../Components/CustomEdge";
+
+interface Props {
+  aboutUsHandler: () => void;
+  contactHandler: () => void;
+  FAQHandler: () => void;
+  backToHomeHandler: () => void;
+  ProfileHandler: () => void;
+}
+
 let id = 0;
 const getId = () => `dndnode_${id++}`;
 const nodeTypes = {
@@ -41,22 +51,20 @@ const initialNodes = [
   },
 ];
 const initialEdges = [];
-// const nodeTypes = {
-//   client: MyCustomNode,
-// };
-export default function App() {
+
+export default function App({ backToHomeHandler, aboutUsHandler, contactHandler, FAQHandler, ProfileHandler }:Props) {
   return (
     <div className="outercontainer">
-      <div className="purple-menu-bar">
+      <div className="purple-menu-bar">  
         {/* Content of the menu bar */}
         {/* For example: */}
         <ul>
-          <li className="title">Website</li>
-          <li className="courseButttom">Courses</li>
-          <li>About us</li>
-          <li>Contact</li>
-          <li>FAQ</li>
-          <button className="profileButtom">Kelvin</button>
+          <button id="title" onClick={backToHomeHandler}>Website.com</button>
+           <button className="infoButtons">Courses</button>
+          <button className="infoButtons" onClick={aboutUsHandler}>About us</button>
+          <button className="infoButtons" onClick={contactHandler}>Contact</button>
+          <button className="infoButtons" onClick={FAQHandler}>FAQ</button>
+          <button id="profileButtom" onClick={ProfileHandler}>Kelvin</button>
         </ul>
       </div>
       <div className="innercontainer">
@@ -82,7 +90,7 @@ export default function App() {
           <button className="savebutton">Save</button>
         </div>
         <Flowchart />
-        <SideBar />
+        <BottomBar />
       </div>
     </div>
   );

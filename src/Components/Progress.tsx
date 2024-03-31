@@ -22,7 +22,8 @@ interface Props {
     InventoryHandler: () => void;
     ProgressHandler: () => void;
     backToHomeHandler: () => void;
-    gotToFirstLesson: () => void;
+    goToFirstLesson: () => void;
+    goToSecondLesson: () => void;
 }
 
 function Progress({ ProfileHandler,
@@ -33,7 +34,8 @@ function Progress({ ProfileHandler,
     InventoryHandler,
     ProgressHandler,
     backToHomeHandler,
-    gotToFirstLesson }: Props) {
+    goToFirstLesson,
+    goToSecondLesson }: Props) {
 
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
@@ -109,22 +111,20 @@ function Progress({ ProfileHandler,
                     <div id="down-arrow"></div>
                 </div>
 
-                <div id="lesson1-box" onClick={gotToFirstLesson}>
+                <div id="lesson1-box" onClick={goToFirstLesson}>
                     <div id="unlocked-border"></div>
                     <div id="unlocked-inner-border">
                         <div id="lesson-text">LESSON 1</div>
-                        <div id="lesson-name">
-                                HTTP
-                        </div>
+                        <div id="lesson-name">HTTP</div>
                     </div>
                     <div id="down-arrow"></div>
                 </div>
 
-                <div id="lesson2-box">
+                <div id="lesson2-box" onClick={goToSecondLesson}>
                     <div id="unlocked-border"></div>
-                    <div id="locked-border">
+                    <div id="unlocked-inner-border">
                         <div id="lesson-text">LESSON 2</div>
-                        <div id="lesson-name">"Topic"</div>
+                        <div id="lesson-name">TCP</div>
                     </div>
                     <div id="down-arrow"></div>
                 </div>
@@ -132,7 +132,7 @@ function Progress({ ProfileHandler,
                 <div id="lesson3-box">
                     <div id="unlocked-border"></div>
                     <div id="locked-border">
-                        <div id="lesson-text">LESSON 2</div>
+                        <div id="lesson-text">LESSON 3</div>
                         <div id="lesson-name">"Topic"</div>
                     </div>
                     <div id="down-arrow"></div>

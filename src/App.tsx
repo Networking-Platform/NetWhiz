@@ -10,12 +10,14 @@ import SignUp from './Components/SignUp';
 import Progress from './Components/Progress';
 
 import FirstLesson from './Components/FirstLesson';
+import SecondLesson from './Components/SecondLesson';
 
 
 import "@fontsource/inter"
 import "@fontsource/inter/700.css";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import View from './Components/View';
+
 
 function App() {
 
@@ -64,6 +66,10 @@ function App() {
 
   const toFirstLesson = () => {
     setPage('FirstLesson');
+  }
+
+  const toSecondLesson = () => {
+    setPage('SecondLesson');
   }
   return (
     <div>
@@ -134,9 +140,22 @@ function App() {
                                               InventoryHandler={toInventoryPage}
                                               ProgressHandler={toProgressPage}
                                               backToHomeHandler={backToHome}
-                                              gotToFirstLesson={toFirstLesson}
+                                              goToFirstLesson={toFirstLesson}
+                                              goToSecondLesson = {toSecondLesson}
                                             />} />
         <Route path="/FirstLesson" element={<FirstLesson
+                                              backToHomeHandler={backToHome} 
+                                              aboutUsHandler={toAboutUsPage}
+                                              contactHandler={toContactPage}
+                                              FAQHandler={toFAQPage} 
+                                              ProfileHandler={toProfilePage} 
+                                            />} />
+        <Route path="/SecondLesson" element={<SecondLesson
+                                              backToHomeHandler={backToHome} 
+                                              aboutUsHandler={toAboutUsPage}
+                                              contactHandler={toContactPage}
+                                              FAQHandler={toFAQPage} 
+                                              ProfileHandler={toProfilePage} 
                                             />} />
       </Routes>
       

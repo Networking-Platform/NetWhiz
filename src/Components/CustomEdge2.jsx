@@ -4,7 +4,7 @@ import {
   EdgeLabelRenderer,
   getBezierPath,
   useReactFlow,
-} from "reactflow"
+} from "reactflow";
 
 import "../Styles/CustomEdge.css";
 
@@ -13,7 +13,7 @@ const onEdgeClick = (evt, id) => {
   alert(`remove ${id}`);
 };
 
-export default function CustomEdge(props) {
+export default function CustomEdge2(props) {
   // if (props.source === props.target) {
   //   return <SelfConnecting {...props} />;
   // }
@@ -52,8 +52,9 @@ export default function CustomEdge(props) {
           {write && "ERROR"}
           <select>
             <option>None</option>
-            <option>OK</option>
-            <option>ERROR</option>
+            <option>Speak too quick</option>
+            <option>Hangs up</option>
+            <option>Else</option>
           </select>
         </div>
       </EdgeLabelRenderer>
@@ -66,8 +67,9 @@ function SelfConnecting(props) {
   const { sourceX, sourceY, targetX, targetY, id, markerEnd } = props;
   const radiusX = (sourceX - targetX) * 0.6;
   const radiusY = 50;
-  const edgePath = `M ${sourceX - 5} ${sourceY} A ${radiusX} ${radiusY} 0 1 0 ${targetX + 2
-    } ${targetY}`;
+  const edgePath = `M ${sourceX - 5} ${sourceY} A ${radiusX} ${radiusY} 0 1 0 ${
+    targetX + 2
+  } ${targetY}`;
   const labelX = (targetX - sourceX) / 2 + sourceX;
   const labelY = (targetY - sourceY) / 2 + sourceY - 80;
 
@@ -90,8 +92,9 @@ function SelfConnecting(props) {
           {write && "ERROR"}
           <select>
             <option>None</option>
-            <option>OK</option>
-            <option>ERROR</option>
+            <option>Speak too quick</option>
+            <option>Hangs up</option>
+            <option>Else</option>
           </select>
         </div>
       </EdgeLabelRenderer>

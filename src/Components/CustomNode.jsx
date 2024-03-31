@@ -1,102 +1,93 @@
 import React, { memo, useState } from "react";
 import { Handle, Position } from "reactflow";
 import "../Styles/CustomNode.css";
-// import Switch from "../Styles/Switch";
 import "../Styles/Options.css";
+
+/// using javascript so it does not have enum :(
+const ClassNames = {
+  "Client send request": "clientColorBlock",
+  "Server receive and process": "serverColorBlock",
+  "Server respond fail": "serverFailColorBlock",
+  "Server respond data": "serverDataBlock",
+  "Caller dial recipient number": "clientColorBlock",
+  "Recipient picks up": "serverColorBlock",
+  "One person speaks": "serverFailColorBlock",
+  "other listens and acknowledges": "serverDataBlock",
+  "One of them hang up": "otherBlock"
+};
+
 export default memo(({ data, isConnectable }) => {
-  let mainblockClassName = "mainblock"; // Default class
+const [isEditing, setEditing] = useState(false);
 
-  // different color blocks places
-  if (data.label === "Client send request") {
-    mainblockClassName += " clientColorBlock";
-  } else if (data.label === "Server receive and process") {
-    mainblockClassName += " serverColorBlock";
-  } else if (data.label === "Server respond fail") {
-    mainblockClassName += " serverFailColorBlock";
-  } else if (data.label === "Server respond data") {
-    mainblockClassName += " serverDataBlock";
-  }
+const handleEditClick = () => {
+  setEditing((isEditing) => !isEditing);
+};
 
-  if (data.label === "Caller dial recipient number") {
-    mainblockClassName += " clientColorBlock";
-  } else if (data.label === "Recipient picks up") {
-    mainblockClassName += " serverColorBlock";
-  } else if (data.label === "One person speaks") {
-    mainblockClassName += " serverFailColorBlock";
-  } else if (data.label === "other listens and acknowledges") {
-    mainblockClassName += " serverDataBlock";
-  } else if (data.label === "One of them hang up") {
-    mainblockClassName += " otherBlock";
-  }
+let mainblockClassName = "mainblock " + ClassNames[data.label];
 
-  const [isEditing, setEditing] = useState(false);
+return (
+  <div className="customNode">
+    <Handle
+      type="target"
+      position={Position.Left}
+      id="a"
+      style={{ background: "#555" }}
+      onConnect={(params) => console.log("handle onConnect", params)}
+      isConnectable={isConnectable}
+    />
 
-  const handleEditClick = () => {
-    setEditing((isEditing) => !isEditing);
-  };
-  return (
-    <div className="customNode">
-      <Handle
-        type="target"
-        position={Position.Left}
-        id="a"
-        style={{ background: "#555" }}
-        onConnect={(params) => console.log("handle onConnect", params)}
-        isConnectable={isConnectable}
-      />
+    <div className={mainblockClassName}>
+      <button className="editbutton" onClick={handleEditClick}>
+        Edit
+      </button>
+      {data.label}
+    </div>
 
-      <div className={mainblockClassName}>
-        <button className="editbutton" onClick={handleEditClick}>
-          Edit
-        </button>
-        {data.label}
+    <Handle
+      type="source"
+      position={Position.Right}
+      id="b"
+      style={{ background: "#555" }}
+      isConnectable={isConnectable}
+    />
+    <Handle
+      type="target"
+      position={Position.Top}
+      id="c"
+      style={{ background: "#555" }}
+      isConnectable={isConnectable}
+    />
+    <Handle
+      type="source"
+      position={Position.Bottom}
+      id="d"
+      style={{ background: "#555" }}
+      isConnectable={isConnectable}
+    />
+    {isEditing && data.label == "Client send request" && (
+      <div className="detailview">
+        <Options_one />
+        <Options_three />
+        <Options_four />
+        <Options_five />
       </div>
-
-      <Handle
-        type="source"
-        position={Position.Right}
-        id="b"
-        style={{ background: "#555" }}
-        isConnectable={isConnectable}
-      />
-      <Handle
-        type="target"
-        position={Position.Top}
-        id="c"
-        style={{ background: "#555" }}
-        isConnectable={isConnectable}
-      />
-      <Handle
-        type="source"
-        position={Position.Bottom}
-        id="d"
-        style={{ background: "#555" }}
-        isConnectable={isConnectable}
-      />
-      {isEditing && data.label == "Client send request" && (
+    )}
+    {isEditing &&
+      (data.label == "Server respond fail" ||
+        data.label == "Server respond data") && (
         <div className="detailview">
-          <Options_one />
-          <Options_three />
-          <Options_four />
-          <Options_five />
+          <Options_two />
         </div>
       )}
-      {isEditing &&
-        (data.label == "Server respond fail" ||
-          data.label == "Server respond data") && (
-          <div className="detailview">
-            <Options_two />
-          </div>
-        )}
-      {/* <Handle
+    {/* <Handle
         type="source"
         position={Position.Right}
         id="b"
         style={{ bottom: 10, top: "auto", background: "#555" }}
         isConnectable={isConnectable}
       /> */}
-    </div>
-  );
+  </div>
+);
 });
 
 // http methods

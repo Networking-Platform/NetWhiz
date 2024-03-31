@@ -8,11 +8,22 @@ import ReactFlow, {
   addEdge,
 } from "reactflow";
 import "reactflow/dist/style.css";
-import "../Styles/App.css";
-import "../Styles/temp.css";
+import "../Styles/mainDrag&Drop.css";
+import "../Styles/nodeBottomBar.css";
 import "../Styles/menuBar.css";
-import CustomNode from "CustomNode";
-import CustomEdge2 from "CustomEdge2";
+import '../Styles/Navigation.css'
+import CustomNode from "../Components/CustomNode";
+import CustomEdge2 from "../Components/CustomEdge2";
+
+interface Props {
+  aboutUsHandler: () => void;
+  contactHandler: () => void;
+  FAQHandler: () => void;
+  backToHomeHandler: () => void;
+  ProfileHandler: () => void;
+}
+
+
 let id = 0;
 const getId = () => `dndnode_${id++}`;
 const nodeTypes = {
@@ -41,19 +52,19 @@ const initialEdges = [];
 // const nodeTypes = {
 //   client: MyCustomNode,
 // };
-export default function SecondLesson() {
+export default function SecondLesson({ backToHomeHandler,aboutUsHandler, contactHandler, FAQHandler, ProfileHandler }:Props) {
   return (
     <div className="outercontainer">
       <div className="purple-menu-bar">
         {/* Content of the menu bar */}
         {/* For example: */}
         <ul>
-          <li className="title">Website</li>
-          <li className="courseButttom">Courses</li>
-          <li>About us</li>
-          <li>Contact</li>
-          <li>FAQ</li>
-          <button className="profileButtom">Kelvin</button>
+          <button id="title">Website.com</button>
+          <button className="infoButtons">Courses</button>
+          <button className="infoButtons" onClick={aboutUsHandler}>About us</button>
+          <button className="infoButtons" onClick={contactHandler}>Contact</button>
+          <button className="infoButtons" onClick={FAQHandler}>FAQ</button>
+          <button id="profileButtom" onClick={ProfileHandler}>Kelvin</button>
         </ul>
       </div>
       <div className="innercontainer">
@@ -63,13 +74,13 @@ export default function SecondLesson() {
           broke to hire someone, you have to fix it yourself. On further
           examination, it looks like the telephone is unable to make calls. So,
           you must reprogram the telephone to make and take calls again. To do
-          that, you must learn how phone calls work: i) The caller must dial the
+          that, you must learn how phone calls work: <br /> (i) The caller must dial the
           recipient's number and wait for them to pick up, which will establish
-          a direct line of communication between them. ii) When one person
+          a direct line of communication between them.<br /> (ii) When one person
           speaks, the other listens and acknowledges their understanding by
-          responding. iii) If someone is speaking too quickly, or they cut off
+          responding.<br /> (iii) If someone is speaking too quickly, or they cut off
           due to network issues or background noises, the other will ask them to
-          repeat themselves. iv) When both parties are done talking, they will
+          repeat themselves.<br /> (iv) When both parties are done talking, they will
           agree to hang up.
         </div>
         <div className="panel">
