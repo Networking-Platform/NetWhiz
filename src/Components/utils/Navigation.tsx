@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import "../../Styles/Navigation.css"
+import { useNavigate } from 'react-router-dom';
 
 interface NavigationProps {
-    aboutUsHandler: () => void;
-    contactHandler: () => void;
-    FAQHandler: () => void;
-    profileHandler: () => void;
     username: string;
     redirects: {
         page_name: string;
@@ -14,13 +11,15 @@ interface NavigationProps {
 }
 
 const Navigation: React.FC<NavigationProps> = ({
-    aboutUsHandler,
-    contactHandler,
-    FAQHandler,
-    profileHandler,
     username,
     redirects
 }) => {
+    const navigate = useNavigate();
+    const usePageNavigation = () => {
+        return (pageName: string) => navigate(`/${pageName.toLowerCase()}`);
+    }
+    
+    const setPage = usePageNavigation();
     return (
         <div>
             <div className="page-title">
@@ -31,10 +30,10 @@ const Navigation: React.FC<NavigationProps> = ({
                 ))}
             </div>
             <div id="top-buttons">
-                <button className="info-button" onClick={aboutUsHandler}> About Us </button>
-                <button className="info-button" onClick={contactHandler}> Contact </button>
-                <button className="info-button" onClick={FAQHandler}> FAQ </button>
-                <button className="info-button" onClick={profileHandler}> Profile </button>
+                <button className="info-button" onClick={() => setPage('about')}> About Us </button>
+                <button className="info-button" onClick={() => setPage('contact')}> Contact </button>
+                <button className="info-button" onClick={() => setPage('faq')}> FAQ </button>
+                <button className="info-button" onClick={() => setPage('profile')}> Profile </button>
             </div>
             <button id="red-name-button">{username}</button>
         </div>

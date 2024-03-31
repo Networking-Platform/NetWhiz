@@ -89,9 +89,6 @@ function App() {
                                       />} />
         <Route path="/profile" element={<Profile 
                                             ProfileHandler={toProfilePage} 
-                                            aboutUsHandler={toAboutUsPage} 
-                                            contactHandler={toContactPage} 
-                                            FAQHandler={toFAQPage} 
                                             getStartedHandler={goToLogin}
                                             InventoryHandler={toInventoryPage}
                                             backToHomeHandler={backToHome}
@@ -99,9 +96,6 @@ function App() {
                                           />} />
         <Route path="/inventory" element={<Inventory 
                                               ProfileHandler={toProfilePage} 
-                                              aboutUsHandler={toAboutUsPage} 
-                                              contactHandler={toContactPage} 
-                                              FAQHandler={toFAQPage} 
                                               getStartedHandler={goToLogin}
                                               ViewHandler={toViewPage}
                                               InventoryHandler={toInventoryPage}
@@ -110,9 +104,6 @@ function App() {
                                             />} />
         <Route path="/inventory/view" element={<View 
                                               ProfileHandler={toProfilePage} 
-                                              aboutUsHandler={toAboutUsPage} 
-                                              contactHandler={toContactPage} 
-                                              FAQHandler={toFAQPage} 
                                               getStartedHandler={goToLogin}
                                               ViewHandler={toViewPage}
                                               InventoryHandler={toInventoryPage}

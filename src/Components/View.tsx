@@ -12,9 +12,6 @@ import Navigation from './utils/Navigation';
 
 interface Props {
     getStartedHandler: () => void;
-    aboutUsHandler: () => void;
-    contactHandler: () => void;
-    FAQHandler: () => void;
     ProfileHandler: () => void;
     ViewHandler: () => void;
     backToHomeHandler:() => void;
@@ -23,9 +20,6 @@ interface Props {
 
 function View({ProfileHandler,
                     getStartedHandler,
-                    aboutUsHandler,
-                    contactHandler,
-                    FAQHandler, 
                     ViewHandler,
                     InventoryHandler,
                     backToHomeHandler} : Props) {
@@ -66,10 +60,6 @@ function View({ProfileHandler,
 
             <div className="white-half" style={{ width: '80%', height: '100%', backgroundColor: 'white', position: 'absolute', left: '20%' }}>
                 <Navigation 
-                    aboutUsHandler={aboutUsHandler}
-                    contactHandler={contactHandler}
-                    FAQHandler={FAQHandler}
-                    profileHandler={ProfileHandler}
                     username="Kelvin"
                     redirects={
                         [
