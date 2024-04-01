@@ -1,0 +1,76 @@
+.purple-menu-bar {
+    background-color: #3127A0;
+    color: white;
+    padding: 30px 30px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.purple-menu-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.purple-menu-bar ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.purple-menu-bar ul li:last-child {
+    margin-right: 0;
+}
+
+.navigation-container {
+    /* display: flex;
+    align-items: center; */
+    width: 50px;
+    float: left;
+}
+
+/* #title {
+    margin-right: 20px;
+} */
+
+#title {
+    background-color: transparent;
+    color: #3127A0;
+    border: none;
+    font-size: xx-large;
+    font-weight: bold;
+    margin-right: 50%;
+    margin-left: 20px;
+    padding-top: 50px;
+    cursor: pointer;
+}
+
+.infoButtons {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 16px;
+    margin-left: 1%;
+}
+
+#profileButtom {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    /* Adjusted right position to match the spacing of the navigation code */
+    border-radius: 20px;
+    background-color: #f47878;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    white-space: nowrap;
+    padding: 12px 24px;
+    font: 600 26px Inter, sans-serif;
+}
+
+.innercontainer {
+    margin-top: 200px;
+}

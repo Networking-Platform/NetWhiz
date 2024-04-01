@@ -1,0 +1,71 @@
+.outercontainer {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.innercontainer {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.flowcontainer {
+  height: 500px;
+  width: 100%;
+}
+
+.instruction {
+  text-align: left;
+  font-family: 'Inter';
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 180px;
+  width: 100%;
+}
+
+.panel {
+  background-color: #E5DEDE;
+  width: 100%;
+  color: black;
+  font-family: 'Inter';
+  font-weight: bold;
+}
+
+
+.runbutton {
+  color: white;
+  background-color: green;
+  margin-left: 800px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 0.6em 1.2em;
+  font-family: 'Inter';
+}
+
+.helpbutton {
+  color: white;
+  background-color: #0073ff;
+  margin-left: 20px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 0.6em 1.2em;
+  font-family: 'Inter';
+}
+
+.savebutton {
+  color: white;
+  background-color: rgb(239, 15, 15);
+  margin-left: 20px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 0.6em 1.2em;
+  font-family: inherit;
+}

@@ -1,0 +1,50 @@
+.customnode {
+  position: relative;
+  border-radius: 25%;
+}
+.detailview {
+  position: absolute;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  left: 105%; /* Position it to the right of the module */
+  top: 0;
+  background-color: white;
+}
+
+.mainblock {
+  padding: 24px;
+  position: relative;
+  color: white;
+  border-radius: 8px;
+}
+
+.editbutton {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  font-size: 8px;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.clientColorBlock {
+  background: #3127a0; /* or any other color */
+}
+
+.serverColorBlock {
+  background: #fc9a07; /* or any other color */
+}
+
+.serverFailColorBlock {
+  background: #f47878; /* or any other color */
+}
+
+.serverDataBlock {
+  background: #3ed079;
+}
+
+.otherBlock {
+  background: rgba(255, 0, 0, 0.611);
+}

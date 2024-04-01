@@ -37,6 +37,7 @@
     padding-top: 7%;
     padding-bottom: 7%;
     margin-left: 3%; 
+    cursor: pointer;
 }
 
 #red-name-button {
@@ -53,4 +54,5 @@
     padding: 12px 24px;
     font: 600 26px Inter, sans-serif;
     width: 12%;
+    cursor: pointer;
 }

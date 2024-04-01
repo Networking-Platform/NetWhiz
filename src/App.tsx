@@ -8,10 +8,16 @@ import Profile from './Components/Profile';
 import Inventory from './Components/Inventory';
 import SignUp from './Components/SignUp';
 import Progress from './Components/Progress';
+
+import FirstLesson from './Components/FirstLesson';
+import SecondLesson from './Components/SecondLesson';
+
+
 import "@fontsource/inter"
 import "@fontsource/inter/700.css";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import View from './Components/View';
+
 
 function App() {
 
@@ -58,6 +64,13 @@ function App() {
     setPage('Progress');
   }
 
+  const toFirstLesson = () => {
+    setPage('FirstLesson');
+  }
+
+  const toSecondLesson = () => {
+    setPage('SecondLesson');
+  }
   return (
     <div>
       <Routes>
@@ -118,8 +131,27 @@ function App() {
                                               InventoryHandler={toInventoryPage}
                                               ProgressHandler={toProgressPage}
                                               backToHomeHandler={backToHome}
+                                              goToFirstLesson={toFirstLesson}
+                                              goToSecondLesson = {toSecondLesson}
+                                            />} />
+        <Route path="/FirstLesson" element={<FirstLesson
+                                              backToHomeHandler={backToHome} 
+                                              aboutUsHandler={toAboutUsPage}
+                                              contactHandler={toContactPage}
+                                              FAQHandler={toFAQPage} 
+                                              ProfileHandler={toProfilePage} 
+                                              ProgressHandler={toProgressPage}
+                                            />} />
+        <Route path="/SecondLesson" element={<SecondLesson
+                                              backToHomeHandler={backToHome} 
+                                              aboutUsHandler={toAboutUsPage}
+                                              contactHandler={toContactPage}
+                                              FAQHandler={toFAQPage} 
+                                              ProfileHandler={toProfilePage} 
+                                              ProgressHandler={toProgressPage}
                                             />} />
       </Routes>
+      
     </div>
   );
 }
