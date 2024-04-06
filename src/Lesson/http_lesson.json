@@ -1,0 +1,37 @@
+{
+  "lesson": "HTTP Protocol",
+  "analogy": [
+    "The post office business just isn't cutting it, so you look to other ventures. Why not open a restaurant? Instead of starting from scratch, you decide to start a franchise.",
+    "While researching, you notice a popular fine dining chain by the name of Achy Teepee, known for their quick and reliable service.",
+    "A couple days and signatures later, and you now own your very own Achy Teepee!\n\nHowever, you now have to train your staff.",
+    "The standard process for dealing with each customer is as follows:",
+    "(i) The customer places an order to the server.",
+    "(ii) The server takes the order and sends it to the kitchen.",
+    "(iii) If the order is not available, the kitchen sends the server back to the customer to inform them. Otherwise, the kitchen makes the order and the server brings it to the customer.",
+    "Since Achy Teepee is a chain, you will be provided with the menu items and ingredients.",
+    "All you need to worry about are the logistics of customer service."
+  ],
+  "actual_logic": [
+    "Web browsers work in a similar way to restaurants.",
+    "When you navigate to a website in your browser, your browser (the client) will communicate with a web server to retrieve the requested website.",
+    "The HTTP protocol deals with requests as follows:",
+    "(i) The client sends a request to the server.",
+    "(ii) The server receives and processes the request.",
+    "(iii) If something goes wrong, the server will respond with a failed status code. Otherwise, the server will respond with the desired information.",
+    "We have provided you with the code for the web server already.",
+    "All you have to do is implement the HTTP protocol logic to generate a working website."
+  ],
+  "explannation": [
+    "First, the caller dials the recipient's number.",
+    "When the recipient picks up, the conversation begins.",
+    "When one person speaks, there are two branches: if the person speaks too quickly, the recipient will not follow, and the person needs to speak again; otherwise, the other will listen and acknowledge that they received the message.",
+    "If one of them hangs up, the conversation ends; otherwise, the conversation continues starting with one person speaking again."
+  ],
+  "nodes": [
+    { "label": "Customer places order", "color": "#3127a0" },
+    { "label": "Server sends the order to the kitchen", "color": "#fc9a07" },
+    { "label": "Server informs customer not available", "color": "#f47878" },
+    { "label": "Server serves the dish", "color": "#3ed079" }
+  ],
+  "options": ["None", "Available", "Else"]
+}

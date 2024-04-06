@@ -6,34 +6,36 @@ import ReactFlow, {
   useNodesState,
   useEdgesState,
   addEdge,
+  MarkerType,
 } from "reactflow";
 
 import "reactflow/dist/style.css";
-import '../Styles/Navigation.css'
+import "../Styles/Navigation.css";
 import "../Styles/mainDrag&Drop.css";
 import "../Styles/nodeBottomBar.css";
 import "../Styles/menuBar.css";
-import BottomBar from "./nodesBottomBar";
 import CustomNode from "../Components/CustomNode";
-import CustomEdge from "../Components/CustomEdge";
-import Navigation from './utils/Navigation';
-
-interface Props {
-  aboutUsHandler: () => void;
-  contactHandler: () => void;
-  FAQHandler: () => void;
-  backToHomeHandler: () => void;
-  ProfileHandler: () => void;
-  ProgressHandler: () => void;
-}
+import FloatingEdge from "./FloatingEdge";
+import CustomConnectionLine from "./CustomConnectionLine";
 
 let id = 0;
-const getId = () => `dndnode_${id++}`;
 const nodeTypes = {
   customNode: CustomNode,
 };
 const edgeTypes = {
-  customEdge: CustomEdge,
+  customEdge: FloatingEdge,
+};
+const connectionLineStyle = {
+  strokeWidth: 3,
+  stroke: "black",
+};
+const defaultEdgeOptions = {
+  style: { strokeWidth: 3, stroke: "black" },
+  type: "floating",
+  markerEnd: {
+    type: MarkerType.ArrowClosed,
+    color: "black",
+  },
 };
 const initialNodes = [
   {
@@ -53,50 +55,9 @@ const initialNodes = [
 ];
 const initialEdges = [];
 
-export default function App({ backToHomeHandler, aboutUsHandler, contactHandler, FAQHandler, ProfileHandler, ProgressHandler }:Props) {
-  return (
-    <div className="outercontainer">
-      <div className="navigation-container ">  
-          <button id="title" onClick={backToHomeHandler}>Website.com</button>
-          <Navigation 
-              username="Kelvin"
-              redirects={
-              [
-                { page_name: 'Home', page_handler: backToHomeHandler },
-                { page_name: 'Progress', page_handler: ProgressHandler }
-              ]} 
-            />
-      </div>
-      <div className="innercontainer">
-        <h2>1.1 Introduction of the Computer Networking</h2>
-        <div className="instruction">
-          HTTP protocol Web browsers work in a similar way to restaurants. When
-          you navigate to a website in your browser, your browser (the client)
-          will communicate with a web server to retrieve the requested website.
-          <br />
-          The HTTP protocol deals with requests as follows: <br />
-          (i) The client sends a request to the server. <br />
-          (ii) The server receives and processes the request. <br />
-          (iii) If something goes wrong, the server will respond with a failed
-          status code. Otherwise, the server will respond with the desired
-          information. We have provided you with the code for the web server
-          already. All you have to do is implement the HTTP protocol logic to
-          generate a working website.
-        </div>
-        <div className="panel">
-          Game Challenge
-          <button className="runbutton">Run</button>
-          <button className="helpbutton">Help</button>
-          <button className="savebutton">Save</button>
-        </div>
-        <Flowchart />
-        <BottomBar />
-      </div>
-    </div>
-  );
-}
-
-function Flowchart() {
+export default function FlowChartTemplate(props) {
+  console.log(props.lesson);
+  const getId = () => `${props.lesson}_${id++}`;
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [reactFlowInstance, setReactFlowInstance] = useState(null);
@@ -104,7 +65,7 @@ function Flowchart() {
 
   const onConnect = useCallback(
     (connection) => {
-      const edge = { ...connection, type: "customEdge" };
+      const edge = { ...connection, type: "customEdge", data: props.options };
       setEdges((eds) => addEdge(edge, eds));
     },
     [setEdges]
@@ -159,6 +120,9 @@ function Flowchart() {
         onDragOver={onDragOver}
         nodeTypes={nodeTypes}
         edgeTypes={edgeTypes}
+        defaultEdgeOptions={defaultEdgeOptions}
+        connectionLineComponent={CustomConnectionLine}
+        connectionLineStyle={connectionLineStyle}
       >
         <Controls />
         <MiniMap />

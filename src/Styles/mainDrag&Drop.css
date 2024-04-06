@@ -18,21 +18,19 @@
 
 .instruction {
   text-align: left;
-  font-family: 'Inter';
+  font-family: "Inter";
   max-width: 1200px;
   margin: 0 auto;
-  height: 180px;
   width: 100%;
 }
 
 .panel {
-  background-color: #E5DEDE;
+  background-color: #e5dede;
   width: 100%;
   color: black;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: bold;
 }
-
 
 .runbutton {
   color: white;
@@ -43,7 +41,7 @@
   border: 1px solid transparent;
   cursor: pointer;
   padding: 0.6em 1.2em;
-  font-family: 'Inter';
+  font-family: "Inter";
 }
 
 .helpbutton {
@@ -55,7 +53,7 @@
   border: 1px solid transparent;
   cursor: pointer;
   padding: 0.6em 1.2em;
-  font-family: 'Inter';
+  font-family: "Inter";
 }
 
 .savebutton {
