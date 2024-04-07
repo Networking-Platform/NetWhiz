@@ -10,8 +10,10 @@ import setting_icon from '../Images/setting_icon.png'
 import theme_icon from '../Images/theme_icon.png'
 import inventory_icon from '../Images/inventory_icon.png'
 import logout_icon from '../Images/logout_icon.png'
-
-
+import blue_jay from '../Images/BlueJay.png'
+import blue_cross from '../Images/blue_cross.png'
+import { useState } from 'react';
+import Navigation from './utils/Navigation';
 
 interface Props {
     getStartedHandler: () => void;
@@ -36,6 +38,12 @@ function Progress({ ProfileHandler,
     backToHomeHandler,
     goToFirstLesson,
     goToSecondLesson }: Props) {
+    
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleDescription = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
@@ -74,17 +82,14 @@ function Progress({ ProfileHandler,
 
             <div className="white-half" style={{ width: '80%', height: '100%', backgroundColor: 'white', position: 'absolute', left: '20%' }}>
 
-                <div className="page-title">
-                    <span id="page-title-button" onClick={backToHomeHandler}>Homepage {'>'} </span>
-                    <span id="page-title-button" onClick={ProgressHandler}> Progress </span>
-                </div>
-                <div id="top-buttons">
-                    <button className="info-button" onClick={aboutUsHandler}> About Us </button>
-                    <button className="info-button" onClick={contactHandler}> Contact </button>
-                    <button className="info-button" onClick={FAQHandler}> FAQ </button>
-                    <button className="info-button" onClick={ProfileHandler}> Profile </button>
-                </div>
-                <button id="red-name-button">Kelvin</button>
+                <Navigation 
+                    username="Kelvin"
+                    redirects={
+                        [
+                            { page_name: 'Home', page_handler: backToHomeHandler },
+                            { page_name: 'Progress', page_handler: ProgressHandler }
+                        ]} 
+                />
 
                 <div id="progress-group">
                     <div id="progress-text">15% complete</div>
@@ -111,7 +116,7 @@ function Progress({ ProfileHandler,
                     <div id="down-arrow"></div>
                 </div>
 
-                <div id="lesson1-box" onClick={goToFirstLesson}>
+                <div id="lesson1-box" onClick={toggleDescription}>
                     <div id="unlocked-border"></div>
                     <div id="unlocked-inner-border">
                         <div id="lesson-text">LESSON 1</div>
@@ -142,6 +147,26 @@ function Progress({ ProfileHandler,
                     <img src={transition_arrow} alt="Transition Arrow"></img>
                 </div>
             </div>
+
+            {isOpen && (
+                <div id="description-box">
+                    <div id="description-title">Lesson 1: HTTP</div>
+                    <div id="description-text">
+                        HTTP blah blah blah blah blah blah blah blah blah blah blah blah.
+                        Blah blah blah blah blah blah blah blah blah blah blah blah blah.
+                        Blah blah blah blah blah blah blah blah blah blah blah blah blah.
+                        Blah blah blah blah blah blah blah blah blah blah blah blah blah.
+                    </div>
+                    <div id="blue-jay">
+                        <img src={blue_jay} alt="Blue Jay" />
+                    </div>
+                    <button id="white-circle" onClick={toggleDescription}>
+                        <div id="blue-cross">
+                            <img src={blue_cross} alt="Exit" />
+                        </div>
+                    </button>
+                    <button id="start-button" onClick={goToFirstLesson}>START</button>                </div>
+            )}
         </div>
     );
 }
