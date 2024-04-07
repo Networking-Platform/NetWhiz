@@ -3,12 +3,10 @@ import '../Styles/Sidebar.css'
 import '../Styles/Profile.modules.css';
 import edit_icon from '../Images/Edit_icon.png'
 import NavigationBar from './utils/BlueNavBar'
+import Navigation from './utils/Navigation';
 
 interface Props {
     getStartedHandler: () => void;
-    aboutUsHandler: () => void;
-    contactHandler: () => void;
-    FAQHandler: () => void;
     ProfileHandler: () => void;
     InventoryHandler: () => void;
     ProgressHandler: () => void;
@@ -18,9 +16,6 @@ interface Props {
 
 function Profile({ProfileHandler,
                     getStartedHandler,
-                    aboutUsHandler,
-                    contactHandler,
-                    FAQHandler,
                     InventoryHandler,
                     ProgressHandler,
                     backToHomeHandler,
@@ -38,6 +33,14 @@ function Profile({ProfileHandler,
             />;
 
             <div className="white-half" style={{ width: '80%', height: '100%', backgroundColor: 'white', position: 'absolute', left: '20%' }}>
+                <Navigation 
+                    username="Kelvin"
+                    redirects={
+                        [
+                            { page_name: 'Home', page_handler: backToHomeHandler },
+                            { page_name: 'Profile', page_handler: ProfileHandler }
+                        ]} 
+                />
                 <div id="profile-background">
                     <div id="avatar"></div>
                     <div id="username">Kelvin</div>
@@ -47,18 +50,6 @@ function Profile({ProfileHandler,
                         Edit
                     </button>
                 </div>
-
-                <div className="page-title">
-                    <span id="page-title-button" onClick={backToHomeHandler}>Homepage {'>'} </span>
-                    <span id="page-title-button" onClick={ProfileHandler}> Profile </span>
-                </div>
-                <div id="top-buttons">
-                    <button className="info-button" onClick={aboutUsHandler}> About Us </button>
-                    <button className="info-button" onClick={contactHandler}> Contact </button>
-                    <button className="info-button" onClick={FAQHandler}> FAQ </button>
-                    <button className="info-button" onClick={ProfileHandler}> Profile </button>
-                </div>
-                <button id = "red-name-button">Kelvin</button>
 
                 <div id="info-slot-topleft">
                     <div id="info-slot-icon"></div>

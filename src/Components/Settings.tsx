@@ -2,12 +2,10 @@ import '../Styles/Navigation.css'
 import '../Styles/Sidebar.css'
 import '../Styles/Settings.modules.css';
 import NavigationBar from './utils/BlueNavBar'
+import Navigation from './utils/Navigation';
 
 interface Props {
     getStartedHandler: () => void;
-    aboutUsHandler: () => void;
-    contactHandler: () => void;
-    FAQHandler: () => void;
     ProfileHandler: () => void;
     ProgressHandler: () => void;
     backToHomeHandler:() => void;
@@ -17,9 +15,6 @@ interface Props {
 
 function Settings({ProfileHandler,
                     getStartedHandler,
-                    aboutUsHandler,
-                    contactHandler,
-                    FAQHandler,
                     ProgressHandler,
                     InventoryHandler,
                     backToHomeHandler,
@@ -36,17 +31,14 @@ function Settings({ProfileHandler,
             />;
 
             <div className="white-half" style={{ width: '80%', height: '100%', backgroundColor: 'white', position: 'absolute', left: '20%' }}>
-                <div className="page-title">
-                    <span id="page-title-button" onClick={backToHomeHandler}>Homepage {'>'} </span>
-                    <span id="page-title-button" onClick={SettingsHandler}> Settings </span>
-                </div>
-                <div id="top-buttons">
-                    <button className="info-button" onClick={aboutUsHandler}> About Us </button>
-                    <button className="info-button" onClick={contactHandler}> Contact </button>
-                    <button className="info-button" onClick={FAQHandler}> FAQ </button>
-                    <button className="info-button" onClick={ProfileHandler}> Profile </button>
-                </div>
-                <button id = "red-name-button">Kelvin</button>
+                <Navigation 
+                    username="Kelvin"
+                    redirects={
+                        [
+                            { page_name: 'Home', page_handler: backToHomeHandler },
+                            { page_name: 'Profile', page_handler: SettingsHandler }
+                        ]} 
+                />
                 <div id="userinfo">User Information</div>
                 <div id="about-me-form">
                     <form>

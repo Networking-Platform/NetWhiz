@@ -2,12 +2,10 @@ import '../Styles/Inventory.modules.css';
 import '../Styles/View.modules.css';
 import NavigationBar from './utils/BlueNavBar'
 import blue_jay from '../Images/blue_jay_view.png'
+import Navigation from './utils/Navigation';
 
 interface Props {
     getStartedHandler: () => void;
-    aboutUsHandler: () => void;
-    contactHandler: () => void;
-    FAQHandler: () => void;
     ProfileHandler: () => void;
     ViewHandler: () => void;
     backToHomeHandler:() => void;
@@ -18,9 +16,6 @@ interface Props {
 
 function View({ProfileHandler,
                     getStartedHandler,
-                    aboutUsHandler,
-                    contactHandler,
-                    FAQHandler, 
                     ViewHandler,
                     InventoryHandler,
                     backToHomeHandler,
@@ -38,18 +33,15 @@ function View({ProfileHandler,
             />;
 
             <div className="white-half" style={{ width: '80%', height: '100%', backgroundColor: 'white', position: 'absolute', left: '20%' }}>
-                <div className="page-title">
-                    <span id="page-title-button" onClick={backToHomeHandler}>Homepage {'>'} </span>
-                    <span id="page-title-button" onClick={InventoryHandler}> Inventory {'>'} </span>
-                    <span id="page-title-button" onClick={ViewHandler}> View </span>
-                </div>
-                <div id="inventory-top-buttons">
-                    <button className="inventory-info-button" onClick={aboutUsHandler}> About Us </button>
-                    <button className="inventory-info-button" onClick={contactHandler}> Contact </button>
-                    <button className="inventory-info-button" onClick={FAQHandler}> FAQ </button>
-                    <button className="inventory-info-button" onClick={ProfileHandler}> Profile </button>
-                </div>
-                <button id = "red-name-button">Kelvin</button>
+                <Navigation 
+                    username="Kelvin"
+                    redirects={
+                        [
+                            { page_name: 'Home', page_handler: backToHomeHandler },
+                            { page_name: 'Inventory', page_handler: InventoryHandler },
+                            { page_name: 'View', page_handler: ViewHandler }
+                        ]} 
+                />
                 
                 <div id="showcase-box">
                     <img src={blue_jay} alt="Blue Jay View"/>

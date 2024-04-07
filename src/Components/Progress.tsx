@@ -4,12 +4,10 @@ import '../Styles/Progress.modules.css';
 import transition_arrow from '../Images/progress_transition_arrow.png'
 import progress_checkmark from '../Images/progress_checkmark.png'
 import NavigationBar from './utils/BlueNavBar'
+import Navigation from './utils/Navigation';
 
 interface Props {
     getStartedHandler: () => void;
-    aboutUsHandler: () => void;
-    contactHandler: () => void;
-    FAQHandler: () => void;
     ProfileHandler: () => void;
     InventoryHandler: () => void;
     ProgressHandler: () => void;
@@ -19,9 +17,6 @@ interface Props {
 
 function Progress({ProfileHandler,
                     getStartedHandler,
-                    aboutUsHandler,
-                    contactHandler,
-                    FAQHandler,
                     InventoryHandler,
                     ProgressHandler,
                     SettingsHandler,
@@ -39,17 +34,14 @@ function Progress({ProfileHandler,
 
             <div className="white-half" style={{ width: '80%', height: '100%', backgroundColor: 'white', position: 'absolute', left: '20%' }}>
 
-                <div className="page-title">
-                    <span id="page-title-button" onClick={backToHomeHandler}>Homepage {'>'} </span>
-                    <span id="page-title-button" onClick={ProgressHandler}> Progress </span>
-                </div>
-                <div id="top-buttons">
-                    <button className="info-button" onClick={aboutUsHandler}> About Us </button>
-                    <button className="info-button" onClick={contactHandler}> Contact </button>
-                    <button className="info-button" onClick={FAQHandler}> FAQ </button>
-                    <button className="info-button" onClick={ProfileHandler}> Profile </button>
-                </div>
-                <button id = "red-name-button">Kelvin</button>
+                <Navigation 
+                    username="Kelvin"
+                    redirects={
+                        [
+                            { page_name: 'Home', page_handler: backToHomeHandler },
+                            { page_name: 'Profile', page_handler: ProgressHandler }
+                        ]} 
+                />
                 
                 <div id = "progress-group">
                     <div id = "progress-text">15% complete</div>
