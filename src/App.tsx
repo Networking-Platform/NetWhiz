@@ -139,6 +139,8 @@ function App() {
                                               ProgressHandler={toProgressPage}
                                               SettingsHandler={toSettingsPage}
                                               backToHomeHandler={goToLogin}
+                                              goToFirstLesson={toFirstLesson}
+                                              goToSecondLesson = {toSecondLesson}
                                             />} />
         <Route path = "/settings" element={<Settings 
                                               ProfileHandler={toProfilePage} 
@@ -147,8 +149,6 @@ function App() {
                                               ProgressHandler={toProgressPage}
                                               SettingsHandler={toSettingsPage}
                                               backToHomeHandler={backToHome}
-                                              goToFirstLesson={toFirstLesson}
-                                              goToSecondLesson = {toSecondLesson}
                                             />} />
         <Route path="/FirstLesson" element={<FirstLesson
                                               backToHomeHandler={backToHome} 
