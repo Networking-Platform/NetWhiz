@@ -1,0 +1,50 @@
+.options {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.dropdown-box {
+  padding: 8px;
+  /* color: aqua; */
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-item p {
+  margin: 0; 
+  margin-right: 5px;
+  width: 69px
+}
+
+.description {
+  color: rgb(23, 23, 23);
+  display: inline-flex;
+  font-size: 12px;
+}
+
+.dropdown-item select {
+  width: 69px;
+  padding: 8px;
+  border: 1px solid #006bf7;
+  border-radius: 4px;
+
+}
+
+.dropdown-item select option {
+  padding: 8px; 
+}
+
+.module {
+  font-size: x-large;
+  text-decoration: underline;
+}
