@@ -22,7 +22,6 @@ function getSpecialPath(sourceX, sourceY, targetX, targetY, offset) {
 }
 
 function FloatingEdge(props) {
-  console.log(props);
   const sourceNode = useStore(
     useCallback(
       (store) => store.nodeInternals.get(props.source),
@@ -35,14 +34,11 @@ function FloatingEdge(props) {
       [props.target]
     )
   );
-  console.log(sourceNode);
-  console.log(targetNode);
 
   if (!sourceNode || !targetNode) {
     return null;
   }
-  //   console.log(source);
-  //   console.log(target);
+
   if (targetNode === sourceNode) {
     const radiusX = sourceNode.width * 0.4;
     const radiusY = sourceNode.height;
@@ -80,16 +76,6 @@ function FloatingEdge(props) {
                 return <option>{option}</option>;
               })}
             </select>
-
-            {/* {props.source.substring(0, 8) === "lesson1" && (
-              <select className="selectlabel">
-                <option>None</option>
-                <option>Available</option>
-                <option>Else</option>
-              </select>
-            )} */}
-
-            {/* <input className="edgeinput"></input> */}
           </div>
         </EdgeLabelRenderer>
       </>

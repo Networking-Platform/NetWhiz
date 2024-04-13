@@ -12,15 +12,6 @@ import Navigation from "./utils/Navigation";
 import FloatingEdge from "./FloatingEdge";
 import CustomConnectionLine from "./CustomConnectionLine";
 
-// interface Props {
-//   aboutUsHandler: () => void;
-//   contactHandler: () => void;
-//   FAQHandler: () => void;
-//   backToHomeHandler: () => void;
-//   ProfileHandler: () => void;
-//   ProgressHandler: () => void;
-// }
-
 export default function LessonTemplate({
   backToHomeHandler,
   aboutUsHandler,
@@ -32,7 +23,6 @@ export default function LessonTemplate({
   const { id } = useParams();
   const lesson_file = require("../Lesson/" + id + ".json");
   const answer = require("../Images/" + id + "_answer.png");
-  console.log(lesson_file);
 
   return (
     <div className="outercontainer">
@@ -51,8 +41,8 @@ export default function LessonTemplate({
       <div className="innercontainer">
         <h2>{lesson_file.lesson}</h2>
         <div className="instruction">
-          {lesson_file.analogy.map((paragraph) => {
-            return <p>{paragraph}</p>;
+          {lesson_file.analogy.map((paragraph, index) => {
+            return <p key={index}>{paragraph}</p>;
           })}
         </div>
         <div className="panel">
@@ -78,12 +68,9 @@ export default function LessonTemplate({
 
           <div className="instruction">
             <h2>Actual Logic</h2>
-            <p>
-              {" "}
-              {lesson_file.actual_logic.map((paragraph) => {
-                return <p>{paragraph}</p>;
-              })}
-            </p>
+            {lesson_file.actual_logic.map((paragraph, index) => {
+              return <p key={index}>{paragraph}</p>;
+            })}
           </div>
         </div>
       </div>

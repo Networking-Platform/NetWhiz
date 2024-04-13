@@ -56,7 +56,6 @@ const initialNodes = [
 const initialEdges = [];
 
 export default function FlowChartTemplate(props) {
-  console.log(props.lesson);
   const getId = () => `${props.lesson}_${id++}`;
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
@@ -111,7 +110,6 @@ export default function FlowChartTemplate(props) {
       <ReactFlow
         nodes={nodes}
         edges={edges}
-        // nodeTypes={nodeTypes}
         onNodesChange={onNodesChange}
         onEdgesChange={onEdgesChange}
         onConnect={onConnect}

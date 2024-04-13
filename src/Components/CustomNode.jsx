@@ -21,29 +21,6 @@ export default memo(({ data, isConnectable, id }) => {
   const node_info = JSON.parse(data.label);
   console.log(node_info);
 
-  // different color blocks places
-  // if (data.label === "Customer places order") {
-  //   mainblockClassName += " clientColorBlock";
-  // } else if (data.label === "Server sends the order to the kitchen") {
-  //   mainblockClassName += " serverColorBlock";
-  // } else if (data.label === "Server informs customer not available") {
-  //   mainblockClassName += " serverFailColorBlock";
-  // } else if (data.label === "Server serves the dish") {
-  //   mainblockClassName += " serverDataBlock";
-  // }
-
-  // if (data.label === "Caller dial recipient number") {
-  //   mainblockClassName += " clientColorBlock";
-  // } else if (data.label === "Recipient picks up") {
-  //   mainblockClassName += " serverColorBlock";
-  // } else if (data.label === "One person speaks") {
-  //   mainblockClassName += " serverFailColorBlock";
-  // } else if (data.label === "other listens and acknowledges") {
-  //   mainblockClassName += " serverDataBlock";
-  // } else if (data.label === "One of them hang up") {
-  //   mainblockClassName += " otherBlock";
-  // }
-
   const [isEditing, setEditing] = useState(false);
 
   const handleEditClick = () => {
@@ -79,7 +56,7 @@ export default memo(({ data, isConnectable, id }) => {
         type="target"
         isConnectableStart={false}
       />
-
+      {/**I might add the edit button back */}
       {/* {isEditing && data.label == "Customer places order" && (
         <div className="detailview">
           <Options_one />

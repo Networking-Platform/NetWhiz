@@ -27,7 +27,7 @@
   border-radius: 4px;
   border: 1px solid transparent;
   cursor: pointer;
-  z-index: 10;
+  z-index: 1;
 }
 
 .clientColorBlock {
