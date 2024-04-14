@@ -17,6 +17,7 @@ import "@fontsource/inter"
 import "@fontsource/inter/700.css";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import View from './Components/View';
+import Settings from './Components/Settings';
 
 
 function App() {
@@ -64,6 +65,10 @@ function App() {
     setPage('Progress');
   }
 
+  const toSettingsPage = () => {
+    setPage('Settings');
+  }
+
   const toFirstLesson = () => {
     setPage('FirstLesson');
   }
@@ -71,6 +76,7 @@ function App() {
   const toSecondLesson = () => {
     setPage('SecondLesson');
   }
+  
   return (
     <div>
       <Routes>
@@ -106,6 +112,7 @@ function App() {
                                             InventoryHandler={toInventoryPage}
                                             backToHomeHandler={backToHome}
                                             ProgressHandler={toProgressPage}
+                                            SettingsHandler={toSettingsPage}
                                           />} />
         <Route path="/inventory" element={<Inventory 
                                               ProfileHandler={toProfilePage} 
@@ -114,6 +121,7 @@ function App() {
                                               InventoryHandler={toInventoryPage}
                                               backToHomeHandler={backToHome} 
                                               ProgressHandler={toProgressPage}
+                                              SettingsHandler={toSettingsPage}
                                             />} />
         <Route path="/inventory/view" element={<View 
                                               ProfileHandler={toProfilePage} 
@@ -121,18 +129,26 @@ function App() {
                                               ViewHandler={toViewPage}
                                               InventoryHandler={toInventoryPage}
                                               backToHomeHandler={backToHome}
+                                              SettingsHandler={toSettingsPage}
+                                              ProgressHandler={toProgressPage}
                                             />} />
         <Route path="/progress" element={<Progress 
                                               ProfileHandler={toProfilePage} 
-                                              aboutUsHandler={toAboutUsPage} 
-                                              contactHandler={toContactPage} 
-                                              FAQHandler={toFAQPage} 
                                               getStartedHandler={goToLogin}
                                               InventoryHandler={toInventoryPage}
                                               ProgressHandler={toProgressPage}
-                                              backToHomeHandler={backToHome}
+                                              SettingsHandler={toSettingsPage}
+                                              backToHomeHandler={goToLogin}
                                               goToFirstLesson={toFirstLesson}
                                               goToSecondLesson = {toSecondLesson}
+                                            />} />
+        <Route path = "/settings" element={<Settings 
+                                              ProfileHandler={toProfilePage} 
+                                              getStartedHandler={goToLogin}
+                                              InventoryHandler={toInventoryPage}
+                                              ProgressHandler={toProgressPage}
+                                              SettingsHandler={toSettingsPage}
+                                              backToHomeHandler={backToHome}
                                             />} />
         <Route path="/FirstLesson" element={<FirstLesson
                                               backToHomeHandler={backToHome} 
