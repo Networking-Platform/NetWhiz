@@ -64,6 +64,10 @@ function App() {
     setPage("Progress");
   };
 
+  const toSettingsPage = () => {
+    setPage("Settings");
+  };
+
   const toFirstLesson = () => {
     setPage("lesson/http_lesson");
   };
@@ -133,6 +137,7 @@ function App() {
               InventoryHandler={toInventoryPage}
               backToHomeHandler={backToHome}
               ProgressHandler={toProgressPage}
+              SettingsHandler={toSettingsPage}
             />
           }
         />
@@ -146,6 +151,7 @@ function App() {
               InventoryHandler={toInventoryPage}
               backToHomeHandler={backToHome}
               ProgressHandler={toProgressPage}
+              SettingsHandler={toSettingsPage}
             />
           }
         />
@@ -158,6 +164,8 @@ function App() {
               ViewHandler={toViewPage}
               InventoryHandler={toInventoryPage}
               backToHomeHandler={backToHome}
+              ProgressHandler={toProgressPage}
+              SettingsHandler={toSettingsPage}
             />
           }
         />
@@ -166,15 +174,13 @@ function App() {
           element={
             <Progress
               ProfileHandler={toProfilePage}
-              aboutUsHandler={toAboutUsPage}
-              contactHandler={toContactPage}
-              FAQHandler={toFAQPage}
               getStartedHandler={goToLogin}
               InventoryHandler={toInventoryPage}
               ProgressHandler={toProgressPage}
               backToHomeHandler={backToHome}
               goToFirstLesson={toFirstLesson}
               goToSecondLesson={toSecondLesson}
+              SettingsHandler={toSettingsPage}
             />
           }
         />
