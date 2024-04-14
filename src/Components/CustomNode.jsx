@@ -19,8 +19,6 @@ const connectionNodeIdSelector = (state) => state.connectionNodeId;
 export default memo(({ data, isConnectable, id }) => {
   let mainblockClassName = "mainblock"; // Default class
   const node_info = JSON.parse(data.label);
-  console.log(node_info);
-
   const [isEditing, setEditing] = useState(false);
 
   const handleEditClick = () => {

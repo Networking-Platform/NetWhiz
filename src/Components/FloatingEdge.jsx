@@ -16,8 +16,6 @@ function getSpecialPath(sourceX, sourceY, targetX, targetY, offset) {
   const path = `M ${sourceX} ${sourceY} Q ${centerX} ${
     centerY + offset
   } ${targetX} ${targetY}`;
-  console.log(centerX);
-  console.log(centerY);
   return { path: path, labelX: centerX, labelY: centerY + offset };
 }
 
@@ -83,24 +81,8 @@ function FloatingEdge(props) {
   }
 
   const { sx, sy, tx, ty } = getEdgeParams(sourceNode, targetNode);
-  console.log(getEdgeParams(sourceNode, targetNode));
 
-  //   const [labelX, labelY] = getStraightPath({
-  //     sourceX: sx,
-  //     sourceY: sy,
-  //     targetX: tx,
-  //     targetY: ty,
-  //   });
-
-  //   const radiusX =
-  //     Math.abs(sourceNode.position.x - targetNode.position.x) * 0.001;
-  //   const radiusY =
-  //     Math.abs(sourceNode.position.y - targetNode.position.y) * 0.001;
-  //   const edgePath = `M ${sx} ${sy} A ${radiusX} ${radiusY} 0 1 0 ${tx} ${ty}`;
   const special = getSpecialPath(sx, sy, tx, ty, sx < tx ? 50 : -50);
-  //   console.log(labelX);
-  //   console.log(labelY);
-  // console.log(props.source.substring(0, 8));
 
   return (
     <>
