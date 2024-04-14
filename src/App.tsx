@@ -11,6 +11,7 @@ import Progress from "./Components/Progress";
 
 import "@fontsource/inter";
 import "@fontsource/inter/700.css";
+
 import {
   BrowserRouter as Router,
   Route,
@@ -19,6 +20,9 @@ import {
 } from "react-router-dom";
 import View from "./Components/View";
 import LessonTemplate from "./Components/LessonTemplate";
+
+
+
 
 function App() {
   const usePageNavigation = () => {
@@ -63,6 +67,10 @@ function App() {
   const toProgressPage = () => {
     setPage("Progress");
   };
+
+  const toSettingsPage = () => {
+    setPage('Settings');
+  }
 
   const toFirstLesson = () => {
     setPage("lesson/http_lesson");
