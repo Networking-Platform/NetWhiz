@@ -11,6 +11,7 @@ import Progress from "./Components/Progress";
 
 import "@fontsource/inter";
 import "@fontsource/inter/700.css";
+
 import {
   BrowserRouter as Router,
   Route,
