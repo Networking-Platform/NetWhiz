@@ -19,6 +19,7 @@ import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-route
 import View from './Components/View';
 import Settings from './Components/Settings';
 
+import { DarkModeProvider, useDarkMode } from './Components/utils/DarkMode';
 
 function App() {
 
@@ -27,6 +28,8 @@ function App() {
     return (pageName: string) => navigate(`/${pageName.toLowerCase()}`);
   }
 
+  const { darkMode } = useDarkMode();
+  console.log("darkMode: ", darkMode);
   const setPage = usePageNavigation();
 
   const goToLogin = () => {
@@ -78,7 +81,7 @@ function App() {
   }
   
   return (
-    <div>
+    <div className={darkMode ? "dark-theme" : ""}>
       <Routes>
       <Route path="/" element={<Home 
                                   getStartedHandler={goToLogin} 
@@ -172,4 +175,11 @@ function App() {
   );
 }
 
-export default App;
+const AppWithDarkModeProvider = () => (
+  <DarkModeProvider>
+    <App />
+  </DarkModeProvider>
+);
+
+
+export default AppWithDarkModeProvider;
