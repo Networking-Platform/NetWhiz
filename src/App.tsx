@@ -29,7 +29,6 @@ function App() {
   }
 
   const { darkMode } = useDarkMode();
-  console.log("darkMode: ", darkMode);
   const setPage = usePageNavigation();
 
   const goToLogin = () => {
