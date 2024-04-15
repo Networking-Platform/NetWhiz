@@ -10,15 +10,25 @@ const DarkModeContext = createContext<DarkModeContextType | undefined>(undefined
 export const DarkModeProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [darkMode, setDarkMode] = useState<boolean>(false);
 
-  useEffect(() => {
-    // Check if the user prefers dark mode using CSS media query
-    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    setDarkMode(prefersDarkMode);
-  }, []);
-
   const toggleDarkMode = () => {
     setDarkMode((prevDarkMode) => !prevDarkMode);
   };
+
+  useEffect(() => {
+    const updateDarkMode = (e: MediaQueryListEvent) => {
+      setDarkMode(e.matches);
+    };
+
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    setDarkMode(prefersDarkMode);
+
+    const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    darkModeQuery.addEventListener('change', updateDarkMode);
+
+    return () => {
+      darkModeQuery.removeEventListener('change', updateDarkMode);
+    };
+  }, []);
 
   return (
     <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
