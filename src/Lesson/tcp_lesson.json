@@ -1,0 +1,36 @@
+{
+  "lesson": "TCP Protocol",
+  "analogy": [
+    "Oops! It looks like the restaurant telephone broke!",
+    "Since you are too broke to hire someone, you have to fix it yourself.",
+    "On further examination, it looks like the telephone is unable to make calls.",
+    "So, you must reprogram the telephone to make and take calls again.",
+    "To do that, you must learn how phone calls work:",
+    "(i) The caller must dial the recipient's number and wait for them to pick up, which will establish a direct line of communication between them.",
+    "(ii) When one person speaks, the other listens and acknowledges their understanding by responding.",
+    "(iii) If someone is speaking too quickly, or they cut off due to network issues or background noises, the other will ask them to repeat themselves.",
+    "(iv) When both parties are done talking, they will agree to hang up."
+  ],
+  "actual_logic": [
+    "When a client communicates with a server for web pages and other information, they use the TCP protocol, which allows for reliable and connection-based communication.",
+    "To establish a TCP connection:",
+    "(i) The client and server engage in a three-way handshake. First, the client indicates to the server that it wants to connect. Then, the server responds by acknowledging that request. Finally, the client acknowledges the response and a connection has been established.",
+    "(ii) During communication, TCP ensures reliable communication by using acknowledgment packets to confirm that messages have been delivered.",
+    "(iii) If data is being transmitted too quickly, or the network is congested, TCP will restrict transmission rates to ensure reliability.",
+    "(iv) When the server and client are done communicating, the TCP connection is terminated by mutual agreement."
+  ],
+  "explannation": [
+    "First, the caller dials the recipient's number.",
+    "When the recipient picks up, the conversation begins.",
+    "When one person speaks, there are two branches: if the person speaks too quickly, the recipient will not follow, and the person needs to speak again; otherwise, the other will listen and acknowledge that they received the message.",
+    "If one of them hangs up, the conversation ends; otherwise, the conversation continues starting with one person speaking again."
+  ],
+  "nodes": [
+    { "label": "Caller dials recipient number", "color": "#3127a0" },
+    { "label": "Recipient picks up", "color": "#fc9a07" },
+    { "label": "One person speaks", "color": "#f47878" },
+    { "label": "Other listens and acknowledges", "color": "#3ed079" },
+    { "label": "One of them hangs up", "color": "rgba(255, 0, 0, 0.611)" }
+  ],
+  "options": ["None", "Speak too quick", "Hangs up", "Else"]
+}

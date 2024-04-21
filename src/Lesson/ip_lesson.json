@@ -1,0 +1,30 @@
+{
+  "lesson": "IP Protocol",
+  "analogy": [
+    "After some market research, you’ve determined that many of your potential customers are too lazy to leave their homes and come to the restaurant.",
+    "So, you decide to get into the food delivery business. The following are important parts of the delivery process:",
+    "i) Get customer’s address",
+    "ii) Delivery person figures out the best route to customer’s address",
+    "iii) If there are too many food items to fit in one bag, the food items can be split into multiple bags",
+    "iv) Upon successful delivery, the customer receives their food and can enjoy a good meal",
+    "v) If the wrong food item is delivered, or something gets lost on the way, another delivery may have to be sent to correct that error."
+  ],
+  "actual_logic": [
+    "IP (Internet Protocol) is an important protocol for delivering data across networks. In IP, data is sent in packets, which include a header containing information for routing and a payload containing the data.",
+    "When a device wants to send data to another device they need to:",
+    "i) Get the destination IP address, which is used to locate the recipient in the network",
+    "ii) Routers find the optimal path to route data packets",
+    "iii) Data is often broken down into multiple data packets that are individually sent across a network in a process known as packet switching",
+    "iv) When packets reach the destination device, the device can process the data.",
+    "v) If there is an error in delivery, such as packets being lost or corrupted, there are mechanisms for recovery that can be used to ensure reliable delivery."
+  ],
+  "explannation": "To make the delivery, the restaurant first need to get the customer address. Then the delivery person will find the best route. There should be a condition after this. If the food is too much, it needs to be split into seperate bags. Then the delivery guy will try to make the delivery. If it is not successful, then he has to do it again.",
+  "nodes": [
+    { "label": "Get customer address", "color": "#3127a0" },
+    { "label": "Find best route", "color": "#fc9a07" },
+    { "label": "Split the food", "color": "#f47878" },
+    { "label": "Deliver the food", "color": "#3ed079" },
+    { "label": "Customer get the food", "color": "rgba(255, 0, 0, 0.611)" }
+  ],
+  "options": ["None", "Too much food", "Successful", "Else"]
+}

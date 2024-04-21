@@ -1,0 +1,30 @@
+{
+  "lesson": "DNS Protocol",
+  "analogy": [
+    "A customer calls the restaurant to order delivery but the connection seems to not be very good. When they start telling you the delivery address, the call suddenly cuts out, and the customer hangs up before you can say anything. When you try calling back, you aren’t able to reach them. Now what? As a somewhat new restaurant, you have a reputation to upkeep, so you can’t just ignore this order. Otherwise, this customer may go around town spreading bad words about you! Thus, you must find a way to obtain this customer’s address.",
+    "You call a staff member over, and instruct them to look up this customer’s phone number in your restaurant’s directory of previous customers and their addresses. However, the phone number cannot be found there. So, you turn to the local phone book. Or what about your neighboring restaurants? Maybe they’ll know something. Still nothing. You suddenly remember that the mayor owes you a favor. Surely, she would know something about this mysterious customer’s whereabouts. You call the mayor and ask her to check the local government records, and after the longest 5 minutes of your life, she comes back with the correct address and you successfully make the delivery. If this customer asks for a delivery in the future, he’ll be in the restaurant’s directory and you won’t have to go through this hassle again. You also decide to come up with a protocol to deal with these types of situations in the future.",
+    "\u00a0",
+    "When you need to find a customer’s address by their phone number, you will do the following:",
+    "(i) Look in the restaurant directory. This contains all of your previous customers, so it’s most likely that the missing address will be in here.",
+    "(ii) Ask neighboring restaurants. Maybe the customer’s address is in their directory.",
+    "(iii) Check the local phone book. This should contain the address of most of the town’s residents.",
+    "(iv) If all else fails, beg the mayor for help."
+  ],
+
+  "actual_logic": [
+    "When requesting a web page, the address must be turned into an IP address so the browser knows where to request the content from. To do this, your web browser uses a protocol called DNS resolution:",
+    "(i) The web browser first checks its local DNS cache to see if the domain name has been recently resolved.",
+    "(ii) The client sends a recursive query to a DNS resolver, which sends queries to other DNS servers to see if they have the IP address.",
+    "(iii) The client sends iterative queries to authoritative servers, which store DNS records for specific domain names.",
+    "(iv) If the IP address is still not found, a root-level server is contacted. The root servers provide information about the top-level domain (TLD) servers responsible for specific domain extensions (.com, .org, .net, etc.)."
+  ],
+  "explannation": "This challenge requires you to do a series of if and else conditions. If number is not found in in restaurant directory, then ask neighboring restaurants, if not found, than check phone book, if not found, beg the mayor to check the number.",
+  "nodes": [
+    { "label": "Look restaurant directory", "color": "#3127a0" },
+    { "label": "Ask neighboring restaurant", "color": "#fc9a07" },
+    { "label": "Check phone book", "color": "#f47878" },
+    { "label": "Beg the mayor", "color": "#3ed079" }
+  ],
+
+  "options": ["None", "Found", "Else"]
+}
