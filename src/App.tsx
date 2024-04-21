@@ -12,6 +12,7 @@ import Progress from "./Components/Progress";
 import "@fontsource/inter";
 import "@fontsource/inter/700.css";
 
+import { DarkModeProvider, useDarkMode } from './Components/utils/DarkMode';
 import {
   BrowserRouter as Router,
   Route,
@@ -27,6 +28,7 @@ function App() {
     return (pageName: string) => navigate(`/${pageName.toLowerCase()}`);
   };
 
+  const { darkMode } = useDarkMode();
   const setPage = usePageNavigation();
 
   const goToLogin = () => {
@@ -77,7 +79,7 @@ function App() {
     setPage("lesson/tcp_lesson");
   };
   return (
-    <div>
+    <div className={darkMode ? "dark-theme" : ""}>
       <Routes>
         <Route
           path="/"
@@ -203,4 +205,11 @@ function App() {
   );
 }
 
-export default App;
+const AppWithDarkModeProvider = () => (
+  <DarkModeProvider>
+    <App />
+  </DarkModeProvider>
+);
+
+
+export default AppWithDarkModeProvider;

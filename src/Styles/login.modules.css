@@ -6,6 +6,16 @@
     left: 3%;
 }
 
+#login-blue-half {
+    width: 20%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #3127A0;
+    position: absolute;
+    left: 0;
+}
+
+
 @media screen and (min-width: 900px) and (max-width: 1250px) {
     #wireframe {
         box-sizing: border-box;
