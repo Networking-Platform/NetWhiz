@@ -1,5 +1,5 @@
 import React, { memo, useState } from "react";
-import { Handle, Position } from "reactflow";
+import { Handle, Position, useStore } from "reactflow";
 import "../Styles/CustomNode.css";
 import "../Styles/Options.css";
 
@@ -13,81 +13,65 @@ const ClassNames = {
   "Recipient picks up": "serverColorBlock",
   "One person speaks": "serverFailColorBlock",
   "other listens and acknowledges": "serverDataBlock",
-  "One of them hang up": "otherBlock"
+  "One of them hang up": "otherBlock",
 };
+const connectionNodeIdSelector = (state) => state.connectionNodeId;
+export default memo(({ data, isConnectable, id }) => {
+  let mainblockClassName = "mainblock"; // Default class
+  const node_info = JSON.parse(data.label);
+  const [isEditing, setEditing] = useState(false);
 
-export default memo(({ data, isConnectable }) => {
-const [isEditing, setEditing] = useState(false);
+  const handleEditClick = () => {
+    setEditing((isEditing) => !isEditing);
+  };
 
-const handleEditClick = () => {
-  setEditing((isEditing) => !isEditing);
-};
+  const connectionNodeId = useStore(connectionNodeIdSelector);
 
-let mainblockClassName = "mainblock " + ClassNames[data.label];
-
-return (
-  <div className="customNode">
-    <Handle
-      type="target"
-      position={Position.Left}
-      id="a"
-      style={{ background: "#555" }}
-      onConnect={(params) => console.log("handle onConnect", params)}
-      isConnectable={isConnectable}
-    />
-
-    <div className={mainblockClassName}>
-      <button className="editbutton" onClick={handleEditClick}>
-        Edit
-      </button>
-      {data.label}
-    </div>
-
-    <Handle
-      type="source"
-      position={Position.Right}
-      id="b"
-      style={{ background: "#555" }}
-      isConnectable={isConnectable}
-    />
-    <Handle
-      type="target"
-      position={Position.Top}
-      id="c"
-      style={{ background: "#555" }}
-      isConnectable={isConnectable}
-    />
-    <Handle
-      type="source"
-      position={Position.Bottom}
-      id="d"
-      style={{ background: "#555" }}
-      isConnectable={isConnectable}
-    />
-    {isEditing && data.label == "Client send request" && (
-      <div className="detailview">
-        <Options_one />
-        <Options_three />
-        <Options_four />
-        <Options_five />
+  const isConnecting = !!connectionNodeId;
+  return (
+    <div className="customNode">
+      <div
+        className={mainblockClassName}
+        style={{ background: node_info.color }}
+      >
+        <button className="editbutton" onClick={handleEditClick}>
+          Edit
+        </button>
+        {node_info.label}
       </div>
-    )}
-    {isEditing &&
-      (data.label == "Server respond fail" ||
-        data.label == "Server respond data") && (
+
+      {!isConnecting && (
+        <Handle
+          className="customHandle"
+          position={Position.Right}
+          type="source"
+        />
+      )}
+
+      <Handle
+        className="customHandle"
+        position={Position.Left}
+        type="target"
+        isConnectableStart={false}
+      />
+      {/**I might add the edit button back */}
+      {/* {isEditing && data.label == "Customer places order" && (
         <div className="detailview">
-          <Options_two />
+          <Options_one />
+          <Options_three />
+          <Options_four />
+          <Options_five />
         </div>
       )}
-    {/* <Handle
-        type="source"
-        position={Position.Right}
-        id="b"
-        style={{ bottom: 10, top: "auto", background: "#555" }}
-        isConnectable={isConnectable}
-      /> */}
-  </div>
-);
+      {isEditing &&
+        (data.label == "Server informs customer not available" ||
+          data.label == "Server serves the dish") && (
+          <div className="detailview">
+            <Options_two />
+          </div>
+        )} */}
+    </div>
+  );
 });
 
 // http methods
