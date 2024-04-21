@@ -1,14 +1,15 @@
-.outercontainer {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
+#outercontainer {
+  background-color: rgba(221, 219, 219, 0.36);
+
 }
 
 .innercontainer {
+  background-color: white;
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
-  text-align: left;
+  padding: 40px;
+  padding-top: 10px;
 }
 
 .flowcontainer {
@@ -17,20 +18,28 @@
 }
 
 .instruction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   text-align: left;
-  font-family: "Inter";
+  font-family: 'Inter';
   max-width: 1200px;
   margin: 0 auto;
-  width: 100%;
+  margin-bottom: 10px;
+}
+
+.instruction p {
+  margin: 10px;
 }
 
 .panel {
-  background-color: #e5dede;
+  background-color: #E5DEDE;
   width: 100%;
   color: black;
-  font-family: "Inter";
+  font-family: 'Inter';
   font-weight: bold;
 }
+
 
 .runbutton {
   color: white;
@@ -41,7 +50,7 @@
   border: 1px solid transparent;
   cursor: pointer;
   padding: 0.6em 1.2em;
-  font-family: "Inter";
+  font-family: 'Inter';
 }
 
 .helpbutton {
@@ -53,7 +62,7 @@
   border: 1px solid transparent;
   cursor: pointer;
   padding: 0.6em 1.2em;
-  font-family: "Inter";
+  font-family: 'Inter';
 }
 
 .savebutton {

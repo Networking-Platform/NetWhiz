@@ -4,13 +4,13 @@ import "reactflow/dist/style.css";
 import "../Styles/Navigation.css";
 import "../Styles/mainDrag&Drop.css";
 import "../Styles/nodeBottomBar.css";
-import "../Styles/menuBar.css";
 import FlowChartTemplate from "./FlowChartTemplate";
 import SideBarTemplate from "./SideBarTemplate";
 import CustomNode from "../Components/CustomNode";
 import Navigation from "./utils/Navigation";
 import FloatingEdge from "./FloatingEdge";
 import CustomConnectionLine from "./CustomConnectionLine";
+import LessonNavigation from './utils/LessonNavigation';
 
 export default function LessonTemplate({
   backToHomeHandler,
@@ -25,19 +25,17 @@ export default function LessonTemplate({
   const answer = require("../Images/" + id + "_answer.png");
 
   return (
-    <div className="outercontainer">
-      <div className="navigation-container ">
-        <button id="title" onClick={backToHomeHandler}>
-          Website.com
-        </button>
-        <Navigation
-          username="Kelvin"
-          redirects={[
-            { page_name: "Home", page_handler: backToHomeHandler },
-            { page_name: "Progress", page_handler: ProgressHandler },
+    <div id="outercontainer">
+      <LessonNavigation
+        username="Kelvin"
+        redirects={
+          [
+            { page_name: 'Home', page_handler: backToHomeHandler },
+            { page_name: 'Progress', page_handler: ProgressHandler },
+            { page_name: lesson_file.lesson, page_handler: () => {} }
           ]}
-        />
-      </div>
+
+      />
       <div className="innercontainer">
         <h2>{lesson_file.lesson}</h2>
         <div className="instruction">
