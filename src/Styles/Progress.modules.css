@@ -447,3 +447,39 @@
     background-color: #FFFFFF;
     border-radius: 50%;
 }
+
+#popover-button {
+    background-color: white;
+    color: #F47878;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 5%;
+}
+
+#popover-button-locked {
+    background-color: white;
+    color: #818181;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 5%;
+}

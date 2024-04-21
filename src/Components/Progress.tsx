@@ -14,6 +14,7 @@ import blue_jay from '../Images/BlueJay.png'
 import blue_cross from '../Images/blue_cross.png'
 import { useState } from 'react';
 import Navigation from './utils/Navigation';
+import { Button, Popover } from 'antd';
 
 interface Props {
     getStartedHandler: () => void;
@@ -39,11 +40,24 @@ function Progress({ ProfileHandler,
     goToFirstLesson,
     goToSecondLesson }: Props) {
     
-    const [isOpen, setIsOpen] = useState(false);
+    const [open, setOpen] = useState(false);
+    const [open3, setOpen3] = useState(false);
 
-    const toggleDescription = () => {
-        setIsOpen(!isOpen);
+    const hide = () => {
+        setOpen(false);
     };
+
+    const handleOpenChange = (newOpen: boolean) => {
+        setOpen(newOpen);
+    };
+    const hide3 = () => {
+        setOpen3(false);
+    };
+
+    const handleOpenChange3 = (newOpen: boolean) => {
+        setOpen3(newOpen);
+    };
+    
 
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
@@ -116,15 +130,40 @@ function Progress({ ProfileHandler,
                     <div id="down-arrow"></div>
                 </div>
 
-                <div id="lesson1-box" onClick={toggleDescription}>
+                {/* <div id="lesson1-box" onClick={toggleDescription}>
                     <div id="unlocked-border"></div>
                     <div id="unlocked-inner-border">
                         <div id="lesson-text">LESSON 1</div>
                         <div id="lesson-name">HTTP</div>
                     </div>
                     <div id="down-arrow"></div>
-                </div>
-
+                </div> */}
+                <Popover
+                    content={
+                        <div style={{ color: 'white' }}>
+                            <p>Learn about HTTP!</p>
+                            <Button type="primary" id="popover-button" onClick={goToFirstLesson}>START</Button>
+                            <a onClick={hide}></a>
+                        </div>
+                    }
+                    overlayStyle={{ width: '20%', borderRadius: '5px' }}
+                    title="Lesson 1: HTTP"
+                    trigger="click"
+                    open={open}
+                    onOpenChange={handleOpenChange}
+                    color="#F47878"
+                    placement={"bottom"}
+                    
+                >
+                    <div id="lesson1-box">
+                        <div id="unlocked-border"></div>
+                        <div id="unlocked-inner-border">
+                            <div id="lesson-text">LESSON 1</div>
+                            <div id="lesson-name">HTTP</div>
+                        </div>
+                        <div id="down-arrow"></div>
+                    </div>
+                </Popover>
                 <div id="lesson2-box" onClick={goToSecondLesson}>
                     <div id="unlocked-border"></div>
                     <div id="unlocked-inner-border">
@@ -134,39 +173,38 @@ function Progress({ ProfileHandler,
                     <div id="down-arrow"></div>
                 </div>
 
-                <div id="lesson3-box">
-                    <div id="unlocked-border"></div>
-                    <div id="locked-border">
-                        <div id="lesson-text">LESSON 3</div>
-                        <div id="lesson-name">"Topic"</div>
+                
+                <Popover
+                    content={
+                        <div style={{ color: '#818181' }}>
+                            <p>Learn about HTTP!</p>
+                            <Button type="primary" id="popover-button-locked" onClick={goToFirstLesson}>LOCKED</Button>
+                            <a onClick={hide3}></a>
+                        </div>
+                    }
+                    overlayStyle={{ width: '20%', borderRadius: '5px' }}
+                    title="Lesson 3: HTTP"
+                    trigger="click"
+                    open={open3}
+                    onOpenChange={handleOpenChange3}
+                    color="#EAEAEA"
+                    placement={"bottom"}
+                    
+                >
+                    <div id="lesson3-box">
+                        <div id="unlocked-border"></div>
+                        <div id="locked-border">
+                            <div id="lesson-text">LESSON 3</div>
+                            <div id="lesson-name">"Topic"</div>
+                        </div>
+                        <div id="down-arrow"></div>
                     </div>
-                    <div id="down-arrow"></div>
-                </div>
+                </Popover>
 
                 <div id="transition-arrow">
                     <img src={transition_arrow} alt="Transition Arrow"></img>
                 </div>
             </div>
-
-            {isOpen && (
-                <div id="description-box">
-                    <div id="description-title">Lesson 1: HTTP</div>
-                    <div id="description-text">
-                        HTTP blah blah blah blah blah blah blah blah blah blah blah blah.
-                        Blah blah blah blah blah blah blah blah blah blah blah blah blah.
-                        Blah blah blah blah blah blah blah blah blah blah blah blah blah.
-                        Blah blah blah blah blah blah blah blah blah blah blah blah blah.
-                    </div>
-                    <div id="blue-jay">
-                        <img src={blue_jay} alt="Blue Jay" />
-                    </div>
-                    <button id="white-circle" onClick={toggleDescription}>
-                        <div id="blue-cross">
-                            <img src={blue_cross} alt="Exit" />
-                        </div>
-                    </button>
-                    <button id="start-button" onClick={goToFirstLesson}>START</button>                </div>
-            )}
         </div>
     );
 }
