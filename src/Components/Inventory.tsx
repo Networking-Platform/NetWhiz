@@ -35,7 +35,7 @@ function Inventory({ProfileHandler,
                 currentPage='Inventory'
             />;
 
-            <div className="white-half" style={{ width: '80%', height: '100%', backgroundColor: 'white', position: 'absolute', left: '20%' }}>
+            <div className="white-half">
                 <Navigation 
                     username="Kelvin"
                     redirects={

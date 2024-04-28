@@ -9,6 +9,10 @@
     border-radius: 20px;
 }
 
+.dark-theme #top-area {
+    background: #474747;
+}
+
 #inventory-title2 {
     position: absolute;
     width: 27%; /* Adjusted width */
@@ -21,6 +25,10 @@
     font-size: 24px;
     line-height: 22px;
     color: #000000;
+}
+
+.dark-theme #inventory-title2 {
+    color: white;
 }
 
 #collection-progress {
@@ -37,6 +45,10 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
+}
+
+.dark-theme #collection-progress {
+    background: #1a1a1a;
 }
 
 #collection-progress .progress-text {

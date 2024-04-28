@@ -18,6 +18,10 @@
     background-color: transparent;
 }
 
+.dark-theme #page-title-button {
+    color: white;
+}
+
 #top-buttons {
     position: absolute;
     display: flex;
@@ -39,6 +43,11 @@
     margin-left: 3%; 
     cursor: pointer;
 }
+
+.dark-theme .info-button {
+    color: white;
+}
+
 
 #red-name-button {
     position: absolute;
