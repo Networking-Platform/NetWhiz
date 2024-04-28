@@ -10,11 +10,9 @@ import setting_icon from '../Images/setting_icon.png'
 import theme_icon from '../Images/theme_icon.png'
 import inventory_icon from '../Images/inventory_icon.png'
 import logout_icon from '../Images/logout_icon.png'
-import blue_jay from '../Images/BlueJay.png'
-import blue_cross from '../Images/blue_cross.png'
 import { useState } from 'react';
 import Navigation from './utils/Navigation';
-import { Button, Popover } from 'antd';
+import {UnlockedLesson, LockedLesson, CompletedLesson} from './utils/Lesson';
 
 interface Props {
     getStartedHandler: () => void;
@@ -116,65 +114,33 @@ function Progress({ ProfileHandler,
                     </div>
                 </div>
 
-                <div id="lesson0-box">
-                    <div id="unlocked-border"></div>
-                    <div id="completed-inner-border">
-                        <div id="lesson-text">LESSON 0</div>
-                        <div id="lesson-name">Tutorial</div>
-                    </div>
-                    <div id="current-circle">
-                        <div id="checkmark">
-                            <img src={progress_checkmark} alt="checkmark"></img>
-                        </div>
-                    </div>
-                    <div id="down-arrow"></div>
-                </div>
+                <CompletedLesson
+                    lessonNumber="0"
+                    lessonName="Tutorial"
+                    lessonInfo="Introduction to NetQuest"
+                    goToLesson={goToFirstLesson}
+                />
+                <UnlockedLesson 
+                    lessonNumber="1"
+                    lessonName="HTTP"
+                    lessonInfo="Learn about HTTP!"
+                    goToLesson={goToFirstLesson}
+                />
 
-                {/* <div id="lesson1-box" onClick={toggleDescription}>
-                    <div id="unlocked-border"></div>
-                    <div id="unlocked-inner-border">
-                        <div id="lesson-text">LESSON 1</div>
-                        <div id="lesson-name">HTTP</div>
-                    </div>
-                    <div id="down-arrow"></div>
-                </div> */}
-                <Popover
-                    content={
-                        <div style={{ color: 'white' }}>
-                            <p>Learn about HTTP!</p>
-                            <Button type="primary" id="popover-button" onClick={goToFirstLesson}>START</Button>
-                            <a onClick={hide}></a>
-                        </div>
-                    }
-                    overlayStyle={{ width: '20%', borderRadius: '5px' }}
-                    title="Lesson 1: HTTP"
-                    trigger="click"
-                    open={open}
-                    onOpenChange={handleOpenChange}
-                    color="#F47878"
-                    placement={"bottom"}
-                    
-                >
-                    <div id="lesson1-box">
-                        <div id="unlocked-border"></div>
-                        <div id="unlocked-inner-border">
-                            <div id="lesson-text">LESSON 1</div>
-                            <div id="lesson-name">HTTP</div>
-                        </div>
-                        <div id="down-arrow"></div>
-                    </div>
-                </Popover>
-                <div id="lesson2-box" onClick={goToSecondLesson}>
-                    <div id="unlocked-border"></div>
-                    <div id="unlocked-inner-border">
-                        <div id="lesson-text">LESSON 2</div>
-                        <div id="lesson-name">TCP</div>
-                    </div>
-                    <div id="down-arrow"></div>
-                </div>
+                <UnlockedLesson 
+                    lessonNumber="2"
+                    lessonName="TCP"
+                    lessonInfo="Learn about TCP!"
+                    goToLesson={goToSecondLesson}
+                />
 
-                
-                <Popover
+                <LockedLesson
+                    lessonNumber="3"
+                    lessonName="IP"
+                    lessonInfo="Learn about IP!"
+                    goToLesson={goToSecondLesson}
+                />
+                {/* <Popover
                     content={
                         <div style={{ color: '#818181' }}>
                             <p>Learn about HTTP!</p>
@@ -199,7 +165,7 @@ function Progress({ ProfileHandler,
                         </div>
                         <div id="down-arrow"></div>
                     </div>
-                </Popover>
+                </Popover> */}
 
                 <div id="transition-arrow">
                     <img src={transition_arrow} alt="Transition Arrow"></img>
