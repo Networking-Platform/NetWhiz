@@ -2,7 +2,6 @@ import '../Styles/Navigation.css'
 import '../Styles/Sidebar.css'
 import '../Styles/Progress.modules.css';
 import transition_arrow from '../Images/progress_transition_arrow.png'
-import progress_checkmark from '../Images/progress_checkmark.png'
 import selected_learning_icon from '../Images/progress_selected_icon.png'
 import profile_icon from '../Images/profile_icon.png'
 import help_center_icon from '../Images/help_center_icon.png'
@@ -28,34 +27,11 @@ interface Props {
 }
 
 function Progress({ ProfileHandler,
-    getStartedHandler,
-    aboutUsHandler,
-    contactHandler,
-    FAQHandler,
     InventoryHandler,
     ProgressHandler,
     backToHomeHandler,
     goToFirstLesson,
     goToSecondLesson }: Props) {
-    
-    const [open, setOpen] = useState(false);
-    const [open3, setOpen3] = useState(false);
-
-    const hide = () => {
-        setOpen(false);
-    };
-
-    const handleOpenChange = (newOpen: boolean) => {
-        setOpen(newOpen);
-    };
-    const hide3 = () => {
-        setOpen3(false);
-    };
-
-    const handleOpenChange3 = (newOpen: boolean) => {
-        setOpen3(newOpen);
-    };
-    
 
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
@@ -140,32 +116,6 @@ function Progress({ ProfileHandler,
                     lessonInfo="Learn about IP!"
                     goToLesson={goToSecondLesson}
                 />
-                {/* <Popover
-                    content={
-                        <div style={{ color: '#818181' }}>
-                            <p>Learn about HTTP!</p>
-                            <Button type="primary" id="popover-button-locked" onClick={goToFirstLesson}>LOCKED</Button>
-                            <a onClick={hide3}></a>
-                        </div>
-                    }
-                    overlayStyle={{ width: '20%', borderRadius: '5px' }}
-                    title="Lesson 3: HTTP"
-                    trigger="click"
-                    open={open3}
-                    onOpenChange={handleOpenChange3}
-                    color="#EAEAEA"
-                    placement={"bottom"}
-                    
-                >
-                    <div id="lesson3-box">
-                        <div id="unlocked-border"></div>
-                        <div id="locked-border">
-                            <div id="lesson-text">LESSON 3</div>
-                            <div id="lesson-name">"Topic"</div>
-                        </div>
-                        <div id="down-arrow"></div>
-                    </div>
-                </Popover> */}
 
                 <div id="transition-arrow">
                     <img src={transition_arrow} alt="Transition Arrow"></img>
