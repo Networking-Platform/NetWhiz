@@ -91,6 +91,9 @@
     border-radius: 20px;
 }
 
+.dark-theme .collection-item {
+    background: #474747;
+}
 
 .view-text {
     position: absolute;
@@ -109,6 +112,10 @@
     background-color: transparent;
 }
 
+.dark-theme .view-text  {
+    color: white;
+}
+
 .name-text {
     position: absolute;
     left: 0;
@@ -124,6 +131,10 @@
     color: #000000;
 }
 
+.dark-theme .name-text  {
+    color: white;
+}
+
 .collection-status {
     position: absolute;
     left: 0;
@@ -137,6 +148,10 @@
     line-height: 24px;
     text-align: center;  
     color: #000000;
+}
+
+.dark-theme .collection-status {
+    color: white;
 }
 
 .collection-item img {
