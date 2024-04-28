@@ -20,11 +20,3 @@ COPY --from=build /app/build .
 EXPOSE 80  
 ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
 
-
-
-# RUN npm run build  
-# EXPOSE 3000 
-
-# CMD [ "npm", "start"]
-
-#sudo chmod 666 /var/run/docker.sock
