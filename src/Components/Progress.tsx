@@ -2,7 +2,9 @@ import '../Styles/Navigation.css'
 import '../Styles/Sidebar.css'
 import '../Styles/Progress.modules.css';
 import transition_arrow from '../Images/progress_transition_arrow.png'
-import {UnlockedLesson, LockedLesson, CompletedLesson} from './utils/Lesson';
+import UnlockedLesson from './LessonUtils/UnlockedLesson';
+import LockedLesson from './LessonUtils/LockedLesson';
+import CompletedLesson from './LessonUtils/CompletedLesson';
 import NavigationBar from './utils/BlueNavBar'
 import Navigation from './utils/Navigation';
 
