@@ -10,6 +10,7 @@ import selected_learning_icon from '../../Images/learning_selected_icon.png'
 import selected_profile_icon from '../../Images/profile_selected_icon.png'
 import selected_setting_icon from '../../Images/setting_selected_icon.png'
 import selected_inventory_icon from '../../Images/inventory_selected_icon.png'
+import selected_helpCenter_icon from '../../Images/helpCenter_selected_icon.png'
 import React, { useState, useEffect } from 'react';
 import { useDarkMode } from './DarkMode';
 
@@ -19,6 +20,7 @@ interface Props {
     InventoryHandler: () => void;
     ProgressHandler: () => void;
     SettingsHandler:() => void;
+    helpCenterHandler: () => void;
     currentPage: string;
 }
 
@@ -27,18 +29,22 @@ function BlueNavBar({ProfileHandler,
                     InventoryHandler,
                     ProgressHandler,
                     SettingsHandler,
+                    helpCenterHandler,
                     currentPage} : Props) {
 
     let progressButtonId: string = (currentPage === 'Progress' ? "sidebar-selected-learning-progress-button" : 'sidebar-learning-progress-button')
     let profileButtonId: string = (currentPage === 'Profile' ? "sidebar-selected-profile-button" : "sidebar-profile-button")
     let settingsButtonId: string = (currentPage === 'Settings' ? "sidebar-selected-setting-button" : "sidebar-setting-button")
     let inventoryButtonId: string = (currentPage === 'Inventory' || currentPage === 'View' ? "sidebar-selected-inventory-button": "sidebar-inventory-button")
+    let helpCenterButtonId: string = (currentPage === 'helpCenter' ? 'sidebar-selected-helpCenter-button' : 'sidebar-helpCenter-button')
+
     const NavbarButtonHandler = (buttonName: string) => {
         if (buttonName === 'Profile'){ProfileHandler()};
         if (buttonName === 'Inventory'){InventoryHandler()};
         if (buttonName === 'Progress'){ProgressHandler()};
         if (buttonName === 'Settings'){SettingsHandler()};
         if (buttonName === 'Signout'){getStartedHandler()};
+        if (buttonName === 'helpCenter'){helpCenterHandler()};
     };
 
     const getImage = (imageName: string) => {
@@ -49,7 +55,7 @@ function BlueNavBar({ProfileHandler,
             return currentPage === 'Profile' ? selected_profile_icon : profile_icon;
         }
         if (imageName === 'HelpCenter') {
-            return help_center_icon;
+            return currentPage === 'helpCenter' ? selected_helpCenter_icon: help_center_icon;
         }
         if (imageName === 'Settings') {
             return currentPage === 'Settings' ? selected_setting_icon : setting_icon;
@@ -59,6 +65,9 @@ function BlueNavBar({ProfileHandler,
         }
         if (imageName === 'Inventory') {
             return currentPage === 'Inventory' ? selected_learning_icon : inventory_icon;
+        }
+        if (imageName === 'helpCenter') {
+            return currentPage === 'helpCenter' ? selected_helpCenter_icon : help_center_icon;
         }
     }
 
@@ -76,7 +85,7 @@ function BlueNavBar({ProfileHandler,
                     <img src={getImage('Profile')} alt="Selected Profile Icon"/>
                     Profile
                 </button>
-                <button id="sidebar-help-center-button">
+                <button id={helpCenterButtonId} onClick={() => {NavbarButtonHandler('helpCenter')}}>
                     <img src={getImage('HelpCenter')} alt="Help Center Icon"/>
                     Help Center
                 </button>

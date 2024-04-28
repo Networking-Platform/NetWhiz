@@ -164,7 +164,7 @@
     color: #1A1A1A;
 }
 
-#sidebar-help-center-button {
+#sidebar-helpCenter-button {
     position: absolute;
     width: 83%;
     height: 48px;
@@ -187,16 +187,50 @@
     padding-left: 15px; /* Adding space for the icon */
 }
 
-#sidebar-help-center-button img {
+#sidebar-selected-helpCenter-button {
+    position: absolute;
+    width: 83%;
+    height: 48px;
+    left: 6%;
+    top: calc(120px + 2 * (48px + 20px));
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3127A0;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    border: none; /* Removing border */
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+#sidebar-helpCenter-button img {
     width: 22px;
     height: 22px;
     margin-right: 12px; /* Add some space between the image and text */
 }
 
-.dark-theme #sidebar-help-center-button {
+#sidebar-selected-helpCenter-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px; /* Add some space between the image and text */
+}
+
+.dark-theme #sidebar-helpCenter-button {
     background-color: #1A1A1A;
 }
 
+.dark-theme #sidebar-selected-helpCenter-button {
+    background-color: #ffffff;
+    color: #1A1A1A;
+}
 
 #sidebar-theme-button {
     position: absolute;

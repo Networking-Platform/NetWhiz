@@ -3,6 +3,7 @@ import '../Styles/Sidebar.css'
 import '../Styles/Settings.modules.css';
 import NavigationBar from './utils/BlueNavBar'
 import Navigation from './utils/Navigation';
+import React, { useState } from 'react';
 
 interface Props {
     getStartedHandler: () => void;
@@ -11,6 +12,7 @@ interface Props {
     backToHomeHandler:() => void;
     InventoryHandler:() => void;
     SettingsHandler:() => void;
+    helpCenterHandler:() => void;
 }
 
 function Settings({ProfileHandler,
@@ -18,7 +20,19 @@ function Settings({ProfileHandler,
                     ProgressHandler,
                     InventoryHandler,
                     backToHomeHandler,
+                    helpCenterHandler,
                     SettingsHandler} : Props) {
+    
+    const [is1On, setIs1On] = useState<boolean>(false);
+    const toggleSwitch1 = () => {
+        setIs1On(!is1On);
+    };
+
+    const [is2On, setIs2On] = useState<boolean>(false);
+    const toggleSwitch2 = () => {
+        setIs2On(!is2On);
+    };
+
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative'}}>
             <NavigationBar 
@@ -27,6 +41,7 @@ function Settings({ProfileHandler,
                 InventoryHandler={InventoryHandler}
                 ProgressHandler={ProgressHandler}
                 SettingsHandler={SettingsHandler}
+                helpCenterHandler={helpCenterHandler}
                 currentPage='Settings'
             />;
 
@@ -76,10 +91,20 @@ function Settings({ProfileHandler,
                 <div id="noti">
                     <div id="notifications">Notifications</div>
                     <div className="not-black-text">Enable Desktop Notifications</div>
+
+                    <div className={`slider-button ${is1On ? 'on' : 'off'}`} onClick={toggleSwitch1}>
+                        <div className="slider"></div>
+                    </div>
+
                     <div className="not-grey-text">If you’re looking forward for our updates, right-click the button </div>
                     <div className="not-black-text">Enable Email Notifications</div>
+                    <div className={`slider-button ${is2On ? 'on' : 'off'}`} onClick={toggleSwitch2}>
+                        <div className="slider"></div>
+                    </div>
                     <div className="not-grey-text">Receive emails for messages</div>
+                    <button type="submit" id="save-changes"> Save Changes </button>
                 </div>
+                
             </div>
         </div>
     );
