@@ -1,3 +1,16 @@
+.blue-half {
+    width: 20%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #3127A0;
+    position: absolute;
+    left: 0;
+}
+
+.dark-theme .blue-half {
+    background-color: #1A1A1A;
+}
+
 #website-title {
     position: absolute;
     left: 10.46%;
@@ -38,6 +51,10 @@
     padding-left: 15px; /* Adding space for the icon */
 }
 
+.dark-theme #sidebar-learning-progress-button {
+    background-color: #1A1A1A;
+}
+
 #sidebar-learning-progress-button img {
     width: 22px;
     height: 22px;
@@ -74,6 +91,11 @@
     margin-right: 12px; /* Add some space between the image and text */
 }
 
+.dark-theme #sidebar-selected-learning-progress-button {
+    background-color: #ffffff;
+    color: #1A1A1A;
+}
+
 #sidebar-profile-button {
     position: absolute;
     width: 83%;
@@ -101,6 +123,10 @@
     width: 22px;
     height: 22px;
     margin-right: 12px; /* Add some space between the image and text */
+}
+
+.dark-theme #sidebar-profile-button {
+    background-color: #1A1A1A;
 }
 
 #sidebar-selected-profile-button {
@@ -133,7 +159,10 @@
     margin-right: 12px; /* Add some space between the image and text */
 }
 
-
+.dark-theme #sidebar-selected-profile-button {
+    background-color: #ffffff;
+    color: #1A1A1A;
+}
 
 #sidebar-help-center-button {
     position: absolute;
@@ -164,6 +193,11 @@
     margin-right: 12px; /* Add some space between the image and text */
 }
 
+.dark-theme #sidebar-help-center-button {
+    background-color: #1A1A1A;
+}
+
+
 #sidebar-theme-button {
     position: absolute;
     width: 83%;
@@ -192,6 +226,11 @@
     height: 22px;
     margin-right: 12px; /* Add some space between the image and text */
 }
+
+.dark-theme #sidebar-theme-button {
+    background-color: #1A1A1A;
+}
+
 
 #sidebar-inventory-button {
     position: absolute;
@@ -222,12 +261,45 @@
     margin-right: 12px; /* Add some space between the image and text */
 }
 
+.dark-theme #sidebar-inventory-button {
+    background-color: #1A1A1A;
+}
+
 #sidebar-selected-inventory-button {
     position: absolute;
     width: 83%;
     height: 48px;
     left: 6%;
     top: calc(120px + 5 * (48px + 20px));
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #3127A0;
+    opacity: 0.9;
+    z-index: 1000;
+    background-color: #FFFFFF;
+    border: none; /* Removing border */
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex; /* Add display flex to align children in a row */
+    align-items: center; /* Align children vertically in the center */
+    justify-content: flex-start; /* Align children to the left */
+    padding-left: 15px; /* Adding space for the icon */
+}
+
+.dark-theme #sidebar-selected-inventory-button {
+    background-color: #ffffff;
+    color: #1A1A1A;
+}
+
+#sidebar-selected-setting-button {
+    position: absolute;
+    width: 83%;
+    height: 48px;
+    left: 6%;
+    top: calc(120px + 3 * (48px + 20px));
     font-family: Inter, sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -279,6 +351,21 @@
     width: 22px;
     height: 22px;
     margin-right: 12px;
+}
+
+.dark-theme #sidebar-setting-button {
+    background-color: #1A1A1A;
+}
+
+#sidebar-selected-setting-button img {
+    width: 22px;
+    height: 22px;
+    margin-right: 12px;
+}
+
+.dark-theme #sidebar-selected-setting-button {
+    background-color: #ffffff;
+    color: #1A1A1A;
 }
 
 #separation-line {

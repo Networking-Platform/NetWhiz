@@ -13,7 +13,7 @@ function LogIn({backToHomeHandler}: Props) {
             height: '100vh', // Set body height to fill the viewport
             background: 'linear-gradient(to right, #6358DC 50%, white 50%)' // Create a linear gradient background
           }}>
-            <div className="blue-half">
+            <div className="login-blue-half">
                 <img id="wireframe" src={HumaaansWireframe} alt="login image" />
             </div>
 
