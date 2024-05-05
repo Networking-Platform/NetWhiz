@@ -28,16 +28,14 @@ function SignUp({backToLoginHandler}: Props) {
             });
 
             if (response.ok) {
-                // 注册成功
                 setMessage('Registration successful!');
                 window.location.href = '/login';
             } else {
-                // 注册失败
                 const errorMessage = await response.text();
                 setMessage(`Registration failed: ${errorMessage}`);
             }
         } catch (error) {
-            // 请求发送失败
+           
             setMessage('Failed to connect to the server.');
         }
     };
