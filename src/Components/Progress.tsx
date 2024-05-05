@@ -20,6 +20,7 @@ interface Props {
     goToDNS: () => void;
     goToIP: () => void;
     goToTCP: () => void;
+    helpCenterHandler: () => void;
 }
 
 function Progress({ 
@@ -32,8 +33,8 @@ function Progress({
     goToHTTP,
     goToDNS,
     goToIP,
-    goToTCP }: Props) {
-
+    goToTCP,
+    helpCenterHandler }: Props) {
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
             <NavigationBar 
@@ -42,6 +43,7 @@ function Progress({
                 InventoryHandler={InventoryHandler}
                 ProgressHandler={ProgressHandler}
                 SettingsHandler={SettingsHandler}
+                helpCenterHandler={helpCenterHandler}
                 currentPage='Progress'
             />;
 

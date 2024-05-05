@@ -16,7 +16,6 @@
 }
 
 h1 {
-
     width: 658px;
     height: 322px;
     top: 152px;
@@ -29,11 +28,11 @@ h1 {
     line-height: 75px;
     letter-spacing: 200;
     text-align: left;
-
-
 }
 
-
+.dark-theme h1 {
+    color: #ffffff;
+}
 
 #intro {
     width: 658px;
@@ -44,7 +43,10 @@ h1 {
     color: #000000;
     font-size: 25px;
     text-align: left;
+}
 
+.dark-theme #intro {
+    color: #F0EFEF;
 }
 
 #get-started {
@@ -56,58 +58,6 @@ h1 {
     width: 162.43px;
     height: 44px;
 }
-
-/* #aboutus-button {
-    background-color: white;
-    color: black;
-    border: none;
-    font-size: 16px;
-    padding-left: 55px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-left: 70%
-}
-#contact-button {
-    background-color: white;
-    color: black;
-    border: none;
-    font-size: 16px;
-    padding-left: 55px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-left: 80%
-}
-
-
-#FAQ-button {
-    background-color: white;
-    color: black;
-    border: none;
-    font-size: 16px;
-    padding-left: 55px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-left: 90%
-} */
-/* 
-#buttons {
-    display: flex;
-    justify-content: flex-end;
-    padding: 10px;
-    margin-top: -15px; /* Shift buttons up 
-    margin-right: 8%;
-} 
-/* .info-button {
-    background-color: white;
-    color: black;
-    border: none;
-    font-size: 16px;
-    padding-left: 55px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-left: 90% 
-    margin-left: 10px;
-} */
 
 #icon {
     /* float: right; */
