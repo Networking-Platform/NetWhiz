@@ -17,6 +17,8 @@ interface Props {
     backToHomeHandler: () => void;
     goToFirstLesson: () => void;
     goToSecondLesson: () => void;
+    goToThirdLesson: () => void;
+    goToFourthLesson: () => void;
 }
 
 function Progress({ ProfileHandler,
@@ -26,11 +28,13 @@ function Progress({ ProfileHandler,
     backToHomeHandler,
     SettingsHandler,
     goToFirstLesson,
-    goToSecondLesson }: Props) {
+    goToSecondLesson,
+    goToThirdLesson,
+    goToFourthLesson }: Props) {
 
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
-            <NavigationBar 
+            <NavigationBar
                 ProfileHandler={ProfileHandler}
                 getStartedHandler={getStartedHandler}
                 InventoryHandler={InventoryHandler}
@@ -41,13 +45,13 @@ function Progress({ ProfileHandler,
 
             <div className="white-half" style={{ width: '80%', height: '100%', backgroundColor: 'white', position: 'absolute', left: '20%' }}>
 
-                <Navigation 
+                <Navigation
                     username="Kelvin"
                     redirects={
                         [
                             { page_name: 'Home', page_handler: backToHomeHandler },
                             { page_name: 'Profile', page_handler: ProgressHandler }
-                        ]} 
+                        ]}
                 />
 
                 <div id="progress-group">
@@ -93,11 +97,21 @@ function Progress({ ProfileHandler,
                     <div id="down-arrow"></div>
                 </div>
 
-                <div id="lesson3-box">
+                <div id="lesson3-box" onClick={goToThirdLesson}>
                     <div id="unlocked-border"></div>
-                    <div id="locked-border">
+                    <div id="unlocked-inner-border">
                         <div id="lesson-text">LESSON 3</div>
-                        <div id="lesson-name">"Topic"</div>
+                        <div id="lesson-name">DNS</div>
+                    </div>
+                    <div id="down-arrow"></div>
+                </div>
+
+
+                <div id="lesson4-box" onClick={goToFourthLesson}>
+                    <div id="unlocked-border"></div>
+                    <div id="unlocked-inner-border">
+                        <div id="lesson-text">LESSON 4</div>
+                        <div id="lesson-name">SHESH</div>
                     </div>
                     <div id="down-arrow"></div>
                 </div>

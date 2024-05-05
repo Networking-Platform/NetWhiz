@@ -78,6 +78,15 @@ function App() {
   const toSecondLesson = () => {
     setPage("lesson/tcp_lesson");
   };
+
+  const toThirdLesson = () => {
+    setPage("lesson/dns_lesson");
+  };
+
+  const toFourthLesson = () => {
+    setPage("lesson/ip_lesson");
+  };
+
   return (
     <div className={darkMode ? "dark-theme" : ""}>
       <Routes>
@@ -183,6 +192,8 @@ function App() {
               backToHomeHandler={backToHome}
               goToFirstLesson={toFirstLesson}
               goToSecondLesson={toSecondLesson}
+              goToThirdLesson={toThirdLesson}
+              goToFourthLesson={toFourthLesson}
               SettingsHandler={toSettingsPage}
             />
           }
