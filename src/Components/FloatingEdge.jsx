@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import {
   useStore,
   getStraightPath,
@@ -6,6 +6,7 @@ import {
   getBezierPath,
   getSmoothStepPath,
   getSimpleBezierPath,
+  useReactFlow,
 } from "reactflow";
 
 import { getEdgeParams } from "./utils.js";
@@ -20,6 +21,8 @@ function getSpecialPath(sourceX, sourceY, targetX, targetY, offset) {
 }
 
 function FloatingEdge(props) {
+  const { setEdges } = useReactFlow();
+  const [selectedOption, setSelectedOption] = useState("None");
   const sourceNode = useStore(
     useCallback(
       (store) => store.nodeInternals.get(props.source),
@@ -70,7 +73,7 @@ function FloatingEdge(props) {
             className="nodrag nopan"
           >
             <select>
-              {props.data.map((option) => {
+              {props.data.options.map((option) => {
                 return <option>{option}</option>;
               })}
             </select>
@@ -83,7 +86,22 @@ function FloatingEdge(props) {
   const { sx, sy, tx, ty } = getEdgeParams(sourceNode, targetNode);
 
   const special = getSpecialPath(sx, sy, tx, ty, sx < tx ? 50 : -50);
-
+  const handleOptionChange = (event) => {
+    setSelectedOption(event.target.value);
+    setEdges((es) => {
+      return es.map((edge) =>
+        edge.id === props.id
+          ? {
+              ...edge,
+              data: {
+                options: props.data.options,
+                selectedOption: event.target.value,
+              },
+            }
+          : edge
+      );
+    });
+  };
   return (
     <>
       <path
@@ -105,9 +123,9 @@ function FloatingEdge(props) {
           }}
           className="nodrag nopan"
         >
-          <select>
-            {props.data.map((option) => {
-              return <option>{option}</option>;
+          <select value={selectedOption} onChange={handleOptionChange}>
+            {props.data.options.map((option, id) => {
+              return <option key={id}>{option}</option>;
             })}
           </select>
           {/* <input className="edgeinput"></input> */}

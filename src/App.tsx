@@ -9,6 +9,7 @@ import Inventory from "./Components/Inventory";
 import SignUp from "./Components/SignUp";
 import Progress from "./Components/Progress";
 
+import Settings from './Components/Settings';
 import "@fontsource/inter";
 import "@fontsource/inter/700.css";
 
