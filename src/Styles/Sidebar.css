@@ -11,6 +11,19 @@
     background-color: #1A1A1A;
 }
 
+.white-half {
+    width: 80%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    left: 20%;
+    top: 0;
+}
+
+.dark-theme .white-half {
+    background-color: #303030;
+}
+
 #website-title {
     position: absolute;
     left: 10.46%;

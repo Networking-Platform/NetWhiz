@@ -2,7 +2,8 @@ import '../Styles/Navigation.css'
 import '../Styles/Sidebar.css'
 import '../Styles/Progress.modules.css';
 import transition_arrow from '../Images/progress_transition_arrow.png'
-import progress_checkmark from '../Images/progress_checkmark.png'
+import UnlockedLesson from './LessonUtils/UnlockedLesson';
+import LockedLesson from './LessonUtils/LockedLesson';
 import NavigationBar from './utils/BlueNavBar'
 import Navigation from './utils/Navigation';
 
@@ -21,7 +22,8 @@ interface Props {
 
 }
 
-function Progress({ ProfileHandler,
+function Progress({ 
+    ProfileHandler,
     getStartedHandler,
     InventoryHandler,
     ProgressHandler,
@@ -65,46 +67,36 @@ function Progress({ ProfileHandler,
                     </div>
                 </div>
 
-                <div id="lesson0-box">
-                    <div id="unlocked-border"></div>
-                    <div id="completed-inner-border">
-                        <div id="lesson-text">LESSON 0</div>
-                        <div id="lesson-name">Tutorial</div>
-                    </div>
-                    <div id="current-circle">
-                        <div id="checkmark">
-                            <img src={progress_checkmark} alt="checkmark"></img>
-                        </div>
-                    </div>
-                    <div id="down-arrow"></div>
-                </div>
+                <UnlockedLesson
+                    lessonNumber="0"
+                    lessonName="Tutorial"
+                    lessonInfo="Introduction to NetQuest"
+                    completed={true}
+                    goToLesson={goToFirstLesson}
+                />
 
-                <div id="lesson1-box" onClick={goToFirstLesson}>
-                    <div id="unlocked-border"></div>
-                    <div id="unlocked-inner-border">
-                        <div id="lesson-text">LESSON 1</div>
-                        <div id="lesson-name">HTTP</div>
-                    </div>
-                    <div id="down-arrow"></div>
-                </div>
+                <UnlockedLesson 
+                    lessonNumber="1"
+                    lessonName="HTTP"
+                    lessonInfo="Learn about HTTP!"
+                    completed={false}
+                    goToLesson={goToFirstLesson}
+                />
 
-                <div id="lesson2-box" onClick={goToSecondLesson}>
-                    <div id="unlocked-border"></div>
-                    <div id="unlocked-inner-border">
-                        <div id="lesson-text">LESSON 2</div>
-                        <div id="lesson-name">TCP</div>
-                    </div>
-                    <div id="down-arrow"></div>
-                </div>
+                <UnlockedLesson 
+                    lessonNumber="2"
+                    lessonName="TCP"
+                    lessonInfo="Learn about TCP!"
+                    completed={false}
+                    goToLesson={goToSecondLesson}
+                />
 
-                <div id="lesson3-box">
-                    <div id="unlocked-border"></div>
-                    <div id="locked-border">
-                        <div id="lesson-text">LESSON 3</div>
-                        <div id="lesson-name">"Topic"</div>
-                    </div>
-                    <div id="down-arrow"></div>
-                </div>
+                <LockedLesson
+                    lessonNumber="3"
+                    lessonName="IP"
+                    lessonInfo="Learn about IP!"
+                    goToLesson={goToSecondLesson}
+                />
 
                 <div id="transition-arrow">
                     <img src={transition_arrow} alt="Transition Arrow"></img>

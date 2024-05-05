@@ -17,7 +17,7 @@ function LogIn({backToHomeHandler}: Props) {
                 <img id="wireframe" src={HumaaansWireframe} alt="login image" />
             </div>
 
-            <div className="white-half">
+            <div className="login-white-half">
                 <button id='back' onClick={backToHomeHandler}>
                     &lt; Back
                 </button>

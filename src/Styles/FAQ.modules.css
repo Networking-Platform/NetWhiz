@@ -20,6 +20,11 @@
     line-height: 43.36px;
     transform: translate(-30%);
 }
+
+.dark-theme #page-title {
+    color: #ffffff;
+}
+
 #homeOffice {
     box-sizing: border-box;
     width: 569px;
@@ -46,6 +51,11 @@
         display: none;
     }
 }
+
 #faqBlock {
     padding: 30px;
+}
+
+.dark-theme #faqBlock {
+    color: #ffffff;
 }

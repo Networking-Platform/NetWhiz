@@ -25,6 +25,12 @@ export const DarkModeProvider: React.FC<{ children: ReactNode }> = ({ children }
     const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
     darkModeQuery.addEventListener('change', updateDarkMode);
 
+    if (prefersDarkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+    
     return () => {
       darkModeQuery.removeEventListener('change', updateDarkMode);
     };
