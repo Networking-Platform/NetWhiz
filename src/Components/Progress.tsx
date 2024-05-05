@@ -4,7 +4,6 @@ import '../Styles/Progress.modules.css';
 import transition_arrow from '../Images/progress_transition_arrow.png'
 import UnlockedLesson from './LessonUtils/UnlockedLesson';
 import LockedLesson from './LessonUtils/LockedLesson';
-import CompletedLesson from './LessonUtils/CompletedLesson';
 import NavigationBar from './utils/BlueNavBar'
 import Navigation from './utils/Navigation';
 
@@ -64,16 +63,19 @@ function Progress({
                     </div>
                 </div>
 
-                <CompletedLesson
+                <UnlockedLesson
                     lessonNumber="0"
                     lessonName="Tutorial"
                     lessonInfo="Introduction to NetQuest"
+                    completed={true}
                     goToLesson={goToFirstLesson}
                 />
+
                 <UnlockedLesson 
                     lessonNumber="1"
                     lessonName="HTTP"
                     lessonInfo="Learn about HTTP!"
+                    completed={false}
                     goToLesson={goToFirstLesson}
                 />
 
@@ -81,6 +83,7 @@ function Progress({
                     lessonNumber="2"
                     lessonName="TCP"
                     lessonInfo="Learn about TCP!"
+                    completed={false}
                     goToLesson={goToSecondLesson}
                 />
 

@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import "../../Styles/Lesson.css"
+import progress_checkmark from '../../Images/progress_checkmark.png'
 import { Button, Popover } from 'antd';
 
 interface LessonProps {
     lessonNumber: string;
     lessonName: string;
     lessonInfo: string;
+    completed: boolean;
     goToLesson: () => void;
 }
 
@@ -13,10 +15,10 @@ const UnlockedLesson: React.FC<LessonProps> = ({
     lessonNumber,
     lessonName,
     lessonInfo,
+    completed,
     goToLesson
 } : LessonProps) => {
     const [open, setOpen] = useState(false);
-
     const hide = () => {
         setOpen(false);
     };
@@ -44,10 +46,15 @@ const UnlockedLesson: React.FC<LessonProps> = ({
         >
             <div id={`lesson${lessonNumber}-box`}>
                 <div id="unlocked-border"></div>
-                <div id="unlocked-inner-border">
+                <div id={`${completed ? "completed" : "unlocked"}-inner-border`}>
                     <div id="lesson-text">LESSON {lessonNumber}</div>
                     <div id="lesson-name">{lessonName}</div>
                 </div>
+                {completed && <div id="current-circle">
+                    <div id="checkmark">
+                        <img src={progress_checkmark} alt="checkmark"></img>
+                    </div>
+                </div>}
                 <div id="down-arrow"></div>
             </div>
         </Popover>
