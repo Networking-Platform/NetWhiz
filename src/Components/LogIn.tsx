@@ -76,19 +76,6 @@ function LogIn({backToHomeHandler}: Props) {
                         If you are already a member you can login with your email address and password.
                     </div>
 
-                    {/* <div id="username-and-password">
-                        <form>
-                            <label htmlFor="username"> User name</label><br />
-                            <input type="text" id="user-name" name="username" /><br />
-
-                            <label htmlFor="password"> Password</label><br />
-                            <input type="text" id="password" name="password" /><br />
-
-                            <input type="checkbox" id="rememberme" defaultChecked />
-                            Remember me <br />
-                            <button type="submit" id="login"> Log In </button>
-                        </form>
-                    </div> */}
 
                     <div id="username-and-password">
                         <form onSubmit={handleSubmit}>
