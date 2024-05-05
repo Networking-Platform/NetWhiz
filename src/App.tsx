@@ -7,7 +7,9 @@ import FAQ from "./Components/FAQ";
 import Profile from "./Components/Profile";
 import Inventory from "./Components/Inventory";
 import SignUp from "./Components/SignUp";
+import Settings from "./Components/Settings"
 import Progress from "./Components/Progress";
+import HelpCenter from "./Components/HelpCenter";
 
 import "@fontsource/inter";
 import "@fontsource/inter/700.css";
@@ -71,6 +73,10 @@ function App() {
     setPage("Settings");
   };
 
+  const toHelpCenter = () => {
+    setPage("helpCenter")
+  };
+
   const toFirstLesson = () => {
     setPage("lesson/http_lesson");
   };
@@ -78,6 +84,8 @@ function App() {
   const toSecondLesson = () => {
     setPage("lesson/tcp_lesson");
   };
+
+
   return (
     <div className={darkMode ? "dark-theme" : ""}>
       <Routes>
@@ -141,6 +149,7 @@ function App() {
               backToHomeHandler={backToHome}
               ProgressHandler={toProgressPage}
               SettingsHandler={toSettingsPage}
+              helpCenterHandler={toHelpCenter}
             />
           }
         />
@@ -155,6 +164,7 @@ function App() {
               backToHomeHandler={backToHome}
               ProgressHandler={toProgressPage}
               SettingsHandler={toSettingsPage}
+              helpCenterHandler={toHelpCenter}
             />
           }
         />
@@ -169,6 +179,7 @@ function App() {
               backToHomeHandler={backToHome}
               ProgressHandler={toProgressPage}
               SettingsHandler={toSettingsPage}
+              helpCenterHandler={toHelpCenter}
             />
           }
         />
@@ -184,6 +195,21 @@ function App() {
               goToFirstLesson={toFirstLesson}
               goToSecondLesson={toSecondLesson}
               SettingsHandler={toSettingsPage}
+              helpCenterHandler={toHelpCenter}
+            />
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <Settings
+              backToHomeHandler={backToHome}
+              getStartedHandler={goToLogin}
+              InventoryHandler={toInventoryPage}
+              SettingsHandler={toSettingsPage}
+              ProfileHandler={toProfilePage}
+              ProgressHandler={toProgressPage}
+              helpCenterHandler={toHelpCenter}
             />
           }
         />
@@ -200,6 +226,21 @@ function App() {
             />
           }
         />
+        <Route
+          path="/helpcenter"
+          element={
+            <HelpCenter
+              backToHomeHandler={backToHome}
+              getStartedHandler={goToLogin}
+              InventoryHandler={toInventoryPage}
+              SettingsHandler={toSettingsPage}
+              ProfileHandler={toProfilePage}
+              ProgressHandler={toProgressPage}
+              helpCenterHandler={toHelpCenter}
+            />
+          }
+        />
+
       </Routes>
     </div>
   );

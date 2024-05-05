@@ -16,8 +16,10 @@ interface Props {
     ProgressHandler: () => void;
     SettingsHandler: () => void;
     backToHomeHandler: () => void;
+    helpCenterHandler: () => void;
     goToFirstLesson: () => void;
     goToSecondLesson: () => void;
+
 }
 
 function Progress({ 
@@ -28,6 +30,7 @@ function Progress({
     backToHomeHandler,
     SettingsHandler,
     goToFirstLesson,
+    helpCenterHandler,
     goToSecondLesson }: Props) {
 
     return (
@@ -38,6 +41,7 @@ function Progress({
                 InventoryHandler={InventoryHandler}
                 ProgressHandler={ProgressHandler}
                 SettingsHandler={SettingsHandler}
+                helpCenterHandler={helpCenterHandler}
                 currentPage='Progress'
             />;
 
