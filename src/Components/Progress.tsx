@@ -16,8 +16,10 @@ interface Props {
     ProgressHandler: () => void;
     SettingsHandler: () => void;
     backToHomeHandler: () => void;
-    goToFirstLesson: () => void;
-    goToSecondLesson: () => void;
+    goToHTTP: () => void;
+    goToDNS: () => void;
+    goToIP: () => void;
+    goToTCP: () => void;
 }
 
 function Progress({ 
@@ -27,8 +29,10 @@ function Progress({
     ProgressHandler,
     backToHomeHandler,
     SettingsHandler,
-    goToFirstLesson,
-    goToSecondLesson }: Props) {
+    goToHTTP,
+    goToDNS,
+    goToIP,
+    goToTCP }: Props) {
 
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
@@ -68,7 +72,7 @@ function Progress({
                     lessonName="Tutorial"
                     lessonInfo="Introduction to NetQuest"
                     completed={true}
-                    goToLesson={goToFirstLesson}
+                    goToLesson={goToHTTP}
                 />
 
                 <UnlockedLesson 
@@ -76,7 +80,7 @@ function Progress({
                     lessonName="HTTP"
                     lessonInfo="Learn about HTTP!"
                     completed={false}
-                    goToLesson={goToFirstLesson}
+                    goToLesson={goToHTTP}
                 />
 
                 <UnlockedLesson 
@@ -84,14 +88,30 @@ function Progress({
                     lessonName="TCP"
                     lessonInfo="Learn about TCP!"
                     completed={false}
-                    goToLesson={goToSecondLesson}
+                    goToLesson={goToTCP}
                 />
 
-                <LockedLesson
+                <UnlockedLesson
                     lessonNumber="3"
                     lessonName="IP"
                     lessonInfo="Learn about IP!"
-                    goToLesson={goToSecondLesson}
+                    completed={false}
+                    goToLesson={goToIP}
+                />
+
+                <UnlockedLesson
+                    lessonNumber="4"
+                    lessonName="DNS"
+                    lessonInfo="Learn about DNS!"
+                    completed={true}
+                    goToLesson={goToDNS}
+                />
+
+                <LockedLesson
+                    lessonNumber="5"
+                    lessonName="Routing: OSPF"
+                    lessonInfo="Learn about OSPF!"
+                    goToLesson={goToDNS}
                 />
 
                 <div id="transition-arrow">

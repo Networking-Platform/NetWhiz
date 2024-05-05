@@ -71,11 +71,19 @@ function App() {
     setPage("Settings");
   };
 
-  const toFirstLesson = () => {
+  const toHTTP = () => {
     setPage("lesson/http_lesson");
   };
 
-  const toSecondLesson = () => {
+  const toDNS = () => {
+    setPage("lesson/dns_lesson");
+  };
+
+  const toIP = () => {
+    setPage("lesson/ip_lesson");
+  };
+
+  const toTCP = () => {
     setPage("lesson/tcp_lesson");
   };
   return (
@@ -181,8 +189,10 @@ function App() {
               InventoryHandler={toInventoryPage}
               ProgressHandler={toProgressPage}
               backToHomeHandler={backToHome}
-              goToFirstLesson={toFirstLesson}
-              goToSecondLesson={toSecondLesson}
+              goToHTTP={toHTTP}
+              goToDNS={toDNS}
+              goToIP={toIP}
+              goToTCP={toTCP}
               SettingsHandler={toSettingsPage}
             />
           }

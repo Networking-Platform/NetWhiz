@@ -30,6 +30,22 @@
     top: 105%;
 }
 
+#lesson4-box {
+    position: absolute;
+    width: 20%;
+    height: 18%;
+    left: 10%;
+    top: 140%;
+}
+
+#lesson5-box {
+    position: absolute;
+    width: 20%;
+    height: 18%;
+    left: 60%;
+    top: 140%;
+}
+
 
 #unlocked-border {
     box-sizing: border-box;
