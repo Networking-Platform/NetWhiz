@@ -74,7 +74,11 @@ function HelpCenter({ProfileHandler,
                     />
                 </div>
                 <div id='hc-body'>See some common topics that may help</div>
-                <div style={{ display: 'flex', justifyContent: 'center' }}>
+                <div style={{ display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    margin: '0 auto',
+    maxWidth: '100%' }}>
                     <div id="hc-boxStyle">
                         <p className='hc-bold'>Website tutorial</p>
                         <p className='hc-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
