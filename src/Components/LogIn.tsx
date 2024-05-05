@@ -29,9 +29,9 @@ function LogIn({backToHomeHandler}: Props) {
 
             if (response.ok) {
                 setSuccessMessage('Login successful');
-                // 清空输入框
                 setEmail('');
                 setPassword('');
+                window.location.href = '/profile';
             } else if (response.status === 404) {
                 setErrorMessage('User not found');
             } else if (response.status === 401) {

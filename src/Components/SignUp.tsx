@@ -30,6 +30,7 @@ function SignUp({backToLoginHandler}: Props) {
             if (response.ok) {
                 // 注册成功
                 setMessage('Registration successful!');
+                window.location.href = '/login';
             } else {
                 // 注册失败
                 const errorMessage = await response.text();
