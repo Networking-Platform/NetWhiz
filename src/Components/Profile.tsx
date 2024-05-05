@@ -4,6 +4,7 @@ import '../Styles/Profile.modules.css';
 import edit_icon from '../Images/Edit_icon.png'
 import NavigationBar from './utils/BlueNavBar'
 import Navigation from './utils/Navigation';
+import { useDarkMode } from './utils/DarkMode';
 
 interface Props {
     getStartedHandler: () => void;
@@ -32,7 +33,7 @@ function Profile({ProfileHandler,
                 currentPage='Profile'
             />;
 
-            <div className="white-half" style={{ width: '80%', height: '100%', backgroundColor: 'white', position: 'absolute', left: '20%' }}>
+            <div className="white-half">
                 <Navigation 
                     username="Kelvin"
                     redirects={
