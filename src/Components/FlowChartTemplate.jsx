@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useRef } from "react";
+import React, { useCallback, useState, useRef, useEffect } from "react";
 import ReactFlow, {
   MiniMap,
   Controls,
@@ -55,15 +55,26 @@ const initialNodes = [
 const initialEdges = [];
 
 export default function FlowChartTemplate(props) {
-  const getId = () => `${props.lesson}_${id++}`;
+  const getId = (label) => `${label}_${id++}`;
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [reactFlowInstance, setReactFlowInstance] = useState(null);
   const reactFlowWrapper = useRef(null);
 
+  useEffect(() => {
+    // This code will run when 'count' changes
+    props.onSolutionChange({ nodes: nodes, edges: edges });
+  }, [nodes, edges]); // 'count' is the dependency
   const onConnect = useCallback(
     (connection) => {
-      const edge = { ...connection, type: "customEdge", data: props.options };
+      const edge = {
+        ...connection,
+        type: "customEdge",
+        data: {
+          options: props.options,
+          selectedOption: "None",
+        },
+      };
       setEdges((eds) => addEdge(edge, eds));
     },
     [setEdges]
@@ -91,8 +102,9 @@ export default function FlowChartTemplate(props) {
         x: event.clientX,
         y: event.clientY,
       });
+      const node_info = JSON.parse(label);
       const newNode = {
-        id: getId(),
+        id: getId(node_info.label),
         position,
         type: "customNode",
         data: { label: label },

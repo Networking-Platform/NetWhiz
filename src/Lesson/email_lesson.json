@@ -1,0 +1,29 @@
+{
+  "lesson": "Email",
+  "analogy": [
+    "Delivering food to customer’s houses can be expensive for both the restaurant and the customer. For a middle ground between convenience and efficiency, the Achy Teepee wants to provide more options via food pickup.",
+    "This is the protocol for food pickup:",
+    "i) The chef makes the food.",
+    "ii) Once the food is ready, it is brought to the front desk.",
+    "iii) The front desk manager calls the customer to tell them that their food is ready for pickup.",
+    "iv) To get their food, the customer can either enter the restaurant and pick it up at the front desk, or if they don’t want to leave their car, the Achy Teepee provides curbside pick up as well!"
+  ],
+  "actual_logic": [
+    "Email works in a similar way:",
+    "i) Email is written by the user in some email application.",
+    "ii) When the user clicks send, the message is sent to an SMTP server.",
+    "ii) SMTP server sends messages to recipient’s email server using TCP (usually).",
+    "iii) Email is retrieved using either IMAP, which allows users to access messages on the server, or POP3, which downloads messages on the user’s devices."
+  ],
+  "explannation": [
+    "First the chef makes the food, then after the food is ready, we will call the customer. If the customer is lazy, he will pcik it up at curbside, else he will pick it up at the front desk."
+  ],
+  "nodes": [
+    { "label": "Chef makes food", "color": "#3127a0" },
+    { "label": "Food is ready", "color": "#fc9a07" },
+    { "label": "Calls Customer", "color": "#f47878" },
+    { "label": "Pick up at front desk", "color": "#3ed079" },
+    { "label": "Pick up at curbside", "color": "rgba(255, 0, 0, 0.611)" }
+  ],
+  "options": ["None", "Lazy", "Else"]
+}

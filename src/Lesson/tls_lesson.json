@@ -1,0 +1,26 @@
+{
+  "lesson": "TLS",
+  "analogy": [
+    "Oh no! One of your competitors is trying to destroy your business. They have hired people to show up at the restaurant and take other customers’ food. Apart from that, they have also opened a fake location next door to confuse customers trying to pick up their food, and they will serve spoiled food to any unsuspecting customer that shows up at their door!",
+    "To prevent this, you must have some security measures for food pickup:",
+    "i) When a customer orders food for pickup, they will be provided with their own secret code that they shouldn’t share with anyone, and also the restaurant's secret code, which changes for every customer to ensure that it doesn’t get copied.",
+    "ii) When they arrive at the restaurant, they will be presented with locked boxes of food that they can only open with their secret code. To ensure that this is the real restaurant and not the imposter next door, these boxes have the restaurant’s secret code inside them to ensure that the food is real.",
+    "iii) If the customer can successfully open the box and identifies the restaurant’s secret code, they can happily enjoy their food."
+  ],
+  "actual_logic": [
+    "TLS works in a similar way:",
+    "i) The sender encrypts their message using a secret key.",
+    "ii) They send their message to the recipient.",
+    "ii) Once the recipient receives the message, they decrypt it using their key.",
+    "iii) This ensures security for messages sent over the internet."
+  ],
+  "explannation": [
+    "First customers are provided unique secret codes to unlock their food box. Then they will try to unlock food boxes one by one. If they fail, they will try again. If they succeed, they can enjoy their food."
+  ],
+  "nodes": [
+    { "label": "Customers are provided with secret code", "color": "#3127a0" },
+    { "label": "Try to open boxes with the code", "color": "#fc9a07" },
+    { "label": "Enjoy their food", "color": "#3ed079" }
+  ],
+  "options": ["None", "Success", "Fail"]
+}
