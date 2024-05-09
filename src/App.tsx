@@ -77,12 +77,34 @@ function App() {
     setPage("helpCenter");
   };
 
-  const toFirstLesson = () => {
+  const toHTTP = () => {
     setPage("lesson/http_lesson");
   };
 
-  const toSecondLesson = () => {
+  const toDNS = () => {
+    setPage("lesson/dns_lesson");
+  };
+
+  const toIP = () => {
+    setPage("lesson/ip_lesson");
+  };
+
+  const toTCP = () => {
     setPage("lesson/tcp_lesson");
+  };
+
+  const toForwarding = () => {
+    setPage("lesson/forwarding_lesson");
+  };
+
+  const toEmail = () => {
+    setPage("lesson/email_lesson");
+  };
+  const toTLS = () => {
+    setPage("lesson/tls_lesson");
+  };
+  const toWifi = () => {
+    setPage("lesson/wifi_lesson");
   };
 
   return (
@@ -191,9 +213,15 @@ function App() {
               InventoryHandler={toInventoryPage}
               ProgressHandler={toProgressPage}
               backToHomeHandler={backToHome}
-              goToFirstLesson={toFirstLesson}
-              goToSecondLesson={toSecondLesson}
+              goToHTTP={toHTTP}
+              goToDNS={toDNS}
+              goToIP={toIP}
+              goToTCP={toTCP}
               SettingsHandler={toSettingsPage}
+              goToForwarding={toForwarding}
+              goToEmail={toEmail}
+              goToTLS={toTLS}
+              goToWifi={toWifi}
               helpCenterHandler={toHelpCenter}
             />
           }
