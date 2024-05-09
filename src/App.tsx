@@ -93,6 +93,20 @@ function App() {
     setPage("lesson/tcp_lesson");
   };
 
+  const toForwarding = () => {
+    setPage("lesson/forwarding_lesson");
+  };
+
+  const toEmail = () => {
+    setPage("lesson/email_lesson");
+  };
+  const toTLS = () => {
+    setPage("lesson/tls_lesson");
+  };
+  const toWifi = () => {
+    setPage("lesson/wifi_lesson");
+  };
+
   return (
     <div className={darkMode ? "dark-theme" : ""}>
       <Routes>
@@ -204,6 +218,10 @@ function App() {
               goToIP={toIP}
               goToTCP={toTCP}
               SettingsHandler={toSettingsPage}
+              goToForwarding={toForwarding}
+              goToEmail={toEmail}
+              goToTLS={toTLS}
+              goToWifi={toWifi}
               helpCenterHandler={toHelpCenter}
             />
           }

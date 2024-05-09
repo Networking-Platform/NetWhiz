@@ -35,11 +35,10 @@
 }
 
 #white-bar {
-    /* Rectangle 322 */
 
     position: absolute;
-    width: 650px;
-    height: 40px;
+    width: 63%;
+    height: 30%;
     left: 35%;
     top: 50%;
 
@@ -48,11 +47,10 @@
 }
 
 #blue-bar {
-    /* Rectangle 323 */
 
     position: absolute;
-    width: 120px;
-    height: 40px;
+    width: 42%;
+    height: 30%;
     left: 35%;
     top: 50%;
 
@@ -334,12 +332,99 @@
 
 }
 
-#transition-arrow {
-    /* Vector */
+#arrow-12 {
 
     position: absolute;
-    left: 43%;
+    left: 38%;
     top: 55%;
+
+    /* background: #2E1FC8; */
+    /* transform: rotate(-134.64deg); */
+
+}
+
+#arrow-13 {
+
+    position: absolute;
+    left: 55%;
+    top: 50%;
+
+    /* background: #2E1FC8; */
+    transform: rotate(-60deg);
+
+}
+
+#arrow-24 {
+
+    position: absolute;
+    left: 38%;
+    top: 90%;
+
+    /* background: #2E1FC8; */
+    /* transform: rotate(-134.64deg); */
+
+}
+
+#arrow-45 {
+
+    position: absolute;
+    left: 38%;
+    top: 125%;
+
+    /* background: #2E1FC8; */
+    /* transform: rotate(-134.64deg); */
+
+}
+
+#arrow-46 {
+
+    position: absolute;
+    left: 55%;
+    top: 107%;
+
+    /* background: #2E1FC8; */
+    transform: rotate(-90deg);
+
+}
+
+#arrow-57 {
+
+    position: absolute;
+    left: 38%;
+    top: 160%;
+
+    /* background: #2E1FC8; */
+    /* transform: rotate(-134.64deg); */
+
+}
+
+#arrow-58 {
+
+    position: absolute;
+    left: 55%;
+    top: 143%;
+
+    /* background: #2E1FC8; */
+    transform: rotate(-90deg);
+
+}
+
+#arrow-79 {
+
+    position: absolute;
+    left: 55%;
+    top: 178%;
+
+    /* background: #2E1FC8; */
+    /* transform: rotate(-134.64deg); */
+
+}
+
+#arrow-89 {
+
+    position: absolute;
+    left: 73%;
+    top: 160%;
 
     /* background: #2E1FC8; */
     /* transform: rotate(-134.64deg); */

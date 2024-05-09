@@ -1,49 +1,73 @@
-#lesson0-box {
-    position: absolute;
-    width: 20%;
-    height: 18%;
-    left: 35%; /* -49 */
-    top: 35%;
-}
-
 #lesson1-box {
     position: absolute;
     width: 20%;
     height: 18%;
-    left: 35%;
-    top: 70%;
+    left: 30%; /* -49 */
+    top: 35%;
 }
 
 #lesson2-box {
     position: absolute;
     width: 20%;
     height: 18%;
-    left: 10%;
-    top: 105%;
+    left: 30%;
+    top: 70%;
 }
 
 #lesson3-box {
     position: absolute;
     width: 20%;
     height: 18%;
-    left: 60%;
-    top: 105%;
+    left: 65%;
+    top: 60%;
 }
 
 #lesson4-box {
     position: absolute;
     width: 20%;
     height: 18%;
-    left: 10%;
-    top: 140%;
+    left: 30%;
+    top: 105%;
 }
 
 #lesson5-box {
     position: absolute;
     width: 20%;
     height: 18%;
-    left: 60%;
+    left: 30%;
     top: 140%;
+}
+
+#lesson6-box {
+    position: absolute;
+    width: 20%;
+    height: 18%;
+    left: 65%;
+    top: 105%;
+}
+
+#lesson7-box {
+    position: absolute;
+    width: 20%;
+    height: 18%;
+    left: 30%;
+    top: 175%;
+}
+
+#lesson8-box {
+    position: absolute;
+    width: 20%;
+    height: 18%;
+    left: 65%;
+    top: 140%;
+}
+
+#lesson9-box {
+    position: absolute;
+    width: 20%;
+    height: 18%;
+    left: 65%;
+    top: 175%;
 }
 
 
