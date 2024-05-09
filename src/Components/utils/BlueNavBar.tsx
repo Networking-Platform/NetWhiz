@@ -10,13 +10,17 @@ import selected_learning_icon from '../../Images/learning_selected_icon.png'
 import selected_profile_icon from '../../Images/profile_selected_icon.png'
 import selected_setting_icon from '../../Images/setting_selected_icon.png'
 import selected_inventory_icon from '../../Images/inventory_selected_icon.png'
+import selected_helpCenter_icon from '../../Images/helpCenter_selected_icon.png'
 import React, { useState, useEffect } from 'react';
+import { useDarkMode } from './DarkMode';
+
 interface Props {
     getStartedHandler: () => void;
     ProfileHandler: () => void;
     InventoryHandler: () => void;
     ProgressHandler: () => void;
     SettingsHandler:() => void;
+    helpCenterHandler: () => void;
     currentPage: string;
 }
 
@@ -25,19 +29,22 @@ function BlueNavBar({ProfileHandler,
                     InventoryHandler,
                     ProgressHandler,
                     SettingsHandler,
+                    helpCenterHandler,
                     currentPage} : Props) {
 
-    // const [activeButton, setActiveButton] = useState('Profile');
     let progressButtonId: string = (currentPage === 'Progress' ? "sidebar-selected-learning-progress-button" : 'sidebar-learning-progress-button')
     let profileButtonId: string = (currentPage === 'Profile' ? "sidebar-selected-profile-button" : "sidebar-profile-button")
     let settingsButtonId: string = (currentPage === 'Settings' ? "sidebar-selected-setting-button" : "sidebar-setting-button")
     let inventoryButtonId: string = (currentPage === 'Inventory' || currentPage === 'View' ? "sidebar-selected-inventory-button": "sidebar-inventory-button")
+    let helpCenterButtonId: string = (currentPage === 'helpCenter' ? 'sidebar-selected-helpCenter-button' : 'sidebar-helpCenter-button')
+
     const NavbarButtonHandler = (buttonName: string) => {
         if (buttonName === 'Profile'){ProfileHandler()};
         if (buttonName === 'Inventory'){InventoryHandler()};
         if (buttonName === 'Progress'){ProgressHandler()};
         if (buttonName === 'Settings'){SettingsHandler()};
         if (buttonName === 'Signout'){getStartedHandler()};
+        if (buttonName === 'helpCenter'){helpCenterHandler()};
     };
 
     const getImage = (imageName: string) => {
@@ -48,7 +55,7 @@ function BlueNavBar({ProfileHandler,
             return currentPage === 'Profile' ? selected_profile_icon : profile_icon;
         }
         if (imageName === 'HelpCenter') {
-            return help_center_icon;
+            return currentPage === 'helpCenter' ? selected_helpCenter_icon: help_center_icon;
         }
         if (imageName === 'Settings') {
             return currentPage === 'Settings' ? selected_setting_icon : setting_icon;
@@ -59,40 +66,47 @@ function BlueNavBar({ProfileHandler,
         if (imageName === 'Inventory') {
             return currentPage === 'Inventory' ? selected_learning_icon : inventory_icon;
         }
+        if (imageName === 'helpCenter') {
+            return currentPage === 'helpCenter' ? selected_helpCenter_icon : help_center_icon;
+        }
     }
-    
+
+    const { darkMode } = useDarkMode();
+
     return (
-        <div className="blue-half" style={{ width: '20%', height: '100vh', overflow: 'hidden', backgroundColor: '#3127A0', position: 'absolute', left: 0 }}>
-            <div id="website-title">Website.com</div>
-            <button id={progressButtonId} onClick={() => {console.log(progressButtonId); NavbarButtonHandler('Progress')}}>
-                <img src={getImage('Progress')} alt="Learning icon"/>
-                Learning Progress
-            </button>
-            <button id={profileButtonId} onClick={() => {console.log(profileButtonId); NavbarButtonHandler('Profile')}}>
-                <img src={getImage('Profile')} alt="Selected Profile Icon"/>
-                Profile
-            </button>
-            <button id="sidebar-help-center-button">
-                <img src={getImage('HelpCenter')} alt="Help Center Icon"/>
-                Help Center
-            </button>
-            <button id={settingsButtonId}  onClick={() => {console.log(settingsButtonId); NavbarButtonHandler('Settings')}}>
-                <img src={getImage('Settings')} alt="Setting Icon"/>
-                Setting
-            </button>
-            <button id="sidebar-theme-button">
-                <img src={getImage('Theme')} alt="Theme Icon"/>
-                Theme
-            </button>
-            <button id={inventoryButtonId} onClick={() => {console.log(inventoryButtonId); NavbarButtonHandler('Inventory')}}>
-                <img src={getImage('Inventory')} alt="Inventory Icon"/>
-                Inventory
-            </button>
-            <div id="separation-line"></div>
-            <button id="sidebar-logout-button" onClick={getStartedHandler}>
-                <img src={logout_icon} alt="Logout Icon"/>
-                Log out
-            </button>
+        <div className={darkMode ? "dark-theme" : ""}>
+            <div className="blue-half">
+                <div id="website-title">Website.com</div>
+                <button id={progressButtonId} onClick={() => {console.log(progressButtonId); NavbarButtonHandler('Progress')}}>
+                    <img src={getImage('Progress')} alt="Learning icon"/>
+                    Learning Progress
+                </button>
+                <button id={profileButtonId} onClick={() => {console.log(profileButtonId); NavbarButtonHandler('Profile')}}>
+                    <img src={getImage('Profile')} alt="Selected Profile Icon"/>
+                    Profile
+                </button>
+                <button id={helpCenterButtonId} onClick={() => {NavbarButtonHandler('helpCenter')}}>
+                    <img src={getImage('HelpCenter')} alt="Help Center Icon"/>
+                    Help Center
+                </button>
+                <button id={settingsButtonId}  onClick={() => {console.log(settingsButtonId); NavbarButtonHandler('Settings')}}>
+                    <img src={getImage('Settings')} alt="Setting Icon"/>
+                    Setting
+                </button>
+                <button id="sidebar-theme-button">
+                    <img src={getImage('Theme')} alt="Theme Icon"/>
+                    Theme
+                </button>
+                <button id={inventoryButtonId} onClick={() => {console.log(inventoryButtonId); NavbarButtonHandler('Inventory')}}>
+                    <img src={getImage('Inventory')} alt="Inventory Icon"/>
+                    Inventory
+                </button>
+                <div id="separation-line"></div>
+                <button id="sidebar-logout-button" onClick={getStartedHandler}>
+                    <img src={logout_icon} alt="Logout Icon"/>
+                    Log out
+                </button>
+            </div>
         </div>
     );
 }

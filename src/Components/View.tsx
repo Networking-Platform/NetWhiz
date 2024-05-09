@@ -12,6 +12,7 @@ interface Props {
     InventoryHandler: () => void;
     SettingsHandler: () => void;
     ProgressHandler: () => void;
+    helpCenterHandler: () => void;
 }
 
 function View({ProfileHandler,
@@ -20,6 +21,7 @@ function View({ProfileHandler,
                     InventoryHandler,
                     backToHomeHandler,
                     SettingsHandler,
+                    helpCenterHandler,
                     ProgressHandler} : Props) {
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
@@ -29,6 +31,7 @@ function View({ProfileHandler,
                 InventoryHandler={InventoryHandler}
                 ProgressHandler={ProgressHandler}
                 SettingsHandler={SettingsHandler}
+                helpCenterHandler={helpCenterHandler}
                 currentPage='View'
             />;
 

@@ -13,7 +13,6 @@ import "reactflow/dist/style.css";
 import "../Styles/Navigation.css";
 import "../Styles/mainDrag&Drop.css";
 import "../Styles/nodeBottomBar.css";
-import "../Styles/menuBar.css";
 import CustomNode from "../Components/CustomNode";
 import FloatingEdge from "./FloatingEdge";
 import CustomConnectionLine from "./CustomConnectionLine";

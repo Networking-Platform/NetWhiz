@@ -4,7 +4,6 @@ import "reactflow/dist/style.css";
 import "../Styles/Navigation.css";
 import "../Styles/mainDrag&Drop.css";
 import "../Styles/nodeBottomBar.css";
-import "../Styles/menuBar.css";
 import FlowChartTemplate from "./FlowChartTemplate";
 import SideBarTemplate from "./SideBarTemplate";
 import CustomNode from "../Components/CustomNode";
@@ -12,6 +11,7 @@ import Navigation from "./utils/Navigation";
 import FloatingEdge from "./FloatingEdge";
 import CustomConnectionLine from "./CustomConnectionLine";
 import { useState } from "react";
+import LessonNavigation from "./utils/LessonNavigation";
 
 export default function LessonTemplate({
   backToHomeHandler,
@@ -91,11 +91,6 @@ export default function LessonTemplate({
   }
   return (
     <div className="outercontainer">
-      <Modal
-        result={result}
-        onClose={closeModal}
-        lessonfile={lesson_file}
-      ></Modal>
       <div className="navigation-container ">
         <button id="title" onClick={backToHomeHandler}>
           Website.com

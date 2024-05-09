@@ -4,6 +4,7 @@ import '../Styles/Profile.modules.css';
 import edit_icon from '../Images/Edit_icon.png'
 import NavigationBar from './utils/BlueNavBar'
 import Navigation from './utils/Navigation';
+import { useDarkMode } from './utils/DarkMode';
 
 interface Props {
     getStartedHandler: () => void;
@@ -12,6 +13,7 @@ interface Props {
     ProgressHandler: () => void;
     backToHomeHandler:() => void;
     SettingsHandler:() => void;
+    helpCenterHandler:() => void;
 }
 
 function Profile({ProfileHandler,
@@ -19,6 +21,7 @@ function Profile({ProfileHandler,
                     InventoryHandler,
                     ProgressHandler,
                     backToHomeHandler,
+                    helpCenterHandler,
                     SettingsHandler} : Props) {
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
@@ -29,10 +32,11 @@ function Profile({ProfileHandler,
                 InventoryHandler={InventoryHandler}
                 ProgressHandler={ProgressHandler}
                 SettingsHandler={SettingsHandler}
+                helpCenterHandler={helpCenterHandler}
                 currentPage='Profile'
             />;
 
-            <div className="white-half" style={{ width: '80%', height: '100%', backgroundColor: 'white', position: 'absolute', left: '20%' }}>
+            <div className="white-half">
                 <Navigation 
                     username="Kelvin"
                     redirects={

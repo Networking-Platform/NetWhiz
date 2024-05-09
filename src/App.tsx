@@ -7,12 +7,15 @@ import FAQ from "./Components/FAQ";
 import Profile from "./Components/Profile";
 import Inventory from "./Components/Inventory";
 import SignUp from "./Components/SignUp";
+import Settings from "./Components/Settings"
 import Progress from "./Components/Progress";
+import HelpCenter from "./Components/HelpCenter";
 
 import Settings from './Components/Settings';
 import "@fontsource/inter";
 import "@fontsource/inter/700.css";
 
+import { DarkModeProvider, useDarkMode } from './Components/utils/DarkMode';
 import {
   BrowserRouter as Router,
   Route,
@@ -28,6 +31,7 @@ function App() {
     return (pageName: string) => navigate(`/${pageName.toLowerCase()}`);
   };
 
+  const { darkMode } = useDarkMode();
   const setPage = usePageNavigation();
 
   const goToLogin = () => {
@@ -70,6 +74,10 @@ function App() {
     setPage("Settings");
   };
 
+  const toHelpCenter = () => {
+    setPage("helpCenter")
+  };
+
   const toFirstLesson = () => {
     setPage("lesson/http_lesson");
   };
@@ -77,8 +85,10 @@ function App() {
   const toSecondLesson = () => {
     setPage("lesson/tcp_lesson");
   };
+
+
   return (
-    <div>
+    <div className={darkMode ? "dark-theme" : ""}>
       <Routes>
         <Route
           path="/"
@@ -140,6 +150,7 @@ function App() {
               backToHomeHandler={backToHome}
               ProgressHandler={toProgressPage}
               SettingsHandler={toSettingsPage}
+              helpCenterHandler={toHelpCenter}
             />
           }
         />
@@ -154,6 +165,7 @@ function App() {
               backToHomeHandler={backToHome}
               ProgressHandler={toProgressPage}
               SettingsHandler={toSettingsPage}
+              helpCenterHandler={toHelpCenter}
             />
           }
         />
@@ -168,6 +180,7 @@ function App() {
               backToHomeHandler={backToHome}
               ProgressHandler={toProgressPage}
               SettingsHandler={toSettingsPage}
+              helpCenterHandler={toHelpCenter}
             />
           }
         />
@@ -183,6 +196,21 @@ function App() {
               goToFirstLesson={toFirstLesson}
               goToSecondLesson={toSecondLesson}
               SettingsHandler={toSettingsPage}
+              helpCenterHandler={toHelpCenter}
+            />
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <Settings
+              backToHomeHandler={backToHome}
+              getStartedHandler={goToLogin}
+              InventoryHandler={toInventoryPage}
+              SettingsHandler={toSettingsPage}
+              ProfileHandler={toProfilePage}
+              ProgressHandler={toProgressPage}
+              helpCenterHandler={toHelpCenter}
             />
           }
         />
@@ -199,9 +227,31 @@ function App() {
             />
           }
         />
+        <Route
+          path="/helpcenter"
+          element={
+            <HelpCenter
+              backToHomeHandler={backToHome}
+              getStartedHandler={goToLogin}
+              InventoryHandler={toInventoryPage}
+              SettingsHandler={toSettingsPage}
+              ProfileHandler={toProfilePage}
+              ProgressHandler={toProgressPage}
+              helpCenterHandler={toHelpCenter}
+            />
+          }
+        />
+
       </Routes>
     </div>
   );
 }
 
-export default App;
+const AppWithDarkModeProvider = () => (
+  <DarkModeProvider>
+    <App />
+  </DarkModeProvider>
+);
+
+
+export default AppWithDarkModeProvider;

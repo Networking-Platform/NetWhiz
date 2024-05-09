@@ -15,6 +15,7 @@ interface Props {
     backToHomeHandler:() => void;
     InventoryHandler:() => void;
     SettingsHandler:() => void;
+    helpCenterHandler:() => void;
 }
 
 function Inventory({ProfileHandler,
@@ -23,6 +24,7 @@ function Inventory({ProfileHandler,
                     InventoryHandler,
                     ViewHandler,
                     backToHomeHandler,
+                    helpCenterHandler,
                     SettingsHandler} : Props) {
     return (
         <div style={{ margin: 0, padding: 0, height: '100vh', position: 'relative' }}>
@@ -32,10 +34,11 @@ function Inventory({ProfileHandler,
                 InventoryHandler={InventoryHandler}
                 ProgressHandler={ProgressHandler}
                 SettingsHandler={SettingsHandler}
+                helpCenterHandler={helpCenterHandler}
                 currentPage='Inventory'
             />;
 
-            <div className="white-half" style={{ width: '80%', height: '100%', backgroundColor: 'white', position: 'absolute', left: '20%' }}>
+            <div className="white-half">
                 <Navigation 
                     username="Kelvin"
                     redirects={

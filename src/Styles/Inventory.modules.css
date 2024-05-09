@@ -9,6 +9,10 @@
     border-radius: 20px;
 }
 
+.dark-theme #top-area {
+    background: #474747;
+}
+
 #inventory-title2 {
     position: absolute;
     width: 27%; /* Adjusted width */
@@ -21,6 +25,10 @@
     font-size: 24px;
     line-height: 22px;
     color: #000000;
+}
+
+.dark-theme #inventory-title2 {
+    color: white;
 }
 
 #collection-progress {
@@ -37,6 +45,10 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
+}
+
+.dark-theme #collection-progress {
+    background: #1a1a1a;
 }
 
 #collection-progress .progress-text {
@@ -79,6 +91,9 @@
     border-radius: 20px;
 }
 
+.dark-theme .collection-item {
+    background: #474747;
+}
 
 .view-text {
     position: absolute;
@@ -97,6 +112,10 @@
     background-color: transparent;
 }
 
+.dark-theme .view-text  {
+    color: white;
+}
+
 .name-text {
     position: absolute;
     left: 0;
@@ -112,6 +131,10 @@
     color: #000000;
 }
 
+.dark-theme .name-text  {
+    color: white;
+}
+
 .collection-status {
     position: absolute;
     left: 0;
@@ -125,6 +148,10 @@
     line-height: 24px;
     text-align: center;  
     color: #000000;
+}
+
+.dark-theme .collection-status {
+    color: white;
 }
 
 .collection-item img {
