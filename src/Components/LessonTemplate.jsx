@@ -90,19 +90,20 @@ export default function LessonTemplate({
     setShowAnswer((answer) => !answer);
   }
   return (
-    <div className="outercontainer">
-      <div className="navigation-container ">
-        <button id="title" onClick={backToHomeHandler}>
-          Website.com
-        </button>
-        <Navigation
-          username="Kelvin"
-          redirects={[
-            { page_name: "Home", page_handler: backToHomeHandler },
-            { page_name: "Progress", page_handler: ProgressHandler },
-          ]}
-        />
-      </div>
+    <div id="outercontainer">
+      <Modal
+        result={result}
+        onClose={closeModal}
+        lessonfile={lesson_file}
+      ></Modal>
+      <LessonNavigation
+        username="Kelvin"
+        redirects={[
+          { page_name: "Home", page_handler: backToHomeHandler },
+          { page_name: "Progress", page_handler: ProgressHandler },
+          { page_name: lesson_file.lesson, page_handler: () => {} },
+        ]}
+      />
       <div className="innercontainer">
         <h2>{lesson_file.lesson}</h2>
         <div className="instruction">

@@ -7,15 +7,14 @@ import FAQ from "./Components/FAQ";
 import Profile from "./Components/Profile";
 import Inventory from "./Components/Inventory";
 import SignUp from "./Components/SignUp";
-import Settings from "./Components/Settings"
+import Settings from "./Components/Settings";
 import Progress from "./Components/Progress";
 import HelpCenter from "./Components/HelpCenter";
 
-import Settings from './Components/Settings';
 import "@fontsource/inter";
 import "@fontsource/inter/700.css";
 
-import { DarkModeProvider, useDarkMode } from './Components/utils/DarkMode';
+import { DarkModeProvider, useDarkMode } from "./Components/utils/DarkMode";
 import {
   BrowserRouter as Router,
   Route,
@@ -75,7 +74,7 @@ function App() {
   };
 
   const toHelpCenter = () => {
-    setPage("helpCenter")
+    setPage("helpCenter");
   };
 
   const toFirstLesson = () => {
@@ -85,7 +84,6 @@ function App() {
   const toSecondLesson = () => {
     setPage("lesson/tcp_lesson");
   };
-
 
   return (
     <div className={darkMode ? "dark-theme" : ""}>
@@ -241,7 +239,6 @@ function App() {
             />
           }
         />
-
       </Routes>
     </div>
   );
@@ -252,6 +249,5 @@ const AppWithDarkModeProvider = () => (
     <App />
   </DarkModeProvider>
 );
-
 
 export default AppWithDarkModeProvider;
