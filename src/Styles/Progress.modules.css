@@ -112,12 +112,14 @@
     /* or 27px */
 
     color: #000000;
-    
 
 }
 
+.dark-theme #status-text {
+    color: #F0EFEF;
+}
+
 #status-level {
-    /* Beginner */
 
     position: absolute;
     width: 139px;
@@ -133,6 +135,10 @@
     /* or 43px */
 
     color: #000000;
+}
+
+.dark-theme #status-level {
+    color: #F0EFEF;
 }
 
 #lesson0-box {
