@@ -168,6 +168,10 @@ function Progress({
                     completed={false}
                     goToLesson={goToWifi}
                 />
+                
+                <div id="arrow-79">
+                    <img src={transition_arrow} alt="Transition Arrow"></img>
+                </div>
 
                 <div id="arrow-89">
                     <img src={transition_arrow} alt="Transition Arrow"></img>
