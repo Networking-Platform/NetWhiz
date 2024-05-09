@@ -11,18 +11,20 @@ export const DarkModeProvider: React.FC<{ children: ReactNode }> = ({ children }
   const [darkMode, setDarkMode] = useState<boolean>(false);
 
   const toggleDarkMode = () => {
-    setDarkMode((prevDarkMode) => !prevDarkMode);
+    const newDarkMode = !darkMode;
+    setDarkMode(newDarkMode);
+    localStorage.setItem('darkMode', newDarkMode.toString());
   };
 
   useEffect(() => {
-    const updateDarkMode = (e: MediaQueryListEvent) => {
-      setDarkMode(e.matches);
-    };
-
     const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
     setDarkMode(prefersDarkMode);
 
     const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const updateDarkMode = (e: MediaQueryListEvent) => {
+      setDarkMode(e.matches);
+    };
+
     darkModeQuery.addEventListener('change', updateDarkMode);
 
     if (prefersDarkMode) {
@@ -30,11 +32,19 @@ export const DarkModeProvider: React.FC<{ children: ReactNode }> = ({ children }
     } else {
       document.body.classList.remove('dark-mode');
     }
-    
+
     return () => {
       darkModeQuery.removeEventListener('change', updateDarkMode);
     };
   }, []);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add('dark-mode');
+    } else {
+      document.body.classList.remove('dark-mode');
+    }
+  }, [darkMode]);
 
   return (
     <DarkModeContext.Provider value={{ darkMode, toggleDarkMode }}>
