@@ -58,7 +58,6 @@ export default function LessonTemplate({
     //compare solution with answer
     const user_nodes = nodes.slice().sort();
     const actual_nodes = lesson_file.solutions.nodes.slice().sort();
-    console.log(JSON.stringify(user_nodes) === JSON.stringify(actual_nodes));
 
     const user_edges = edges.slice().sort((a, b) => {
       const stringA = JSON.stringify(a);
