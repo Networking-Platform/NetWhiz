@@ -1,0 +1,31 @@
+{
+  "lesson": "Wifi",
+  "analogy": [
+    "What is the protocol for using the library?",
+    "i) Visitors need a library card to access the library's resources.",
+    "ii) To enter the library, visitors must show their library card to the librarian.",
+    "iii) Once in, visitors can access the library’s resources with the help of the librarian.",
+    "iv) The library has certain rules that must be followed so that all visitors are satisfied.",
+    "v) Once visitors are done, they leave the library."
+  ],
+  "actual_logic": [
+    "Wi-Fi follows a similar flow:",
+    "i) Users need a password to access WiFi.",
+    "ii) The Wireless Access Point (WAP) checks the user’s credentials before allowing them to connect.",
+    "iii) The WAP facilitates communication so that users can access the Internet.",
+    "iv) WiFi networks have security protocols to protect against unauthorized access and protect data privacy.",
+    "v) Users disconnect from WiFi once they leave the area."
+  ],
+  "explannation": ["Just follow the instruction"],
+  "nodes": [
+    { "label": "Visitors need a library card", "color": "#3127a0" },
+    { "label": "Show their card to Librarian", "color": "#fc9a07" },
+    {
+      "label": "Access resources",
+      "color": "#f47878"
+    },
+    { "label": "Visitors follow the rule", "color": "#3ed079" },
+    { "label": "Leave the library", "color": "rgba(255, 0, 0, 0.611)" }
+  ],
+  "options": ["None"]
+}

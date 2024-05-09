@@ -1,0 +1,30 @@
+{
+  "lesson": "Basic Forwarding",
+  "analogy": [
+    "(In order to fund your journey, you need to start a business. You’ve heard that mail delivery services are in high demand right now, so you decide to set one up.)",
+    "Mail delivery is built on post offices, which are used to forward mail to and from all across the world. When a post office receives mail, the following tasks must be performed:",
+    "(i) update the source (this post office) and destination (post office to forward to) addresses",
+    "(ii) check the expiration date of the package and discard it if the date has passed",
+    "(iii) forward mail to the appropriate post office via a post worker",
+    "To figure out where to forward mail to, each post office has a chart filled with rules for every destination address. This will be provided to you. All you have to do is to figure out how to implement the 3 objectives listed above."
+  ],
+  "actual_logic": [
+    "The internet can be represented as a computer network with switches, which are used to forward messages to and from all across the world. In order to send these messages in the most efficient way possible, networks use a protocol known as IPv4 forwarding.",
+    "When a switch receives a message, it must do the following:",
+    "(i) update the source and destination MAC addresses",
+    "(ii) decrement the time-to-live (TTL) in the IP header (discard packet when TTL reaches zero)",
+    "(iii) forward the packet out the appropriate port",
+    "Sound familiar? That's right, IPv4 forwarding is extremely similar to how mail is forwarded in post offices!",
+    "To find out where to forward the packet, your switch will have a single table populated with static rules. Each rule will map an IP address to the MAC address and output port for the next hop. This is known as the control plane, which determines the best route for a packet. What you need to do is implement the three actions listed above by processing data from each packet and doing the actual forwarding. This is known as the data plane."
+  ],
+  "explannation": [
+    "First, the post office updates its address and the address of the destination, then it checks the package's expiration date. If it is expired, we discard it, else we will mail it to destination."
+  ],
+  "nodes": [
+    { "label": "Update addresses", "color": "#3127a0" },
+    { "label": "Check expiration date", "color": "#fc9a07" },
+    { "label": "Discard The package", "color": "#f47878" },
+    { "label": "foward to appropriate post office", "color": "#3ed079" }
+  ],
+  "options": ["None", "Expired", "Else"]
+}

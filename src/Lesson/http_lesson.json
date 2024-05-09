@@ -33,5 +33,48 @@
     { "label": "Server informs customer not available", "color": "#f47878" },
     { "label": "Server serves the dish", "color": "#3ed079" }
   ],
-  "options": ["None", "Available", "Else"]
+  "options": ["None", "Available", "Else"],
+  "solutions": {
+    "nodes": [
+      "Customer places order",
+      "Server sends the order to the kitchen",
+      "Server informs customer not available",
+      "Server serves the dish",
+      "begin",
+      "end"
+    ],
+    "edges": [
+      {
+        "source": "Customer places order",
+        "target": "Server sends the order to the kitchen",
+        "option": "None"
+      },
+      {
+        "source": "Server sends the order to the kitchen",
+        "target": "Server informs customer not available",
+        "option": "Else"
+      },
+      {
+        "source": "Server sends the order to the kitchen",
+        "target": "Server serves the dish",
+        "option": "Available"
+      },
+
+      {
+        "source": "begin",
+        "target": "Customer places order",
+        "option": "None"
+      },
+      {
+        "source": "Server informs customer not available",
+        "target": "end",
+        "option": "None"
+      },
+      {
+        "source": "Server serves the dish",
+        "target": "end",
+        "option": "None"
+      }
+    ]
+  }
 }
