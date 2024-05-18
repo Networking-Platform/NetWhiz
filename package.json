@@ -1,6 +1,7 @@
 {
   "name": "project",
   "version": "0.1.0",
+  "homepage": "https://networking-platform.github.io/netwhiz.github.io",
   "private": true,
   "dependencies": {
     "@fontsource/inter": "^5.0.16",
