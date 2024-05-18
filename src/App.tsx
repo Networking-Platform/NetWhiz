@@ -111,7 +111,7 @@ function App() {
     <div className={darkMode ? "dark-theme" : ""}>
       <Routes>
         <Route
-          path="netwhiz.github.io/"
+          path="networking-platform.github.io/netwhiz.github.io/"
           element={
             <Home
               getStartedHandler={goToLogin}
