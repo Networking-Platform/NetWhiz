@@ -49,7 +49,7 @@ function SignUp({backToLoginHandler}: Props) {
             } else {
                 // Handle case where error is not an AxiosError
                 console.error('SignUp Error:', error);
-                setErrorMessage('An unexpected error occurred!');
+                setErrorMessage('An unexpected error occurred');
             }
         }
     };
