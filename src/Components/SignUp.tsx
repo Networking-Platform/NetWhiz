@@ -40,7 +40,7 @@ function SignUp({backToLoginHandler}: Props) {
                 firstName: firstName,
                 lastName: lastName,
             });
-            console.log('SignUp Success:', response.data);
+            console.log('SignUp Success!', response.data);
             
         } catch (error) {
             if (axios.isAxiosError(error)) {
