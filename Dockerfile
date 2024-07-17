@@ -13,10 +13,11 @@ RUN npm run build
 
 # Step 2: Server With Nginx  
 
-FROM nginx:1.23-alpine
+FROM nginx:1.18-alpine
 WORKDIR /usr/share/nginx/html  
 RUN rm -rf * 
 COPY --from=build /app/build . 
+COPY default.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80  
 ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
 

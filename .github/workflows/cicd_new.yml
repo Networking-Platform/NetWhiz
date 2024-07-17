@@ -3,7 +3,7 @@ name: CICD
 on:
   push:
     branches:
-      - main
+      - koway927
   workflow_dispatch:
 
 jobs:
@@ -22,7 +22,7 @@ jobs:
         run: docker push cliu232/networking-platform-cicd
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps: 
       - name: Pull image from docker hub
         run: docker pull cliu232/networking-platform-cicd
