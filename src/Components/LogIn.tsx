@@ -26,7 +26,7 @@ function LogIn({backToHomeHandler}: Props) {
                 </div>
 
                 <div id="website-name">
-                    website
+                    NetWhiz
                 </div>
                 <div id="bottom-right-container">
                     <div id="account">
