@@ -34,7 +34,7 @@ function SignUp({backToLoginHandler}: Props) {
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://54.82.168.119:8081/api/users/SignUp', {
+            const response = await axios.post('http://54.82.168.119:8081/api/users/testVariable', {
                 email: email,
                 password: password,
                 firstName: firstName,
